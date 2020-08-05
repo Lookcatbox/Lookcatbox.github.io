@@ -2,12 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-05T12:35:16.378Z</updated>
+    <updated>2020-08-05T13:23:55.005Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
-    <subtitle>小蒟蒟于校内
-大蒻蒻于省外</subtitle>
+    <subtitle>HMF | Every day have much fun</subtitle>
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
