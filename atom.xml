@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-06T10:06:20.572Z</updated>
+    <updated>2020-08-06T11:44:43.612Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,22 +10,6 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
-    <entry>
-        <title type="html"><![CDATA[DAY 4 题目讲评]]></title>
-        <id>https://Lookcatbox.github.io/post/day-4-ti-mu-jiang-ping/</id>
-        <link href="https://Lookcatbox.github.io/post/day-4-ti-mu-jiang-ping/">
-        </link>
-        <updated>2020-08-06T09:14:40.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="t1">T1</h1>
-<pre><code>N=14，判断胡牌
-如果N=13，那么枚举添加的牌，然后判断胡牌
-</code></pre>
-<h1 id="t2">T2</h1>
-<h1 id="t3">T3</h1>
-<pre><code>对于一个等差数列
-</code></pre>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[提高组夏令营DAY 4 题目讲评]]></title>
         <id>https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/</id>
