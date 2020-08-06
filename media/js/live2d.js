@@ -19,7 +19,7 @@ jsonPath: "https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json
 "display": {
 "position": "right", //看板娘的表现位置
 "width": 170, //小萝莉的宽度
-"height": 300, //小萝莉的高度
+"height": 350, //小萝莉的高度
 "hOffset": 0,
 "vOffset": -20
 },
