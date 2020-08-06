@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-06T12:02:04.293Z</updated>
+    <updated>2020-08-06T12:18:27.466Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[自动播放网 抑 云音乐与bilibili视频方法]]></title>
+        <id>https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/</id>
+        <link href="https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/">
+        </link>
+        <updated>2020-08-06T12:10:38.000Z</updated>
+        <content type="html"><![CDATA[<p>** 网易云：**</p>
+<p>/&lt;iframe  class=&quot;music&quot; frameborder=&quot;no&quot;</p>
+<p>src=&quot;//music.163.com/outchain/player?type=1&amp;id=89680147&amp;auto=0&amp;height=90&quot;&gt;</iframe></p>
+<p>直接复制放进文章内就行，通过修改src的值来更换音乐(去掉斜杆)</p>
+<p>其中auto=0代表不会自动播放,auto=1代表自动播放。</p>
+<p>其他值请不要修改。</p>
+<p>** bilibili：**</p>
+<div class="tvcontainer">
+<p>​                        &lt;iframe class=&quot;tv&quot;</p>
+<p>​                            src=&quot;https://player.bilibili.com/player.html?cid=145147963&amp;aid=84267566&amp;page=1&amp;as_wide=1&amp;high_quality=1&amp;danmaku=0&quot;</p>
+<p>​                            frameborder=&quot;no&quot; scrolling=&quot;no&quot;&gt;</iframe></p>
+</div>
+通过修改cid来更换视频。
+转自https://github.com/850552586/gridea-theme-fog#目前支持的主题自定义目录]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[提高组夏令营DAY 4 题目讲评]]></title>
         <id>https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/</id>
