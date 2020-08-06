@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>数论 | HMF-have much fun Site</title>
+<title>提高组夏令营DAY 4 题目讲评 | HMF-have much fun Site</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -33,11 +33,18 @@
 </script>
 
 
-    <meta name="description" content="
-拓展欧几里得
+    <meta name="description" content="T1
+N=14，判断胡牌
+如果N=13，那么枚举添加的牌，然后判断胡牌
+先枚举雀头（雀头只要一对，时间复杂度会低一点）
+然后DFS暴搜
+每检测出一个刻子或者顺子，就将其取上，然后转移状态
 
+T2
+DFS序后做线段树+倍增LCA
 
-..." />
+T3
+对于..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -119,23 +126,34 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">数论</h2>
+            <h2 class="post-title">提高组夏令营DAY 4 题目讲评</h2>
             <div class="post-date">2020-08-06</div>
             
             <div class="post-content" v-pre>
-              <ul>
-<li>拓展欧几里得<br>
-<img src="https://Lookcatbox.github.io/post-images/1596676248965.jpg" alt="" loading="lazy"></li>
-</ul>
+              <h1 id="t1">T1</h1>
+<pre><code>N=14，判断胡牌
+如果N=13，那么枚举添加的牌，然后判断胡牌
+先枚举雀头（雀头只要一对，时间复杂度会低一点）
+然后DFS暴搜
+每检测出一个刻子或者顺子，就将其取上，然后转移状态
+</code></pre>
+<h1 id="t2">T2</h1>
+<pre><code>DFS序后做线段树+倍增LCA
+</code></pre>
+<h1 id="t3">T3</h1>
+<pre><code>对于一个等差数列
+val=N(max(l,r)-min(l,r)+l-r)
+也可以用析和树
+</code></pre>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/">
+                <a href="https://Lookcatbox.github.io/post/shu-lun/">
                   <h3 class="post-title">
-                    基础数据结构选讲
+                    数论
                   </h3>
                 </a>
               </div>
