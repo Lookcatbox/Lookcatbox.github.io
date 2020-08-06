@@ -763,6 +763,10 @@ a {
         color: #da77f2;
       }
     
+      .post-item .right .feature-container {
+        border-radius: 6px;
+      }
+    
       body {
         background: #22b8cf;
       }
