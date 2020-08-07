@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-07T09:16:30.925Z</updated>
+    <updated>2020-08-07T12:09:34.243Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -16,7 +16,39 @@
         <link href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
         </link>
         <updated>2020-08-07T09:14:59.000Z</updated>
-        <content type="html"><![CDATA[<p>1</p>
+        <content type="html"><![CDATA[<p>难易度T3&gt;T2&gt;T1<br>
+T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
+设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
+其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
+<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
+设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
+复杂度为n* 2^t  * O (25pt)</p>
+<p>发现前两维可以决定第三维，所以变成两维<br>
+复杂度为n * 2^t</p>
+<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
+然后做类似25pt的状压DP(100pt)</p>
+<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
+暴力<br>
+10pt<br>
+分类讨论</p>
+<ul>
+<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
+<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
+<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
+<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
+30pt<br>
+会超时，当因一开始的题目时间限制错误可以拿100pt</li>
+</ul>
+<p>O(m*最短路长度)<br>
+40pt</p>
+<p>线段树优化维护<br>
+枚举一条边，更新该边在最短路上对应的区间<br>
+C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
+这可以用线段树维护<br>
+O(mlogn+nlohn+nlogq)<br>
+优化：<br>
+O(mlogn+nlogn+q)<br>
+100pt</p>
 ]]></content>
     </entry>
     <entry>

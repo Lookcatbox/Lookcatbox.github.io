@@ -1,8 +1,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="1
-" />
+    <meta name="description" content="难易度T3&gt;T2&gt;T1
+T3 传送门
+设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个
+其中第一种包为（平，仄），第二种包为（平平，仄仄）
+T2传送门
+设f(i,S,h..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
@@ -73,7 +77,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://Lookcatbox.github.io/images/avatar.png?v=1596791785879" class="avatar">
+            <img src="https://Lookcatbox.github.io/images/avatar.png?v=1596802169516" class="avatar">
         </div>
         <div class="sitename">HMF-have much fun Site</div>
         <span class="describtion" data-text='["HMF | Every day have much fun"]'>&nbsp;</span>
@@ -350,7 +354,7 @@
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
                 
             </div>
@@ -366,7 +370,39 @@
             </span>
         </div>
         <div class="text ">
-            <p>1</p>
+            <p>难易度T3&gt;T2&gt;T1<br>
+T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
+设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
+其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
+<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
+设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
+复杂度为n* 2^t  * O (25pt)</p>
+<p>发现前两维可以决定第三维，所以变成两维<br>
+复杂度为n * 2^t</p>
+<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
+然后做类似25pt的状压DP(100pt)</p>
+<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
+暴力<br>
+10pt<br>
+分类讨论</p>
+<ul>
+<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
+<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
+<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
+<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
+30pt<br>
+会超时，当因一开始的题目时间限制错误可以拿100pt</li>
+</ul>
+<p>O(m*最短路长度)<br>
+40pt</p>
+<p>线段树优化维护<br>
+枚举一条边，更新该边在最短路上对应的区间<br>
+C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
+这可以用线段树维护<br>
+O(mlogn+nlohn+nlogq)<br>
+优化：<br>
+O(mlogn+nlogn+q)<br>
+100pt</p>
 
         </div>
         
@@ -581,7 +617,7 @@
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
                 
             </div>
@@ -597,7 +633,39 @@
             </span>
         </div>
         <div class="text ">
-            <p>1</p>
+            <p>难易度T3&gt;T2&gt;T1<br>
+T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
+设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
+其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
+<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
+设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
+复杂度为n* 2^t  * O (25pt)</p>
+<p>发现前两维可以决定第三维，所以变成两维<br>
+复杂度为n * 2^t</p>
+<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
+然后做类似25pt的状压DP(100pt)</p>
+<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
+暴力<br>
+10pt<br>
+分类讨论</p>
+<ul>
+<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
+<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
+<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
+<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
+30pt<br>
+会超时，当因一开始的题目时间限制错误可以拿100pt</li>
+</ul>
+<p>O(m*最短路长度)<br>
+40pt</p>
+<p>线段树优化维护<br>
+枚举一条边，更新该边在最短路上对应的区间<br>
+C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
+这可以用线段树维护<br>
+O(mlogn+nlohn+nlogq)<br>
+优化：<br>
+O(mlogn+nlogn+q)<br>
+100pt</p>
 
         </div>
         
