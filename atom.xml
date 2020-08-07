@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-07T02:34:59.681Z</updated>
+    <updated>2020-08-07T02:52:41.353Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -144,7 +144,8 @@ return 0;
 <p>边双联通分量</p>
 <ul>
 <li>DFS（Tarjan）<a href="https://blog.csdn.net/fuyukai/article/details/51303292">博客索引</a></li>
-<li>边双联通图一定有耳朵</li>
+<li>边双联通图一定有耳朵<br>
+<a href="https://zerol.me/2019/03/06/ear-decomposition/">耳分解 博客索引</a></li>
 <li>割边肯定是树边</li>
 <li>边双联通分量的树上差分算法<br>
 对于每一条返祖边，他“覆盖”一些树边。我们把这些树边的“被覆盖次数”+1，最<br>
