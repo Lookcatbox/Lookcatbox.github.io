@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-06T14:21:57.862Z</updated>
+    <updated>2020-08-07T02:05:48.596Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,6 +10,181 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[图的进阶]]></title>
+        <id>https://Lookcatbox.github.io/post/tu-de-jin-jie/</id>
+        <link href="https://Lookcatbox.github.io/post/tu-de-jin-jie/">
+        </link>
+        <updated>2020-08-07T00:05:22.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<p>树边，前向边，返祖边，横叉边</p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/u014665013/article/details/51351371">博客索引</a></p>
+</li>
+<li>
+<p><s>乌拉</s> 欧拉回路</p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/zdblog/articles/3725858.html">博客索引</a></p>
+<ul>
+<li>图必须联通</li>
+<li>对于无向图：每个点的度数为偶数<br>
+对于有向图：每个点的出度与入度相等<br>
+套圈！<br>
+搜圈一个圈后的回溯过程中<br>
+记得开当前弧优化
+<ul>
+<li><a href="https://blog.csdn.net/corncsd/article/details/39675105">博客索引</a></li>
+<li>欧拉路径（不需要回到起点）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>混合图欧拉回路</li>
+<li>强联通分量<br>
+利用Tarjan，找出low[i]<br>
+low[i]=i的情况下i为一个强联通分量的根<br>
+推荐题：<a href="https://www.luogu.com.cn/problem/P2341">最受欢迎的牛</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="代码">代码</h1>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int timeh;
+int n,m,cuo[10010],low[10010],ans,num[10010],gui[10010];
+vector&lt;int&gt; to[10010];
+stack&lt;int&gt; s;
+bool visit[10010],in[10010],v2[10010],out[10010];
+void tarjan(int now) { 
+//    cout&lt;&lt;&quot;now:&quot;&lt;&lt;now&lt;&lt;endl;
+visit[now]=true,s.push(now),timeh++,cuo[now]=timeh,low[now]=timeh,in[now]=true;
+for(int i=0; i&lt;to[now].size(); i++) {
+	int ti=to[now][i];
+	if(!visit[ti]) {
+		tarjan(ti);
+		low[now]=min(low[now],low[ti]);
+	} else if(in[ti]) low[now]=min(low[now],low[ti]);
+}
+if(low[now]!=cuo[now]) return ;
+//	cout&lt;&lt;&quot;我是根&quot;&lt;&lt;now&lt;&lt;endl;
+int k;
+do{
+	k=s.top(),s.pop();
+	in[k]=false;
+	gui[k]=now;
+}while(k!=now);
+}
+void dfs(int now) {
+if(v2[now]) return ;
+v2[now]=true;
+for(int i=0; i&lt;to[now].size(); i++) {
+	int ti=to[now][i];
+	if(gui[ti]!=gui[now]) out[gui[now]]=true;
+	else dfs(ti);
+}
+}
+
+int main() {
+cin&gt;&gt;n&gt;&gt;m;
+for(int i=1; i&lt;=m; i++) {
+	int a,b;
+	cin&gt;&gt;a&gt;&gt;b;
+	to[a].push_back(b);
+}	
+for(int i=1; i&lt;=n; i++) if(!visit[i]) tarjan(i);
+for(int i=1; i&lt;=n; i++) if(!v2[i]) dfs(i);
+for(int i=1; i&lt;=n; i++) num[gui[i]]++;
+//    for(int i=1; i&lt;=n; i++) cout&lt;&lt;&quot;gui:&quot;&lt;&lt;i&lt;&lt;&quot;:&quot;&lt;&lt;gui[i]&lt;&lt;endl;
+for(int i=1; i&lt;=n; i++) if(low[i]==cuo[i]) {
+	if(!out[i]) {
+		if(ans) {cout&lt;&lt;0&lt;&lt;endl;return 0;}
+		else ans=num[i];
+	}
+}
+cout&lt;&lt;ans&lt;&lt;endl;
+return 0;
+}
+</code></pre>
+<ul>
+<li>
+<p>双联通分量<br>
+<a href="https://baike.so.com/doc/9441199-9782210.html">百度百科</a><br>
+[博客索引](https://www.cnblogs.com/ljk123-de-bo-ke/p/10888905.html）</p>
+</li>
+<li>
+<p>边双联通分量</p>
+<ul>
+<li>DFS（Tarjan）<a href="https://blog.csdn.net/fuyukai/article/details/51303292">博客索引</a></li>
+<li>割边肯定是树边</li>
+<li>边双联通分量的树上差分算法<br>
+对于每一条返祖边，他“覆盖”一些树边。我们把这些树边的“被覆盖次数”+1，最<br>
+常数较大，O（n+m），要DFS两遍</li>
+<li>边双联通分量例题：Educational Codeforces Round 63 (Rated for Div. 2) F</li>
+</ul>
+</li>
+<li>
+<p>点双联通分量</p>
+<ul>
+<li>还是DFS</li>
+<li>点u是割点当且仅当u在dfs树上存在一个孩子满足low[v]&gt;=dfn[u]</li>
+<li>low[idx[12]]=12&gt;dfn[idx[8]],8是割点</li>
+</ul>
+</li>
+<li>
+<p>圆方树(block cut tree)</p>
+</li>
+<li>
+<p>kosaraju算法 <a href="https://baike.so.com/doc/8986970-9315633.html">百度百科</a></p>
+</li>
+<li>
+<p>SAT问题<br>
+对于一个只含有与，或，非括号和若干遍量的表达式，求一组是的这个表达式为真的解<br>
+可以发现，这类表达式最终都能写成一些变量或者变量的非值<br>
+如果与号之间的括号里面有k个变量被或起来，我们称之为k-SAT问题</p>
+</li>
+<li>
+<p>2-SAT 即括号里面有两个东西被或起来</p>
+<ul>
+<li>A蕴含 B 当且仅当 A命题为真，B命题为假时为假</li>
+<li>A或B等价于B的非值蕴含A</li>
+<li>如果A蕴含B，我们连边A-&gt;B</li>
+<li>如果B的非值蕴含A，我们连边：B的非值-&gt;A</li>
+<li>忘记了可以现场编</li>
+<li>对于一组或的关系，把两条蕴含边连上</li>
+<li>每个强联通分量是打包的，必须一起选</li>
+<li>如果A和A的非值，就直接凉掉？好像也只能用这个词了</li>
+<li>吧缩点后的图反过来</li>
+<li>优先选择拓扑序娇小的可选包，选择这个包，然后把和它矛盾的所有包标记为不可选择。</li>
+<li>为什么是对的
+<ol>
+<li>A和非A不会同时被选</li>
+<li>要求关系能被满足</li>
+<li>A和非A不会都不被选(对称性）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>最短路</p>
+<ul>
+<li>SPFA(经常被卡)</li>
+<li>Belllman-Ford</li>
+<li>Dijkstra<br>
+用堆优化后还好<br>
+用zkw线段树优化（优化算法的难度大于原本算法）</li>
+<li>负环<br>
+Naive 在SPFA中，如果一个点入队超过N次，那么一定会有负环</li>
+<li>差分约束<br>
+给定很多形如x_i-x_j&lt;=的式子，不同式子的W可能不一样<br>
+求x_s-x_t的最小值</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[自动播放网 抑 云音乐与bilibili视频方法]]></title>
         <id>https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/</id>

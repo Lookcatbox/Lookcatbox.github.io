@@ -2,16 +2,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
 
-🏠 关于本站
-这是一个个人的网站。
-当然我更希望把它做成多用户的网站
-目前没有这个功能
-可以在文章下评论，联系我发布你的文章。
-👨‍💻 博主是谁
-一个蒟蒻，名为lcb9021
-参加过史上最后..." />
+树边，前向边，返祖边，横叉边
+
+
+博客索引
+
+
+乌拉 欧拉回路
+
+
+博客索引
+
+图必须联通
+对于无向图：每个点的度数为偶数
+对于有向图：每个点的出度与入度相等
+套圈！
+搜圈一个圈后的回溯过程中
+记得开当前弧优化
+
+博客索引
+欧拉路径（不..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
@@ -358,54 +369,200 @@
                 
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2019-01-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
             <div class="posttag">
                 
             </div>
         </div>
         
         <div id="texttitle" style="text-align: center">
-            <h2>关于</h2>
+            <h2>图的进阶</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/about/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/tu-de-jin-jie/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="关于">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="图的进阶">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>这是一个个人的网站。<br>
-当然我更希望把它做成多用户的网站<br>
-目前没有这个功能<br>
-可以在文章下评论，联系我发布你的文章。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>一个蒟蒻，名为lcb9021<br>
-参加过史上最后一次NOIp<br>
-可谓是值得纪念<br>
-2018后再没有NOIp（雾）</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>我的兴趣爱好很多<br>
-比如：<br>
-编程，编程，编程，编程，编程，编程，编程，编程，编程，编程，编程</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>可以访问我的luogu<a href="https://www.luogu.com.cn/user/124918">个人主页</a><br>
-我的<a href="https://github.com/Lookcatbox">Github</a><br>
-私信QQ邮箱：1245495327@qq.com<br>
-QQ：1245495327<br>
-在文章下方评论</p>
-<h2 id="关于room">🎲关于Room</h2>
-<p>Room是我自己制作的游戏<br>
-纯C++编程，主要是猎奇向的。<br>
-喜欢的话可以通过Buy me a coffie赞助！<br>
-欢迎发表意见及游玩感受</p>
+            <ul>
+<li>
+<p>树边，前向边，返祖边，横叉边</p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/u014665013/article/details/51351371">博客索引</a></p>
+</li>
+<li>
+<p><s>乌拉</s> 欧拉回路</p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/zdblog/articles/3725858.html">博客索引</a></p>
+<ul>
+<li>图必须联通</li>
+<li>对于无向图：每个点的度数为偶数<br>
+对于有向图：每个点的出度与入度相等<br>
+套圈！<br>
+搜圈一个圈后的回溯过程中<br>
+记得开当前弧优化
+<ul>
+<li><a href="https://blog.csdn.net/corncsd/article/details/39675105">博客索引</a></li>
+<li>欧拉路径（不需要回到起点）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>混合图欧拉回路</li>
+<li>强联通分量<br>
+利用Tarjan，找出low[i]<br>
+low[i]=i的情况下i为一个强联通分量的根<br>
+推荐题：<a href="https://www.luogu.com.cn/problem/P2341">最受欢迎的牛</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="代码">代码</h1>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int timeh;
+int n,m,cuo[10010],low[10010],ans,num[10010],gui[10010];
+vector&lt;int&gt; to[10010];
+stack&lt;int&gt; s;
+bool visit[10010],in[10010],v2[10010],out[10010];
+void tarjan(int now) { 
+//    cout&lt;&lt;&quot;now:&quot;&lt;&lt;now&lt;&lt;endl;
+visit[now]=true,s.push(now),timeh++,cuo[now]=timeh,low[now]=timeh,in[now]=true;
+for(int i=0; i&lt;to[now].size(); i++) {
+	int ti=to[now][i];
+	if(!visit[ti]) {
+		tarjan(ti);
+		low[now]=min(low[now],low[ti]);
+	} else if(in[ti]) low[now]=min(low[now],low[ti]);
+}
+if(low[now]!=cuo[now]) return ;
+//	cout&lt;&lt;&quot;我是根&quot;&lt;&lt;now&lt;&lt;endl;
+int k;
+do{
+	k=s.top(),s.pop();
+	in[k]=false;
+	gui[k]=now;
+}while(k!=now);
+}
+void dfs(int now) {
+if(v2[now]) return ;
+v2[now]=true;
+for(int i=0; i&lt;to[now].size(); i++) {
+	int ti=to[now][i];
+	if(gui[ti]!=gui[now]) out[gui[now]]=true;
+	else dfs(ti);
+}
+}
+
+int main() {
+cin&gt;&gt;n&gt;&gt;m;
+for(int i=1; i&lt;=m; i++) {
+	int a,b;
+	cin&gt;&gt;a&gt;&gt;b;
+	to[a].push_back(b);
+}	
+for(int i=1; i&lt;=n; i++) if(!visit[i]) tarjan(i);
+for(int i=1; i&lt;=n; i++) if(!v2[i]) dfs(i);
+for(int i=1; i&lt;=n; i++) num[gui[i]]++;
+//    for(int i=1; i&lt;=n; i++) cout&lt;&lt;&quot;gui:&quot;&lt;&lt;i&lt;&lt;&quot;:&quot;&lt;&lt;gui[i]&lt;&lt;endl;
+for(int i=1; i&lt;=n; i++) if(low[i]==cuo[i]) {
+	if(!out[i]) {
+		if(ans) {cout&lt;&lt;0&lt;&lt;endl;return 0;}
+		else ans=num[i];
+	}
+}
+cout&lt;&lt;ans&lt;&lt;endl;
+return 0;
+}
+</code></pre>
+<ul>
+<li>
+<p>双联通分量<br>
+<a href="https://baike.so.com/doc/9441199-9782210.html">百度百科</a><br>
+[博客索引](https://www.cnblogs.com/ljk123-de-bo-ke/p/10888905.html）</p>
+</li>
+<li>
+<p>边双联通分量</p>
+<ul>
+<li>DFS（Tarjan）<a href="https://blog.csdn.net/fuyukai/article/details/51303292">博客索引</a></li>
+<li>割边肯定是树边</li>
+<li>边双联通分量的树上差分算法<br>
+对于每一条返祖边，他“覆盖”一些树边。我们把这些树边的“被覆盖次数”+1，最<br>
+常数较大，O（n+m），要DFS两遍</li>
+<li>边双联通分量例题：Educational Codeforces Round 63 (Rated for Div. 2) F</li>
+</ul>
+</li>
+<li>
+<p>点双联通分量</p>
+<ul>
+<li>还是DFS</li>
+<li>点u是割点当且仅当u在dfs树上存在一个孩子满足low[v]&gt;=dfn[u]</li>
+<li>low[idx[12]]=12&gt;dfn[idx[8]],8是割点</li>
+</ul>
+</li>
+<li>
+<p>圆方树(block cut tree)</p>
+</li>
+<li>
+<p>kosaraju算法 <a href="https://baike.so.com/doc/8986970-9315633.html">百度百科</a></p>
+</li>
+<li>
+<p>SAT问题<br>
+对于一个只含有与，或，非括号和若干遍量的表达式，求一组是的这个表达式为真的解<br>
+可以发现，这类表达式最终都能写成一些变量或者变量的非值<br>
+如果与号之间的括号里面有k个变量被或起来，我们称之为k-SAT问题</p>
+</li>
+<li>
+<p>2-SAT 即括号里面有两个东西被或起来</p>
+<ul>
+<li>A蕴含 B 当且仅当 A命题为真，B命题为假时为假</li>
+<li>A或B等价于B的非值蕴含A</li>
+<li>如果A蕴含B，我们连边A-&gt;B</li>
+<li>如果B的非值蕴含A，我们连边：B的非值-&gt;A</li>
+<li>忘记了可以现场编</li>
+<li>对于一组或的关系，把两条蕴含边连上</li>
+<li>每个强联通分量是打包的，必须一起选</li>
+<li>如果A和A的非值，就直接凉掉？好像也只能用这个词了</li>
+<li>吧缩点后的图反过来</li>
+<li>优先选择拓扑序娇小的可选包，选择这个包，然后把和它矛盾的所有包标记为不可选择。</li>
+<li>为什么是对的
+<ol>
+<li>A和非A不会同时被选</li>
+<li>要求关系能被满足</li>
+<li>A和非A不会都不被选(对称性）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>最短路</p>
+<ul>
+<li>SPFA(经常被卡)</li>
+<li>Belllman-Ford</li>
+<li>Dijkstra<br>
+用堆优化后还好<br>
+用zkw线段树优化（优化算法的难度大于原本算法）</li>
+<li>负环<br>
+Naive 在SPFA中，如果一个点入队超过N次，那么一定会有负环</li>
+<li>差分约束<br>
+给定很多形如x_i-x_j&lt;=的式子，不同式子的W可能不一样<br>
+求x_s-x_t的最小值</li>
+</ul>
+</li>
+</ul>
 
         </div>
         
+        
+        <div class="next-post">
+            下一篇
+            <a href="https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/">
+                自动播放网 抑 云音乐与bilibili视频方法
+            </a>
+        </div>
         
     </div>
     </div>
@@ -482,15 +639,7 @@ QQ：1245495327<br>
      
                 <div class="toc-container">
                     <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-<li><a href="#%E5%85%B3%E4%BA%8Eroom">🎲关于Room</a></li>
-</ul>
-</li>
+<li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
 </ul>
 
     </div>
@@ -620,54 +769,200 @@ QQ：1245495327<br>
                 
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2019-01-25</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
             <div class="posttag">
                 
             </div>
         </div>
         
         <div id="texttitle" style="text-align: center">
-            <h2>关于</h2>
+            <h2>图的进阶</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/about/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/tu-de-jin-jie/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="关于">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="图的进阶">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>这是一个个人的网站。<br>
-当然我更希望把它做成多用户的网站<br>
-目前没有这个功能<br>
-可以在文章下评论，联系我发布你的文章。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>一个蒟蒻，名为lcb9021<br>
-参加过史上最后一次NOIp<br>
-可谓是值得纪念<br>
-2018后再没有NOIp（雾）</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>我的兴趣爱好很多<br>
-比如：<br>
-编程，编程，编程，编程，编程，编程，编程，编程，编程，编程，编程</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>可以访问我的luogu<a href="https://www.luogu.com.cn/user/124918">个人主页</a><br>
-我的<a href="https://github.com/Lookcatbox">Github</a><br>
-私信QQ邮箱：1245495327@qq.com<br>
-QQ：1245495327<br>
-在文章下方评论</p>
-<h2 id="关于room">🎲关于Room</h2>
-<p>Room是我自己制作的游戏<br>
-纯C++编程，主要是猎奇向的。<br>
-喜欢的话可以通过Buy me a coffie赞助！<br>
-欢迎发表意见及游玩感受</p>
+            <ul>
+<li>
+<p>树边，前向边，返祖边，横叉边</p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/u014665013/article/details/51351371">博客索引</a></p>
+</li>
+<li>
+<p><s>乌拉</s> 欧拉回路</p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/zdblog/articles/3725858.html">博客索引</a></p>
+<ul>
+<li>图必须联通</li>
+<li>对于无向图：每个点的度数为偶数<br>
+对于有向图：每个点的出度与入度相等<br>
+套圈！<br>
+搜圈一个圈后的回溯过程中<br>
+记得开当前弧优化
+<ul>
+<li><a href="https://blog.csdn.net/corncsd/article/details/39675105">博客索引</a></li>
+<li>欧拉路径（不需要回到起点）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>混合图欧拉回路</li>
+<li>强联通分量<br>
+利用Tarjan，找出low[i]<br>
+low[i]=i的情况下i为一个强联通分量的根<br>
+推荐题：<a href="https://www.luogu.com.cn/problem/P2341">最受欢迎的牛</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="代码">代码</h1>
+<pre><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int timeh;
+int n,m,cuo[10010],low[10010],ans,num[10010],gui[10010];
+vector&lt;int&gt; to[10010];
+stack&lt;int&gt; s;
+bool visit[10010],in[10010],v2[10010],out[10010];
+void tarjan(int now) { 
+//    cout&lt;&lt;&quot;now:&quot;&lt;&lt;now&lt;&lt;endl;
+visit[now]=true,s.push(now),timeh++,cuo[now]=timeh,low[now]=timeh,in[now]=true;
+for(int i=0; i&lt;to[now].size(); i++) {
+	int ti=to[now][i];
+	if(!visit[ti]) {
+		tarjan(ti);
+		low[now]=min(low[now],low[ti]);
+	} else if(in[ti]) low[now]=min(low[now],low[ti]);
+}
+if(low[now]!=cuo[now]) return ;
+//	cout&lt;&lt;&quot;我是根&quot;&lt;&lt;now&lt;&lt;endl;
+int k;
+do{
+	k=s.top(),s.pop();
+	in[k]=false;
+	gui[k]=now;
+}while(k!=now);
+}
+void dfs(int now) {
+if(v2[now]) return ;
+v2[now]=true;
+for(int i=0; i&lt;to[now].size(); i++) {
+	int ti=to[now][i];
+	if(gui[ti]!=gui[now]) out[gui[now]]=true;
+	else dfs(ti);
+}
+}
+
+int main() {
+cin&gt;&gt;n&gt;&gt;m;
+for(int i=1; i&lt;=m; i++) {
+	int a,b;
+	cin&gt;&gt;a&gt;&gt;b;
+	to[a].push_back(b);
+}	
+for(int i=1; i&lt;=n; i++) if(!visit[i]) tarjan(i);
+for(int i=1; i&lt;=n; i++) if(!v2[i]) dfs(i);
+for(int i=1; i&lt;=n; i++) num[gui[i]]++;
+//    for(int i=1; i&lt;=n; i++) cout&lt;&lt;&quot;gui:&quot;&lt;&lt;i&lt;&lt;&quot;:&quot;&lt;&lt;gui[i]&lt;&lt;endl;
+for(int i=1; i&lt;=n; i++) if(low[i]==cuo[i]) {
+	if(!out[i]) {
+		if(ans) {cout&lt;&lt;0&lt;&lt;endl;return 0;}
+		else ans=num[i];
+	}
+}
+cout&lt;&lt;ans&lt;&lt;endl;
+return 0;
+}
+</code></pre>
+<ul>
+<li>
+<p>双联通分量<br>
+<a href="https://baike.so.com/doc/9441199-9782210.html">百度百科</a><br>
+[博客索引](https://www.cnblogs.com/ljk123-de-bo-ke/p/10888905.html）</p>
+</li>
+<li>
+<p>边双联通分量</p>
+<ul>
+<li>DFS（Tarjan）<a href="https://blog.csdn.net/fuyukai/article/details/51303292">博客索引</a></li>
+<li>割边肯定是树边</li>
+<li>边双联通分量的树上差分算法<br>
+对于每一条返祖边，他“覆盖”一些树边。我们把这些树边的“被覆盖次数”+1，最<br>
+常数较大，O（n+m），要DFS两遍</li>
+<li>边双联通分量例题：Educational Codeforces Round 63 (Rated for Div. 2) F</li>
+</ul>
+</li>
+<li>
+<p>点双联通分量</p>
+<ul>
+<li>还是DFS</li>
+<li>点u是割点当且仅当u在dfs树上存在一个孩子满足low[v]&gt;=dfn[u]</li>
+<li>low[idx[12]]=12&gt;dfn[idx[8]],8是割点</li>
+</ul>
+</li>
+<li>
+<p>圆方树(block cut tree)</p>
+</li>
+<li>
+<p>kosaraju算法 <a href="https://baike.so.com/doc/8986970-9315633.html">百度百科</a></p>
+</li>
+<li>
+<p>SAT问题<br>
+对于一个只含有与，或，非括号和若干遍量的表达式，求一组是的这个表达式为真的解<br>
+可以发现，这类表达式最终都能写成一些变量或者变量的非值<br>
+如果与号之间的括号里面有k个变量被或起来，我们称之为k-SAT问题</p>
+</li>
+<li>
+<p>2-SAT 即括号里面有两个东西被或起来</p>
+<ul>
+<li>A蕴含 B 当且仅当 A命题为真，B命题为假时为假</li>
+<li>A或B等价于B的非值蕴含A</li>
+<li>如果A蕴含B，我们连边A-&gt;B</li>
+<li>如果B的非值蕴含A，我们连边：B的非值-&gt;A</li>
+<li>忘记了可以现场编</li>
+<li>对于一组或的关系，把两条蕴含边连上</li>
+<li>每个强联通分量是打包的，必须一起选</li>
+<li>如果A和A的非值，就直接凉掉？好像也只能用这个词了</li>
+<li>吧缩点后的图反过来</li>
+<li>优先选择拓扑序娇小的可选包，选择这个包，然后把和它矛盾的所有包标记为不可选择。</li>
+<li>为什么是对的
+<ol>
+<li>A和非A不会同时被选</li>
+<li>要求关系能被满足</li>
+<li>A和非A不会都不被选(对称性）</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>最短路</p>
+<ul>
+<li>SPFA(经常被卡)</li>
+<li>Belllman-Ford</li>
+<li>Dijkstra<br>
+用堆优化后还好<br>
+用zkw线段树优化（优化算法的难度大于原本算法）</li>
+<li>负环<br>
+Naive 在SPFA中，如果一个点入队超过N次，那么一定会有负环</li>
+<li>差分约束<br>
+给定很多形如x_i-x_j&lt;=的式子，不同式子的W可能不一样<br>
+求x_s-x_t的最小值</li>
+</ul>
+</li>
+</ul>
 
         </div>
         
+        
+        <div class="next-post">
+            下一篇
+            <a href="https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/">
+                自动播放网 抑 云音乐与bilibili视频方法
+            </a>
+        </div>
         
     </div>
     </div>
