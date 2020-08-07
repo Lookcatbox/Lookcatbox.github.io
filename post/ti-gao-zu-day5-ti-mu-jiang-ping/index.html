@@ -7,7 +7,7 @@ T3 传送门
 其中第一种包为（平，仄），第二种包为（平平，仄仄）
 T2传送门
 设f(i,S,h..." />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="题解,2020福建师大附中夏令营" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
     
@@ -77,7 +77,7 @@ T2传送门
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://Lookcatbox.github.io/images/avatar.png?v=1596802169516" class="avatar">
+            <img src="https://Lookcatbox.github.io/images/avatar.png?v=1596818671764" class="avatar">
         </div>
         <div class="sitename">HMF-have much fun Site</div>
         <span class="describtion" data-text='["HMF | Every day have much fun"]'>&nbsp;</span>
@@ -348,18 +348,24 @@ T2传送门
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                
-                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
-                
+                <img src="https://Lookcatbox.github.io/post-images/ti-gao-zu-day5-ti-mu-jiang-ping.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a href="https://Lookcatbox.github.io/tag/gX-ZpYhUx/" class="postlink">
+                        <i class="fa fa-tag"></i> 题解
+                    </a>
+                    
+                    <a href="https://Lookcatbox.github.io/tag/gdJHkK9Gm/" class="postlink">
+                        <i class="fa fa-tag"></i> 2020福建师大附中夏令营
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
+            
         <div id="texttitle" style="text-align: center">
             <h2>提高组DAY5题目讲评</h2>
             <!-- id 将作为查询条件 -->
@@ -380,6 +386,7 @@ T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618"
 <p>发现前两维可以决定第三维，所以变成两维<br>
 复杂度为n * 2^t</p>
 <p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
+其中关键点i到关键点j的路径为原图中i到j的最短路<br>
 然后做类似25pt的状压DP(100pt)</p>
 <p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
 暴力<br>
@@ -391,18 +398,32 @@ T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618"
 <li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
 <li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
 30pt<br>
-会超时，当因一开始的题目时间限制错误可以拿100pt</li>
+会超时，但因一开始的题目时间限制错误可以拿100pt</li>
 </ul>
-<p>O(m*最短路长度)<br>
-40pt</p>
+<p>考虑第二种情况<br>
+共有两种可能：</p>
+<ol>
+<li>改后的最短路比原最短路大：选原最短路</li>
+<li>改后的最短路比原最短路小<br>
+第一种情况直接输出原最短路即可，这里考虑第二种情况<br>
+如果改后的最短路比原最短路小，那么相当于把改前的那条边删掉，在原最短路外另找一条最短路径<br>
+找出新最短路径与原最短路径前一段重合的最后一个点，设为l<br>
+找出新最短路径与原最短路径后一段重合的最前一个点，设为r<br>
+1-&gt;l和r-&gt;n都是已知的（因为在原最短路上），其中枚举原最短路外的一条边将被删的边替换掉，算出点1，n到该边的两个端点的最短路，更新该边在最短路上对应的区间(l,r)<br>
+具体操作参考分类讨论中的第四种情况，即枚举被修改的边<br>
+O(m*最短路长度) 注：在随机生成的数据中，最短路的期望长度为logn<br>
+40pt</li>
+</ol>
 <p>线段树优化维护<br>
 枚举一条边，更新该边在最短路上对应的区间<br>
-C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
-这可以用线段树维护<br>
-O(mlogn+nlohn+nlogq)<br>
-优化：<br>
+发现之前的操作可以表示为C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
+这是个区间操作，可以用线段树维护<br>
+O(mlogn+nlogn+qlogn) 注：mlogn为最短路复杂度，nlogn为线段树初始化复杂度，qlogn为查询复杂度<br>
+优化：预处理好线段树，将所有懒标记预先下传到叶节点，查询时复杂度变为O(1)<br>
 O(mlogn+nlogn+q)<br>
-100pt</p>
+再优化：将最短路用斐波那契堆优化，最短路变为m复杂度 <s>优化狂魔</s><br>
+O(m+nlogn+q)<br>
+100pt（优化到线段树就可以了）</p>
 
         </div>
         
@@ -611,18 +632,24 @@ O(mlogn+nlogn+q)<br>
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                
-                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
-                
+                <img src="https://Lookcatbox.github.io/post-images/ti-gao-zu-day5-ti-mu-jiang-ping.png" class="postimage" style="cursor:auto">
             </div>
             <div class="postinfo-detail">
                 <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-            <div class="posttag">
-                
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+                <div class="posttag">
+                    
+                    <a href="https://Lookcatbox.github.io/tag/gX-ZpYhUx/" class="postlink">
+                        <i class="fa fa-tag"></i> 题解
+                    </a>
+                    
+                    <a href="https://Lookcatbox.github.io/tag/gdJHkK9Gm/" class="postlink">
+                        <i class="fa fa-tag"></i> 2020福建师大附中夏令营
+                    </a>
+                    
+                </div>
             </div>
-        </div>
-        
+            
         <div id="texttitle" style="text-align: center">
             <h2>提高组DAY5题目讲评</h2>
             <!-- id 将作为查询条件 -->
@@ -643,6 +670,7 @@ T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618"
 <p>发现前两维可以决定第三维，所以变成两维<br>
 复杂度为n * 2^t</p>
 <p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
+其中关键点i到关键点j的路径为原图中i到j的最短路<br>
 然后做类似25pt的状压DP(100pt)</p>
 <p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
 暴力<br>
@@ -654,18 +682,32 @@ T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618"
 <li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
 <li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
 30pt<br>
-会超时，当因一开始的题目时间限制错误可以拿100pt</li>
+会超时，但因一开始的题目时间限制错误可以拿100pt</li>
 </ul>
-<p>O(m*最短路长度)<br>
-40pt</p>
+<p>考虑第二种情况<br>
+共有两种可能：</p>
+<ol>
+<li>改后的最短路比原最短路大：选原最短路</li>
+<li>改后的最短路比原最短路小<br>
+第一种情况直接输出原最短路即可，这里考虑第二种情况<br>
+如果改后的最短路比原最短路小，那么相当于把改前的那条边删掉，在原最短路外另找一条最短路径<br>
+找出新最短路径与原最短路径前一段重合的最后一个点，设为l<br>
+找出新最短路径与原最短路径后一段重合的最前一个点，设为r<br>
+1-&gt;l和r-&gt;n都是已知的（因为在原最短路上），其中枚举原最短路外的一条边将被删的边替换掉，算出点1，n到该边的两个端点的最短路，更新该边在最短路上对应的区间(l,r)<br>
+具体操作参考分类讨论中的第四种情况，即枚举被修改的边<br>
+O(m*最短路长度) 注：在随机生成的数据中，最短路的期望长度为logn<br>
+40pt</li>
+</ol>
 <p>线段树优化维护<br>
 枚举一条边，更新该边在最短路上对应的区间<br>
-C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
-这可以用线段树维护<br>
-O(mlogn+nlohn+nlogq)<br>
-优化：<br>
+发现之前的操作可以表示为C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
+这是个区间操作，可以用线段树维护<br>
+O(mlogn+nlogn+qlogn) 注：mlogn为最短路复杂度，nlogn为线段树初始化复杂度，qlogn为查询复杂度<br>
+优化：预处理好线段树，将所有懒标记预先下传到叶节点，查询时复杂度变为O(1)<br>
 O(mlogn+nlogn+q)<br>
-100pt</p>
+再优化：将最短路用斐波那契堆优化，最短路变为m复杂度 <s>优化狂魔</s><br>
+O(m+nlogn+q)<br>
+100pt（优化到线段树就可以了）</p>
 
         </div>
         
