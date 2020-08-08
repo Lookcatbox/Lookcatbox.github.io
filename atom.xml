@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-08T03:54:55.260Z</updated>
+    <updated>2020-08-08T10:39:16.662Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,6 +10,44 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[提高组DAY5讲评]]></title>
+        <id>https://Lookcatbox.github.io/post/ti-gao-zu-day5-jiang-ping/</id>
+        <link href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-jiang-ping/">
+        </link>
+        <updated>2020-08-08T09:17:48.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="t1-魔方">T1 魔方</h1>
+<p><a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4622&amp;jumpFrom=problemlist">传送门</a></p>
+<ul>
+<li>
+<p>分18类讨论（？？？）<br>
+超·暴力<br>
+100pt</p>
+</li>
+<li>
+<p>一个大A分成3个小a</p>
+</li>
+<li>
+<p>100pt</p>
+</li>
+<li>
+<p>将展开图转化为三维魔方，记录每个立方体的六个面（没颜色为0），记录每个立方体在魔方中的位置，最后展开。</p>
+</li>
+<li>
+<p>100pt</p>
+</li>
+</ul>
+<h1 id="t2-苹果树">T2 苹果树</h1>
+<p><a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4623&amp;jumpFrom=problemlist">传送门</a></p>
+<p>树上差分。<br>
+新增加一条(x,y)的作用相当于原树上x到y的最短路径链。<br>
+枚举一条边<br>
+如果一条边的边权为0，即这条边没有任何新边可以替代，那么只要切掉这条边，剩余的m条边任意切都没事，因此方案数+m<br>
+如果一条边的边权为1，即有一条新边可以替代，那么把这条边和新边一起切掉就行，方案数+1<br>
+复杂度即为正常树上差分的复杂度。<br>
+主要是思维难度。。。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[网络流及其拓展]]></title>
         <id>https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</id>
