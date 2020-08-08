@@ -2,11 +2,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
-拓展欧几里得
+二分图
+网络流
+费用流
+网络流及其线性规划
+例题
 
 
-..." />
-    <meta name="keywords" content="算法" />
+二分图
+将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图
+如果一个图没有奇环，那么它就是二分图
+奇环：点数为奇数的环。
+二分图的子图也是个二..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
     
@@ -352,46 +360,86 @@
                 
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-06</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-08</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
-                
-                <a href="https://Lookcatbox.github.io/tag/Kj_5qXYja/" class="postlink">
-                    <i class="fa fa-tag"></i> 算法
-                </a>
                 
             </div>
         </div>
         
         <div id="texttitle" style="text-align: center">
-            <h2>数论</h2>
+            <h2>网络流及其拓展</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/shu-lun/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="数论">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="网络流及其拓展">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
             <ul>
-<li>拓展欧几里得<br>
-<img src="https://Lookcatbox.github.io/post-images/1596676248965.jpg" alt="" loading="lazy"></li>
+<li>二分图</li>
+<li>网络流</li>
+<li>费用流</li>
+<li>网络流及其线性规划</li>
+<li>例题</li>
+</ul>
+<ol>
+<li>二分图<br>
+将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图<br>
+如果一个图没有奇环，那么它就是二分图<br>
+奇环：点数为奇数的环。<br>
+二分图的子图也是个二分图<br>
+奇环无法把点集分为两个点集，使同一点集的点互不相连</li>
+</ol>
+<ul>
+<li>
+<p>二分图染色！<br>
+将图中的一个点随机赋予一个颜色，与它相邻的点染成第二种颜色，如果将整个图染色后没有出现矛盾，那么即为二分图。</p>
+</li>
+<li>
+<p>二分图匹配<br>
+给定边数<br>
+每个点最多连一条边<br>
+求连边的方法数</p>
+</li>
+<li>
+<p>匈牙利算法<br>
+用于计算二分图最大匹配<br>
+交错路<br>
+从一条边开始遍历<br>
+如果被连的边设为1，未连的边设为0<br>
+交错路即为1010101010<br>
+如果最后一个节点时未被匹配的节点，那么这是增广路<br>
+我们将其路径上的匹配边换为未匹配边，未匹配边换为匹配边<br>
+那么匹配边会增加一条，就找到了一种二分图匹配。<br>
+O（n^3)</p>
+</li>
+<li>
+<p>二分图最大权匹配<br>
+给每个边加一个权值，求二分图匹配的最大权值</p>
+</li>
+<li>
+<p>KM算法</p>
+</li>
+</ul>
+<p>步入正题</p>
+<ul>
+<li>网络流</li>
+<li>最大流EK算法</li>
+<li>dinic算法-层次网络<br>
+EK算法复杂度太大了，所以换一种算法、<br>
+循环增<br>
+当前弧优化</li>
 </ul>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/">
-                提高组夏令营DAY 4 题目讲评
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/">
-                基础数据结构选讲
+            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
+                提高组DAY5题目讲评
             </a>
         </div>
         
@@ -597,46 +645,86 @@
                 
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-06</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-08</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
-                
-                <a href="https://Lookcatbox.github.io/tag/Kj_5qXYja/" class="postlink">
-                    <i class="fa fa-tag"></i> 算法
-                </a>
                 
             </div>
         </div>
         
         <div id="texttitle" style="text-align: center">
-            <h2>数论</h2>
+            <h2>网络流及其拓展</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/shu-lun/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="数论">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="网络流及其拓展">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
             <ul>
-<li>拓展欧几里得<br>
-<img src="https://Lookcatbox.github.io/post-images/1596676248965.jpg" alt="" loading="lazy"></li>
+<li>二分图</li>
+<li>网络流</li>
+<li>费用流</li>
+<li>网络流及其线性规划</li>
+<li>例题</li>
+</ul>
+<ol>
+<li>二分图<br>
+将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图<br>
+如果一个图没有奇环，那么它就是二分图<br>
+奇环：点数为奇数的环。<br>
+二分图的子图也是个二分图<br>
+奇环无法把点集分为两个点集，使同一点集的点互不相连</li>
+</ol>
+<ul>
+<li>
+<p>二分图染色！<br>
+将图中的一个点随机赋予一个颜色，与它相邻的点染成第二种颜色，如果将整个图染色后没有出现矛盾，那么即为二分图。</p>
+</li>
+<li>
+<p>二分图匹配<br>
+给定边数<br>
+每个点最多连一条边<br>
+求连边的方法数</p>
+</li>
+<li>
+<p>匈牙利算法<br>
+用于计算二分图最大匹配<br>
+交错路<br>
+从一条边开始遍历<br>
+如果被连的边设为1，未连的边设为0<br>
+交错路即为1010101010<br>
+如果最后一个节点时未被匹配的节点，那么这是增广路<br>
+我们将其路径上的匹配边换为未匹配边，未匹配边换为匹配边<br>
+那么匹配边会增加一条，就找到了一种二分图匹配。<br>
+O（n^3)</p>
+</li>
+<li>
+<p>二分图最大权匹配<br>
+给每个边加一个权值，求二分图匹配的最大权值</p>
+</li>
+<li>
+<p>KM算法</p>
+</li>
+</ul>
+<p>步入正题</p>
+<ul>
+<li>网络流</li>
+<li>最大流EK算法</li>
+<li>dinic算法-层次网络<br>
+EK算法复杂度太大了，所以换一种算法、<br>
+循环增<br>
+当前弧优化</li>
 </ul>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/">
-                提高组夏令营DAY 4 题目讲评
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/">
-                基础数据结构选讲
+            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
+                提高组DAY5题目讲评
             </a>
         </div>
         

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-07T16:51:02.817Z</updated>
+    <updated>2020-08-08T01:01:34.391Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,6 +10,69 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[网络流及其拓展]]></title>
+        <id>https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</id>
+        <link href="https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/">
+        </link>
+        <updated>2020-08-08T00:01:57.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>二分图</li>
+<li>网络流</li>
+<li>费用流</li>
+<li>网络流及其线性规划</li>
+<li>例题</li>
+</ul>
+<ol>
+<li>二分图<br>
+将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图<br>
+如果一个图没有奇环，那么它就是二分图<br>
+奇环：点数为奇数的环。<br>
+二分图的子图也是个二分图<br>
+奇环无法把点集分为两个点集，使同一点集的点互不相连</li>
+</ol>
+<ul>
+<li>
+<p>二分图染色！<br>
+将图中的一个点随机赋予一个颜色，与它相邻的点染成第二种颜色，如果将整个图染色后没有出现矛盾，那么即为二分图。</p>
+</li>
+<li>
+<p>二分图匹配<br>
+给定边数<br>
+每个点最多连一条边<br>
+求连边的方法数</p>
+</li>
+<li>
+<p>匈牙利算法<br>
+用于计算二分图最大匹配<br>
+交错路<br>
+从一条边开始遍历<br>
+如果被连的边设为1，未连的边设为0<br>
+交错路即为1010101010<br>
+如果最后一个节点时未被匹配的节点，那么这是增广路<br>
+我们将其路径上的匹配边换为未匹配边，未匹配边换为匹配边<br>
+那么匹配边会增加一条，就找到了一种二分图匹配。<br>
+O（n^3)</p>
+</li>
+<li>
+<p>二分图最大权匹配<br>
+给每个边加一个权值，求二分图匹配的最大权值</p>
+</li>
+<li>
+<p>KM算法</p>
+</li>
+</ul>
+<p>步入正题</p>
+<ul>
+<li>网络流</li>
+<li>最大流EK算法</li>
+<li>dinic算法-层次网络<br>
+EK算法复杂度太大了，所以换一种算法、<br>
+循环增<br>
+当前弧优化</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[提高组DAY5题目讲评]]></title>
         <id>https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/</id>
