@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Lookcatbox.github.io</id>
+    <id>https://havemuchfun.top</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-08T10:39:16.662Z</updated>
+    <updated>2020-08-12T11:55:46.930Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Lookcatbox.github.io"/>
-    <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
+    <link rel="alternate" href="https://havemuchfun.top"/>
+    <link rel="self" href="https://havemuchfun.top/atom.xml"/>
     <subtitle>HMF | Every day have much fun</subtitle>
-    <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
-    <icon>https://Lookcatbox.github.io/favicon.ico</icon>
+    <logo>https://havemuchfun.top/images/avatar.png</logo>
+    <icon>https://havemuchfun.top/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
     <entry>
-        <title type="html"><![CDATA[提高组DAY5讲评]]></title>
-        <id>https://Lookcatbox.github.io/post/ti-gao-zu-day5-jiang-ping/</id>
-        <link href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-jiang-ping/">
+        <title type="html"><![CDATA[博弈论]]></title>
+        <id>https://havemuchfun.top/post/bo-yi-lun/</id>
+        <link href="https://havemuchfun.top/post/bo-yi-lun/">
+        </link>
+        <updated>2020-08-10T00:16:52.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>Dynamic Subtraction
+
+ ~~迷茫~~
+ 当n=2^k时，后手必胜
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[提高组DAY6讲评]]></title>
+        <id>https://havemuchfun.top/post/ti-gao-zu-day5-jiang-ping/</id>
+        <link href="https://havemuchfun.top/post/ti-gao-zu-day5-jiang-ping/">
         </link>
         <updated>2020-08-08T09:17:48.000Z</updated>
         <content type="html"><![CDATA[<h1 id="t1-魔方">T1 魔方</h1>
@@ -50,8 +63,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[网络流及其拓展]]></title>
-        <id>https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</id>
-        <link href="https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/">
+        <id>https://havemuchfun.top/post/wang-luo-liu-ji-qi-tuo-zhan/</id>
+        <link href="https://havemuchfun.top/post/wang-luo-liu-ji-qi-tuo-zhan/">
         </link>
         <updated>2020-08-08T00:01:57.000Z</updated>
         <content type="html"><![CDATA[<ul>
@@ -137,8 +150,8 @@ EK算法复杂度太大了，所以换一种算法、<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[提高组DAY5题目讲评]]></title>
-        <id>https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/</id>
-        <link href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
+        <id>https://havemuchfun.top/post/ti-gao-zu-day5-ti-mu-jiang-ping/</id>
+        <link href="https://havemuchfun.top/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
         </link>
         <updated>2020-08-07T09:14:59.000Z</updated>
         <content type="html"><![CDATA[<p>难易度T3&gt;T2&gt;T1<br>
@@ -193,8 +206,8 @@ O(m+nlogn+q)<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[图的进阶]]></title>
-        <id>https://Lookcatbox.github.io/post/tu-de-jin-jie/</id>
-        <link href="https://Lookcatbox.github.io/post/tu-de-jin-jie/">
+        <id>https://havemuchfun.top/post/tu-de-jin-jie/</id>
+        <link href="https://havemuchfun.top/post/tu-de-jin-jie/">
         </link>
         <updated>2020-08-07T00:05:22.000Z</updated>
         <content type="html"><![CDATA[<p>写在前面：<br>
@@ -396,14 +409,14 @@ Naive 在SPFA中，如果一个点入队超过N次，那么一定会有负环</l
     </entry>
     <entry>
         <title type="html"><![CDATA[自动播放网 抑 云音乐与bilibili视频方法]]></title>
-        <id>https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/</id>
-        <link href="https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/">
+        <id>https://havemuchfun.top/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/</id>
+        <link href="https://havemuchfun.top/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/">
         </link>
         <updated>2020-08-06T12:10:38.000Z</updated>
         <content type="html"><![CDATA[<p>** 网易云：**<br>
 实例</p>
 <iframe  class="music" frameborder="no" src="https://music.163.com/outchain/player?type=1&id=89680147&auto=0&height=90"></iframe>
-<p><img src="https://Lookcatbox.github.io/post-images/123.png" alt="代码" loading="lazy"><br>
+<p><img src="https://havemuchfun.top/post-images/123.png" alt="代码" loading="lazy"><br>
 直接复制放进文章内就行，通过修改src的值来更换音乐(去掉斜杆，将&lt;iframe  和 class两行合并,在最后加上即可，记得留空格)</p>
 <p>其中auto=0代表不会自动播放,auto=1代表自动播放。</p>
 <p>其他值请不要修改。</p>
@@ -417,8 +430,8 @@ Naive 在SPFA中，如果一个点入队超过N次，那么一定会有负环</l
     </entry>
     <entry>
         <title type="html"><![CDATA[提高组夏令营DAY 4 题目讲评]]></title>
-        <id>https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/</id>
-        <link href="https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/">
+        <id>https://havemuchfun.top/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/</id>
+        <link href="https://havemuchfun.top/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/">
         </link>
         <updated>2020-08-06T09:14:40.000Z</updated>
         <content type="html"><![CDATA[<h1 id="t1">T1</h1>
@@ -440,20 +453,20 @@ val=N(max(l,r)-min(l,r)+l-r)
     </entry>
     <entry>
         <title type="html"><![CDATA[数论]]></title>
-        <id>https://Lookcatbox.github.io/post/shu-lun/</id>
-        <link href="https://Lookcatbox.github.io/post/shu-lun/">
+        <id>https://havemuchfun.top/post/shu-lun/</id>
+        <link href="https://havemuchfun.top/post/shu-lun/">
         </link>
         <updated>2020-08-06T00:42:58.000Z</updated>
         <content type="html"><![CDATA[<ul>
 <li>拓展欧几里得<br>
-<img src="https://Lookcatbox.github.io/post-images/1596676248965.jpg" alt="" loading="lazy"></li>
+<img src="https://havemuchfun.top/post-images/1596676248965.jpg" alt="" loading="lazy"></li>
 </ul>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[基础数据结构选讲]]></title>
-        <id>https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/</id>
-        <link href="https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/">
+        <id>https://havemuchfun.top/post/ji-chu-shu-ju-jie-gou-xuan-jiang/</id>
+        <link href="https://havemuchfun.top/post/ji-chu-shu-ju-jie-gou-xuan-jiang/">
         </link>
         <updated>2020-08-05T23:56:03.000Z</updated>
         <summary type="html"><![CDATA[<ul>
@@ -488,8 +501,8 @@ val=N(max(l,r)-min(l,r)+l-r)
     </entry>
     <entry>
         <title type="html"><![CDATA[Room游戏更新]]></title>
-        <id>https://Lookcatbox.github.io/post/room-you-xi-geng-xin/</id>
-        <link href="https://Lookcatbox.github.io/post/room-you-xi-geng-xin/">
+        <id>https://havemuchfun.top/post/room-you-xi-geng-xin/</id>
+        <link href="https://havemuchfun.top/post/room-you-xi-geng-xin/">
         </link>
         <updated>2020-08-05T12:18:38.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://api.ixiaowai.cn/api/api.php" alt="" loading="lazy"><br>

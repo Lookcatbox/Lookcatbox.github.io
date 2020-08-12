@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/live2d.css">
-    <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
+    <link rel="stylesheet" href="https://havemuchfun.top/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://havemuchfun.top/media/css/live2d.css">
+    <link rel="stylesheet" href="https://havemuchfun.top/styles/main.css">
     <meta name="description" content="HMF | Every day have much fun" />
     <title>HMF-have much fun Site</title>
 </head>
@@ -32,7 +32,7 @@
             <div class="row">
                 <div class="side"><head>
     <meta name="description" content="HMF | Every day have much fun" />
-    <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://havemuchfun.top/media/css/bootstrap.min.css">
 </head>
 
 
@@ -40,7 +40,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://Lookcatbox.github.io/images/avatar.png?v=1596880678269" class="avatar">
+            <img src="https://havemuchfun.top/images/avatar.png?v=1597233338732" class="avatar">
         </div>
         <div class="sitename">HMF-have much fun Site</div>
         <span class="describtion" data-text='["HMF | Every day have much fun"]'>&nbsp;</span>
@@ -55,10 +55,10 @@
         <span>社交按钮</span>
         
         <a href="https://github.com/Lookcatbox" target="_blank"><i><img class="icon"
-                    src="https://Lookcatbox.github.io/media/images/github.png" alt=""></i></a>
+                    src="https://havemuchfun.top/media/images/github.png" alt=""></i></a>
         
         
-        <a onclick="showqq()"><i><img class="icon" src="https://Lookcatbox.github.io/media/images/QQ.png" alt=""></i></a>
+        <a onclick="showqq()"><i><img class="icon" src="https://havemuchfun.top/media/images/QQ.png" alt=""></i></a>
         
         
         
@@ -122,7 +122,7 @@
     </div>
 
 
-<script src="https://Lookcatbox.github.io/media/js/wordshow.js"></script>
+<script src="https://havemuchfun.top/media/js/wordshow.js"></script>
     
     <script>
         //----------------------站点运行时间
@@ -305,30 +305,66 @@
                     <div name="comment" style="background: white">
                         <div class="commentcontainer">
                             
-                            
-                            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                            <head>
+    <script src='https://havemuchfun.top/media/js/valine.min.js'></script>
+    <script src="https://havemuchfun.top/media/js/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+</head>
+<style>
+    @media screen and (min-width: 1300px) {
+        .v .vbtn .vsubmit {
+            border-radius: 0;
+            padding: 0;
+            color: #fff;
+            line-height: 44px;
+            width: 100%;
+            border: none;
+            background: #595485;
+        }
 
-<div id="gitalk-container"></div>
+        .v .vwrap .vedit .vctrl span.vpreview-btn,
+        .v .vwrap .vcontrol .col.col-20,
+        .v .vlist .vcard .vhead .vsys {
+            display: none;
+        }
 
-<script>
+        .v .vwrap .vmark .valert {
+            padding-top: 0px;
+        }
 
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: 'Lookcatbox.github.io',
-    owner: 'Lookcatbox',
-    admin: ['Lookcatbox'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+        .vtext {
+            padding: 0;
+        }
+    }
+</style>
 
-  gitalk.render('gitalk-container')
+<body>
+    <div id="vcomments">
+    </div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: '22026789@qq.com',
+            appKey: 'lu363663',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '既然来了，何不畅所欲言呢？',
+            visitor: true // 阅读量统计
+        })
+    </script>
+</body>
 
+
+<script type="text/javascript">
+    jinrishici.load(function (result) {
+        var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+            .dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+    });
 </script>
-
-                            
-                            
+                            <div class="clear"></div>
                             
                         </div>
                     </div>
@@ -348,7 +384,7 @@
     <div class="nav-small">
         <head>
   <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://havemuchfun.top/media/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -363,7 +399,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://Lookcatbox.github.io">HMF-have much fun Site&nbsp;&nbsp;|</a>
+        <a class="navbar-brand" href="https://havemuchfun.top">HMF-have much fun Site&nbsp;&nbsp;|</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -454,30 +490,167 @@
         <div name="comment" style="background: white">
             <div class="commentcontainer">
                 
-                
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                <head>
+    <script src='https://havemuchfun.top/media/js/valine.min.js'></script>
+    <script src="https://havemuchfun.top/media/js/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+</head>
+<style>
+    @media screen and (min-width: 1300px) {
+        .v {
+            margin-top: 10%;
+        }
 
-<div id="gitalk-container"></div>
+        .v .vwrap {
+            overflow: hidden;
+        }
 
-<script>
+        .v .vwrap {
+            padding: 0 0 44px;
+        }
 
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: 'Lookcatbox.github.io',
-    owner: 'Lookcatbox',
-    admin: ['Lookcatbox'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+        .v .veditor {
+            resize: none;
+        }
 
-  gitalk.render('gitalk-container')
+        .veditor::placeholder {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-align: center;
+            line-height: 3rem;
+            font-family: kaiti;
+        }
 
+        .v .vwrap .vedit {
+            padding-top: 0
+        }
+
+        .v .vwrap .vheader {
+            width: 80%;
+            bottom: 0;
+            position: absolute;
+            background: #f7f7f7;
+        }
+
+        .v .vinput {
+            padding: 10px 15px;
+        }
+
+        .v .vwrap .vheader .vinput {
+            border-bottom: 0px
+        }
+
+        .v .vwrap .vedit .vctrl {
+            margin-top: -44px;
+            right: 0;
+            position: absolute;
+            margin-right: -3px;
+        }
+
+        .v .vwrap .vcontrol {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 20%;
+            padding-top: 0px;
+        }
+    }
+
+    .v .vwrap .vcontrol .col.col-80 {
+        width: 100%;
+    }
+
+    .v .vbtn.vsubmit {
+        border-radius: 0;
+        padding: 0;
+        color: #fff;
+        line-height: 44px;
+        width: 100%;
+        border: none;
+        background: #595485;
+    }
+
+    .v .vwrap .vedit .vctrl span.vpreview-btn,
+    .v .vwrap .vcontrol .col.col-20,
+    .v .vlist .vcard .vhead .vsys {
+        display: none;
+    }
+
+    .v .vwrap .vmark .valert {
+        padding-top: 0px;
+    }
+
+    .vtext {
+        padding: 0;
+    }
+
+    @media screen and (max-width: 1300px) {
+        .v .vwrap .vmark .valert {
+            margin-top: 60%;
+        }
+
+        .vwrap {
+            margin: 15px;
+            width: 100%;
+        }
+
+        .v .vwrap .vheader .vinput {
+            padding: 10px 5px;
+        }
+
+        .v .vwrap {
+            overflow: auto;
+        }
+
+        .v .veditor {
+            min-height: 30rem;
+            resize: none;
+        }
+
+        .v .vinput {
+            padding: 10px 15px;
+            font-size: 20px;
+        }
+
+        .v .vwrap .vedit .vctrl {
+            right: 0;
+        }
+
+        .v .vempty {
+            padding: 1.25em;
+            text-align: center;
+            color: #999;
+            font-size: 25px;
+        }
+
+    }
+</style>
+
+<body>
+    <div id="vcomments1"></div>
+    <script>
+        new Valine({
+            el: '#vcomments1',
+            appId: '22026789@qq.com',
+            appKey: 'lu363663',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '既然来了，那就留个痕迹吧~',
+            visitor: true // 阅读量统计
+        })
+    </script>
+</body>
+
+<script type="text/javascript">
+    jinrishici.load(function (result) {
+        var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+            .dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+    });
 </script>
-
-                
-                
+                <div class="clear"></div>
                 
             </div>
         </div>
@@ -486,7 +659,7 @@
         <div class="message" style="opacity:0"></div>
         <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
     </div>
-    <div id="domainname" style="display:none">https://Lookcatbox.github.io</div>
+    <div id="domainname" style="display:none">https://havemuchfun.top</div>
 </body>
 
 </html>
@@ -495,10 +668,10 @@
     var message_Path = '/live2d/'
     var home_Path = document.getElementById("domainname").innerHTML+"/"; //此处修改为你的域名，必须带斜杠
 </script>
-<script type="text/javascript" src="https://Lookcatbox.github.io/media/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="https://Lookcatbox.github.io/media/live2d/js/message.js"></script>
+<script type="text/javascript" src="https://havemuchfun.top/media/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="https://havemuchfun.top/media/live2d/js/message.js"></script>
 <script type="text/javascript">
-    loadlive2d("live2d", "https://Lookcatbox.github.io/media/live2d/assets/tororo.model.json");
+    loadlive2d("live2d", "https://havemuchfun.top/media/live2d/assets/tororo.model.json");
 </script>
 
 
@@ -512,4 +685,4 @@
         bg.css("background", "url('" + bgurl + "')");
 </script>
 
-    <script src="https://Lookcatbox.github.io/media/js/index.js"></script>
+    <script src="https://havemuchfun.top/media/js/index.js"></script>
