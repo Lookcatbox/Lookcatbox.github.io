@@ -2,14 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-08-12T12:59:19.714Z</updated>
+    <updated>2020-09-06T06:06:23.416Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
-    <subtitle>HMF | Every day have much fun</subtitle>
+    <subtitle>&lt;a href=&quot;https://github.com/Lookcatbox&quot; target=&quot;_blank&quot;&gt;HMF&lt;/a&gt; | Every day have much fun </subtitle>
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[斐波那契堆学习笔记]]></title>
+        <id>https://Lookcatbox.github.io/post/fei-bo-na-qi-dui-xue-xi-bi-ji/</id>
+        <link href="https://Lookcatbox.github.io/post/fei-bo-na-qi-dui-xue-xi-bi-ji/">
+        </link>
+        <updated>2020-08-23T06:39:01.000Z</updated>
+        <content type="html"><![CDATA[<p>斐波那契堆是一种可合并堆，拥有优秀的摊还时间复杂度，最优秀的是其堆合并的时间复杂度仅为O(1)，其余所有操作的摊还时间复杂度都优于正常的朴素堆。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[博弈论]]></title>
         <id>https://Lookcatbox.github.io/post/bo-yi-lun/</id>
@@ -97,6 +106,9 @@
 <li>
 <p>匈牙利算法<br>
 用于计算二分图最大匹配<br>
+枚举两个集合<br>
+找到不同集合的两个未匹配的点并连边<br>
+如果<br>
 交错路<br>
 从一条边开始遍历<br>
 如果被连的边设为1，未连的边设为0<br>
@@ -130,7 +142,8 @@ EK算法复杂度太大了，所以换一种算法、<br>
 </li>
 <li>
 <p>费用流（最大流量最小费用）<br>
-先满足最大流然后满足最小费用</p>
+先满足最大流然后满足最小费用<br>
+就是在正常网络流的</p>
 </li>
 <li>
 <p>zkw费用流<br>
@@ -497,102 +510,6 @@ val=N(max(l,r)-min(l,r)+l-r)
 </li>
 </ul>
 <!-- more -->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Room游戏更新]]></title>
-        <id>https://Lookcatbox.github.io/post/room-you-xi-geng-xin/</id>
-        <link href="https://Lookcatbox.github.io/post/room-you-xi-geng-xin/">
-        </link>
-        <updated>2020-08-05T12:18:38.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://api.ixiaowai.cn/api/api.php" alt="" loading="lazy"><br>
-一款闯关类的射击游戏</p>
-<p>主要是<s>抄袭</s>借鉴了Issac</p>
-<p>英文界面（作者就是这么皮<s>你管我</s>）</p>
-<p>注：1.2.3可以下了</p>
-<p>咕咕咕咕咕咕咕咕咕咕咕咕咕</p>
-<h2 id="由于用room参加了一个程序设计比赛放出了200比赛版">由于用Room参加了一个程序设计比赛，放出了2.0.0比赛版</h2>
-<h1 id="作者加入fff团了">作者加入FFF团了！</h1>
-<h2 id="130准备中由于备战csp提高组所以更新会慢一点">1.3.0准备中（由于备战CSP提高组所以更新会慢一点）</h2>
-<h2 id="提高组二等奖">提高组二等奖</h2>
-<h2 id="-官方团队-"><a href="https://www.luogu.org/team/show?teamid=20044">-&gt;官方团队&lt;-</a></h2>
-<h2 id="白嫖不给赞是很不道德的">白嫖不给赞是很不道德的</h2>
-<h3 id="125版本链接修复完成可以正常下载-之前好像挂了久远的003">1.2.5版本链接修复完成，可以正常下载。（之前好像挂了久远的0.0.3）</h3>
-<h3 id="130更新了这可能是csp-s第二轮认证之前的最后一次更新了抱歉咕了那么久">1.3.0更新了，这可能是CSP-S第二轮认证之前的最后一次更新了（抱歉咕了那么久）</h3>
-<h3 id="rt"><a href="https://pan.baidu.com/s/14-N_dblDGi3j_TTdhJVASg">RT</a> 提取码: gqpc  作者自己做的OIer输入法皮肤，可以下载看看</h3>
-<figure data-type="image" tabindex="1"><img src="https://cdn.luogu.com.cn/upload/image_hosting/6dingcre.png" alt="" loading="lazy"></figure>
-<h1 id="最新版链接200比赛版rt-提取码-wkjf">最新版链接（2.0.0比赛版）：<a href="https://pan.baidu.com/s/1o0Ic2smAqB3fz7nev0YR_Q">RT</a>  提取码: wkjf</h1>
-<p>历史版本：</p>
-<p><a href="https://pan.baidu.com/s/1ccrh_fvWWTx17zP3yeEhhQ">1.0.0</a><br>
-win64<br>
-（作为第一个版本，只有一把武器，一种敌对生物和两张地图）<br>
-提取码：nvqt</p>
-<p><a href="https://pan.baidu.com/s/1HU7G64XjzZPkZuipm_YvNw">1.0.1</a> win64 提取码: s96j<br>
-（1.0.0的修补版，进行了一些优化，使游戏运行地更快了）</p>
-<p><a href="https://pan.baidu.com/s/17GPs97USJmYmVGPd-MgLmg">1.0.3</a>  提取码: h3ia  （新增一张地图和一种敌对生物，并修改了地图2）</p>
-<p><a href="https://pan.baidu.com/s/1kOF4f3P5YDJRQ0ERf2uBkw">1.0.4</a>  提取码: 5ji4<br>
-(进行了图像优化，更新了武器模块，添加了换弹操作)</p>
-<p><a href="https://pan.baidu.com/s/1yo6H0x4-zkY6ha1BOHqf6Q">1.1.0</a>  提取码: 5bnk<br>
-(更新了膜拜神像模块，新增神像lin_toto，优化了图像显示)</p>
-<p><a href="https://pan.baidu.com/s/169jw0nJVMzmO4jIUchR_Ow">1.1.2</a> 提取码: 6taw  （新增3张地图四种生物，修改了换弹的BUG，优化了状态显示）</p>
-<p><a href="https://pan.baidu.com/s/1hfx76Qlzf1lhY4ajnSztyg">1.1.3</a>   提取码: tq7y  （增加了奖励箱 <strong>通关一个房间后有几率获得</strong> ， 新增武器Aurora <s>光明正大抄袭Alive</s>）</p>
-<p><a href="https://pan.baidu.com/s/1hVI881AYY3Te-wnzAmOS6Q">1.1.4</a>  提取码:6v7h  （你们要的商店终于来啦！以及修复了一些显示BUG，更改了算法，运行地更快了）</p>
-<p><a href="https://pan.baidu.com/s/1yivoFBYk9gf71FkLdgiU9w">1.2.0</a>  提取码: asdp  （修复了商店的BUG，更新了一张新的地图，以及第一种远程敌对生物！远程敌对生物特点：躲避玩家，发射子弹）</p>
-<p><a href="https://pan.baidu.com/s/1mUHIMkANtPpQ23YPUMzv6g">1.2.1</a>  提取码: mvhw （修复了一大堆商店的BUG）</p>
-<p><a href="https://pan.baidu.com/s/10u_a_JwhBBra_RPb52805w">1.2.2</a>  提取码: 65uq  （新增断点存储！在主界面点击[continue]来继续你上一盘的游戏！）</p>
-<p><a href="https://pan.baidu.com/s/1lXccqQm7BgMP3Kn_oGdDbA">1.2.3</a>   提取码: wyvt （新增BOSS：泣魔 技能：恶魔尖啸 向四周持续发射30颗子弹，间隔0.1秒）</p>
-<p><a href="https://pan.baidu.com/s/1WSkaXji4DaqkkyuaNxSR8g">1.2.4</a>   提取码: wx42  （新增巢穴型生物：不会移动，可以产生别的生物）</p>
-<p><a href="https://pan.baidu.com/s/1ZCVKRi5Xdkgs8igQxpplCA">1.2.5</a>  提取码: k9gr （新增老板键M，P暂停，O继续，M键最小化后自动暂停。新增空房间，让你不会马上死亡）</p>
-<p><a href="https://pan.baidu.com/s/1kgmcdT4onzle5uAQFN1tBg">1.3.0</a>  提取码: papi （新增竖排状态栏，新增房间编号显示，新增技能房与技能：嗜血，新增商店武器MP5，优化图像颜色显示，修复了无限刷神像增益的BUG）</p>
-<p><a href="https://pan.baidu.com/s/1ZMXmrDXu2pBqjcrIFZfBtQ">1.3.1</a>  提取码: j1kr （小更新，增加了鼠标操作射击系统 左键射击）</p>
-<p><a href="https://pan.baidu.com/s/1o0Ic2smAqB3fz7nev0YR_Q">2.0.0比赛版</a>  提取码: wkjf （大更新，更新了许多内容，由于是比赛版就不详解了，等正式版出来再详解）</p>
-<hr>
-<h1 id="提示">提示：</h1>
-<p>运用安装包下载之后打开文件夹中的 Loading first.exe 程序来载入地图等操作</p>
-<p>注：安装后将不要重复运行此程序，会导致覆盖存档。</p>
-<p>新版通关后会出现传送门，进入传送门来进行下一关</p>
-<p>R键换弹（how to play里忘记写了）</p>
-<p>第一次注册后会动不了，重启就行了</p>
-<p>关于开源，加入开发组吧（私信我）</p>
-<p>下载本游戏的大佬请点个赞，让我知道你们来过这里</p>
-<p>由于作者开学了，游戏更新会放缓，@我也有可能会很久才回复，请多多谅解。</p>
-<p><s>写这个好累啊</s></p>
-<figure data-type="image" tabindex="2"><img src="https://cdn.luogu.com.cn/upload/pic/74847.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://cdn.luogu.com.cn/upload/pic/74848.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://cdn.luogu.com.cn/upload/pic/74849.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="5"><img src="https://cdn.luogu.com.cn/upload/pic/74899.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://cdn.luogu.com.cn/upload/pic/75448.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="7"><img src="https://cdn.luogu.com.cn/upload/image_hosting/qp5icl2l.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="8"><img src="https://cdn.luogu.com.cn/upload/image_hosting/ahi75r5n.png" alt="" loading="lazy"></figure>
-<hr>
-<p>BOSS背景介绍：</p>
-<ul>
-<li>泣魔：作为地牢里的诸多古老生物之一，泣魔拥有强大的实力。然而治愈之神的神誓者总是可以迅速恢复所受的伤势。</li>
-</ul>
-<hr>
-<p>回答@dfydada⚡⚡⚡ 的疑问</p>
-<ol>
-<li>
-<p>被怪物攻击之后无法移动：怪物是实体，在你旁边时是无法移动的，当然还是可以走出去的，按着方向键（信仰圣光）</p>
-</li>
-<li>
-<p>换弹时可以攻击：emmm，没注意到，会去修改的</p>
-</li>
-<li>
-<p>回血好快：神像是很强的（orz），但有时候回血会有BUG（特快），就当是外挂好了</p>
-</li>
-<li>
-<p>把敌人杀了，自己会不显示： enmm，蒟蒻作者在游戏过程中并没有发现这个BUG，或许是图像被覆盖了？动一动就好了。</p>
-</li>
-<li>
-<p>膜拜系统没体验到？<s>那是你太非了</s> 我会提供大概率获得奖励（膜拜与战后补给箱）的版本，敬请期待。</p>
-</li>
-<li>
-<p>你是怎么在游戏过程中购买血量上限增加的？血量上限加成只适用于下一局游戏，连续购买多次只会有一次的效果，可以等这局游戏打完效果清空后再次购买。</p>
-</li>
-</ol>
-<p>特别感谢 @四向搜 大佬前来围观 （orz）</p>
-<p>有什么疑问请@我的小号<a href="https://www.luogu.org/space/show?uid=149501">lcb的小号</a></p>
 ]]></content>
     </entry>
 </feed>
