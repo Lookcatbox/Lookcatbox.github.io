@@ -1534,3 +1534,32 @@ body {
     display: none;
   }
 }
+
+      .posttitlewithoutimg {
+        color: #66d9e8;
+      }
+    
+      .sitename {
+        color: #3bc9db;
+      }
+    
+        .describtion {
+          color: #364fc7;
+        }
+      
+        .menubutton {
+          color: #f03e3e;
+        }
+      
+        .posttitle {
+          color: #99e9f2;
+        }
+      
+        #sitegotimeDate,#sitegotimes,#footinfo,#footinfo a{
+          color: #228be6;
+        }
+      
+        .mobiledescribtion{
+          color: #228be6;
+        }
+      
