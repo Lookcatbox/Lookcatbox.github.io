@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-10-29T14:31:47.884Z</updated>
+    <updated>2020-10-29T14:45:54.596Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[需要复习的算法]]></title>
+        <id>https://Lookcatbox.github.io/post/xu-yao-fu-xi-de-suan-fa/</id>
+        <link href="https://Lookcatbox.github.io/post/xu-yao-fu-xi-de-suan-fa/">
+        </link>
+        <updated>2020-10-29T14:39:40.000Z</updated>
+        <content type="html"><![CDATA[<p>1.字符串各类算法</p>
+<p>2.数论算法（高斯消元，矩阵算法等）</p>
+<p>3.网络流（HHLP）</p>
+<p>4.Treap<br>
+（FHQ Treap复习完成）<br>
+新增错误记忆：</p>
+<pre><code>void pop(int a){
+        split(rt,a,x,z);
+        split(x,a-1,x,y);//这里是将x划分
+        y=merge(son[y][0],son[y][1]);
+        rt=merge(merge(x,y),z);
+    }
+</code></pre>
+<p>5.树链剖分</p>
+<p>6.DP，特别是数位，然后状压复习一下</p>
+<p>7.点分治</p>
+<p>8.oiwiki</p>
+<p>9新增：可持久化线段树、平衡树</p>
+<p>10.计算几何</p>
+<p>简单复习：manacher，回文数，欧拉筛，KMP，莫队</p>
+<p>11.树套树</p>
+<p>12.AC自动机</p>
+<ol start="13">
+<li></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[斐波那契堆学习笔记]]></title>
         <id>https://Lookcatbox.github.io/post/fei-bo-na-qi-dui-xue-xi-bi-ji/</id>
@@ -474,42 +507,6 @@ val=N(max(l,r)-min(l,r)+l-r)
 <li>拓展欧几里得<br>
 <img src="https://Lookcatbox.github.io/post-images/1596676248965.jpg" alt="" loading="lazy"></li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[基础数据结构选讲]]></title>
-        <id>https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/</id>
-        <link href="https://Lookcatbox.github.io/post/ji-chu-shu-ju-jie-gou-xuan-jiang/">
-        </link>
-        <updated>2020-08-05T23:56:03.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>单调栈与单调队列 略</li>
-<li>线段树与树状数组
-<ul>
-<li>标记永久化<br>
-所有加到一个点父节点上的值都应该加到这个点上。<br>
-因此，简而言之<br>
-当一个节点被包含在加法区间里时，将该点打上永久标记。<br>
-当查询这个节点时，自然的，如果这个节点被加上了，那么它的所有父节点也都加过了，所以           在回溯的过程将该节点的永久标记向上回溯，让该节点的祖先节点加上。</li>
-<li>👌</li>
-</ul>
-</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<ul>
-<li>单调栈与单调队列 略</li>
-<li>线段树与树状数组
-<ul>
-<li>标记永久化<br>
-所有加到一个点父节点上的值都应该加到这个点上。<br>
-因此，简而言之<br>
-当一个节点被包含在加法区间里时，将该点打上永久标记。<br>
-当查询这个节点时，自然的，如果这个节点被加上了，那么它的所有父节点也都加过了，所以           在回溯的过程将该节点的永久标记向上回溯，让该节点的祖先节点加上。</li>
-<li>👌</li>
-</ul>
-</li>
-</ul>
-<!-- more -->
 ]]></content>
     </entry>
 </feed>
