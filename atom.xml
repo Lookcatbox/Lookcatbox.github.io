@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-11-02T13:36:52.993Z</updated>
+    <updated>2020-11-02T13:41:52.127Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -49,9 +49,8 @@
 <p>简单复习：manacher，回文数，欧拉筛，KMP，莫队</p>
 <p>11.树套树</p>
 <p>12.AC自动机</p>
-<ol start="13">
-<li></li>
-</ol>
+<p>13.线段树优化</p>
+<p>14.博弈论</p>
 ]]></content>
     </entry>
     <entry>
