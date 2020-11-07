@@ -1,13 +1,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="难易度T3&gt;T2&gt;T1
-T3 传送门
-设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个
-其中第一种包为（平，仄），第二种包为（平平，仄仄）
-T2传送门
-设f(i,S,h..." />
-    <meta name="keywords" content="题解,2020福建师大附中夏令营" />
+    <meta name="description" content="这是篇久远的文章，本来发在CSDN上的，搬过来顺便修正了一下
+string类是个用于字符串处理的好东西，用完以后再也不想用char类了
+其中有很多实用的函数，初赛时也会考到。
+string类的头文件
+&lt;string.h&gt;
+&lt..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
     
@@ -320,97 +320,193 @@ T2传送门
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://Lookcatbox.github.io/post-images/ti-gao-zu-day5-ti-mu-jiang-ping.png" class="postimage" style="cursor:auto">
+                
+                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
-                <div class="posttag">
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gX-ZpYhUx/" class="postlink">
-                        <i class="fa fa-tag"></i> 题解
-                    </a>
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gdJHkK9Gm/" class="postlink">
-                        <i class="fa fa-tag"></i> 2020福建师大附中夏令营
-                    </a>
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-11-07</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 11 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>提高组DAY5题目讲评</h2>
+            <h2>String类深入讲解</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/string-lei-shen-ru-jiang-jie/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="提高组DAY5题目讲评">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="String类深入讲解">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <p>难易度T3&gt;T2&gt;T1<br>
-T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
-设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
-其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
-<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
-设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
-复杂度为n* 2^t  * O (25pt)</p>
-<p>发现前两维可以决定第三维，所以变成两维<br>
-复杂度为n * 2^t</p>
-<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
-其中关键点i到关键点j的路径为原图中i到j的最短路<br>
-然后做类似25pt的状压DP(100pt)</p>
-<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
-暴力<br>
-10pt<br>
-分类讨论</p>
-<ul>
-<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
-<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
-<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
-<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
-30pt<br>
-会超时，但因一开始的题目时间限制错误可以拿100pt</li>
+            <p>这是篇久远的文章，本来发在CSDN上的，搬过来顺便修正了一下<br>
+string类是个用于字符串处理的好东西，<s>用完以后再也不想用char类了</s><br>
+其中有很多实用的函数，初赛时也会考到。<br>
+string类的头文件<br>
+&lt;string.h&gt;<br>
+&lt; c string&gt;<br>
+声明一个string类：</p>
+<pre><code>string str;
+</code></pre>
+<p>下面来看一下它的应用。<br>
+<strong>一。运算</strong><br>
+string类支持一下几种运算：</p>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1341804"><label class="task-list-item-label" for="task-item-1341804"> 四则运算</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2197089"><label class="task-list-item-label" for="task-item-2197089"> 直接比较</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4871745"><label class="task-list-item-label" for="task-item-4871745"> 插入字符</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8635265"> 利用前一个字符串的一部分创建新字符串。<br>
+......<br>
+首先第一个，运算。<br>
+<label class="task-list-item-label" for="task-item-8635265"> 利用前一个字符串的一部分创建新字符串。
+......
+首先第一个，运算。
+我们来看一下代码：</label></p>
+</li>
 </ul>
-<p>考虑第二种情况<br>
-共有两种可能：</p>
-<ol>
-<li>改后的最短路比原最短路大：选原最短路</li>
-<li>改后的最短路比原最短路小<br>
-第一种情况直接输出原最短路即可，这里考虑第二种情况<br>
-如果改后的最短路比原最短路小，那么相当于把改前的那条边删掉，在原最短路外另找一条最短路径<br>
-找出新最短路径与原最短路径前一段重合的最后一个点，设为l<br>
-找出新最短路径与原最短路径后一段重合的最前一个点，设为r<br>
-1-&gt;l和r-&gt;n都是已知的（因为在原最短路上），其中枚举原最短路外的一条边将被删的边替换掉，算出点1，n到该边的两个端点的最短路，更新该边在最短路上对应的区间(l,r)<br>
-具体操作参考分类讨论中的第四种情况，即枚举被修改的边<br>
-O(m*最短路长度) 注：在随机生成的数据中，最短路的期望长度为logn<br>
-40pt</li>
-</ol>
-<p>线段树优化维护<br>
-枚举一条边，更新该边在最短路上对应的区间<br>
-发现之前的操作可以表示为C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
-这是个区间操作，可以用线段树维护<br>
-O(mlogn+nlogn+qlogn) 注：mlogn为最短路复杂度，nlogn为线段树初始化复杂度，qlogn为查询复杂度<br>
-优化：预处理好线段树，将所有懒标记预先下传到叶节点，查询时复杂度变为O(1)<br>
-O(mlogn+nlogn+q)<br>
-再优化：将最短路用斐波那契堆优化，最短路变为m复杂度 <s>优化狂魔</s><br>
-O(m+nlogn+q)<br>
-100pt（优化到线段树就可以了）</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/">
-                网络流及其拓展
-            </a>
+int main()
+{
+    string str1=&quot;a&quot;;//定义一个string字符串str1 为 ‘ a’
+    string str2=&quot;b&quot;;
+    
+    cout&lt;&lt;a+b;
+    return 0;
+}
+</code></pre>
+<p>运行结果如下：<br>
+<img src="https://img-blog.csdn.net/20181013102634576?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDUzODk0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述" loading="lazy"></p>
+<h2 id="第二点-比较根据字典序">第二点 比较（根据字典序）</h2>
+<p>还是复制黏贴上一段代码：</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int main()
+{
+    string str1=&quot;a&quot;;//定义一个string字符串str1 为 ‘ a’
+    string str2=&quot;b&quot;;
+    
+    if(str1 &lt; str2) cout&lt;&lt;&quot;&lt;&quot;;
+    if(str1 == str2) cout&lt;&lt;&quot;=&quot;;
+    if(str1 &gt; str2) cout&lt;&lt;&quot;&gt;&quot;;
+    return 0;
+}
+</code></pre>
+<p>运行结果如下</p>
+<p><img src="https://img-blog.csdn.net/20181013104010342?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDUzODk0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述" loading="lazy"> 可以看到，运行结果是&quot;&lt;&quot;。<br>
+因为‘a’的ASCLL码是97，‘b’是98，因此‘a’&lt;‘b’。</p>
+<h2 id="最重要的一点-函数">最重要的一点 函数</h2>
+<p>1.str.append（char）<br>
+在字符串str后面加上字符char(c)。<br>
+2.swap(str1,str2)<br>
+交换str1与str2。<br>
+3.str.clear()<br>
+清除str的全部字符。<br>
+4.str.empty()<br>
+判断str是否为空，空时返回true，否则返回false。<br>
+5.str.data()<br>
+将str以字符数组的形式返回。<br>
+6.str.length()<br>
+返回str的长度</p>
+<p>C ++提供的由C++字符串得到对应的C_string的方法是使用data()、c_str()和copy()，其中，data()以字符数组的形式返回字符串内容，但并不添加'/0'。c_str()返回一个以‘/0'结尾的字符数组，而copy()则把字符串的内容复制或写入既有的c_string或 字符数组内。C++字符串并不以'/0'结尾。我的建议是在程序中能使用C++字符串就使用，除非万不得已不选用c_string。由于只是简单介绍，详细介绍掠过。</p>
+<p>一个C++字符串存在三种大小：a)现有的字符数，函数是size()和length()，他们等效。Empty()用来检查字符串是否为空。b)max_size() 这个大小是指当前C++字符串最多能包含的字符数，很可能和机器本身的限制或者字符串所在位置连续内存的大小有关系。我们一般情况下不用关心他，应该大小足够我们用的。但是不够用的话，会抛出length_error异常c)capacity()重新分配内存之前 string所能包含的最大字符数。这里另一个需要指出的是reserve()函数，这个函数为string重新分配内存。重新分配的大小由其参数决定， 默认参数为0，这时候会对string进行非强制性缩减。</p>
+<p>还有必要再重复一下C++字符串和C字符串转换的问 题，许多人会遇到这样的问题，自己做的程序要调用别人的函数、类什么的（比如数据库连接函数Connect(char*,char*)），但别人的函数参 数用的是char<em>形式的，而我们知道，c_str()、data()返回的字符数组由该字符串拥有，所以是一种const char</em>,要想作为上面提及的函数的参数，还必须拷贝到一个char*,而我们的原则是能不使用C字符串就不使用。那么，这时候我们的处理方式是：如果 此函数对参数(也就是char*)的内容不修改的话，我们可以这样Connect((char*)UserID.c_str(), (char*)PassWD.c_str()),但是这时候是存在危险的，因为这样转换后的字符串其实是可以修改的（有兴趣地可以自己试一试），所以我强调除非函数调用的时候不对参数进行修改，否则必须拷贝到一个char<em>上去。当然，更稳妥的办法是无论什么情况都拷贝到一个char</em>上去。同时我们也祈祷现在仍然使用C字符串进行编程的高手们（说他们是高手一点儿也不为过，也许在我们还穿开裆裤的时候他们就开始编程了，哈哈…）写的函数都比较规范，那样我们就不必进行强制转换了。</p>
+<p>我们可以使用下标操作符[]和函数at()对元素包含的字符进行访问。但是应该注意的是操作符[]并不检查索引是否有效（有效索引0~str.length()），如果索引失效，会引起未定义的行为。而at()会检查，如果使用 at()的时候索引无效，会抛出out_of_range异常。</p>
+<p>有一个例外不得不说，const string a;的操作符[]对索引值是a.length()仍然有效，其返回值是'/0'。其他的各种情况，a.length()索引都是无效的。举例如下：</p>
+<pre><code>const string Cstr(“const string”);
+string Str(“string”);
+Str[3];      //ok
+Str.at(3);    //ok
+Str[100]; //未定义的行为
+Str.at(100);    //throw out_of_range
+Str[Str.length()]    //未定义行为
+Cstr[Cstr.length()] //返回 ‘/0'
+Str.at(Str.length());//throw out_of_range
+Cstr.at(Cstr.length()) ////throw out_of_range
+我不赞成类似于下面的引用或指针赋值：
+char&amp; r=s[2];
+char* p= &amp;s[3];
+</code></pre>
+<p>因为一旦发生重新分配，r,p立即失效。避免的方法就是不使用。</p>
+<p>C ++字符串支持常见的比较操作符（&gt;,&gt;=,&lt;,&lt;=,==,!=），甚至支持string与C-string的比较(如 str&lt;”hello”)。在使用&gt;,&gt;=,&lt;,&lt;=这些操作符的时候是根据“当前字符特性”将字符按字典顺序进行逐一得 比较。字典排序靠前的字符小，比较的顺序是从前向后比较，遇到不相等的字符就按这个位置上的两个字符的比较结果确定两个字符串的大小。同时，string (“aaaa”) &lt;string(aaaaa)。</p>
+<p>另一个功能强大的比较函数是成员函数compare()。他支持多参数处理，支持用索引值和长度定位子串来进行比较。他返回一个整数来表示比较结果，返回值意义如下：0-相等 〉0-大于 &lt;0-小于。举例如下：</p>
+<pre><code>string s(“abcd”);
+s.compare(“abcd”); //返回0
+s.compare(“dcba”); //返回一个小于0的值
+s.compare(“ab”); //返回大于0的值
+s.compare(s); //相等
+s.compare(0,2,s,2,2); //用”ab”和”cd”进行比较 小于零
+s.compare(1,2,”bcx”,2); //用”bc”和”bc”比较。
+</code></pre>
+<p>首先讲赋值，第一个赋值方法当然是使用操作符=，新值可以是string(如：s=ns) 、c_string(如：s=”gaint”)甚至单一字符（如：s='j'）。还可以使用成员函数assign()，这个成员函数可以使你更灵活的对字符串赋值。还是举例说明吧：</p>
+<pre><code>s.assign(str); //不说
+s.assign(str,1,3);//如果str是”iamangel” 就是把”ama”赋给字符串
+s.assign(str,2,string::npos);//把字符串str从索引值2开始到结尾赋给s
+s.assign(“gaint”); //不说
+s.assign(“nico”,5);//把'n' ‘I' ‘c' ‘o' ‘/0'赋给字符串
+s.assign(5,'x');//把五个x赋给字符串
+</code></pre>
+<p>把字符串清空的方法有三个：s=&quot;&quot;;s.clear();s.erase();(我越来越觉得举例比说话让别人容易懂！)。<br>
+string提供了很多函数用于插入（insert）、删除（erase）、替换（replace）、增加字符。<br>
+先说增加字符（这里说的增加是在尾巴上），函数有 +=、append()、push_back()。</p>
+<pre><code>s+=str;//加个字符串
+s+=”my name is jiayp”;//加个C字符串
+s+='a';//加个字符
+s.append(str);
+s.append(str,1,3);//不解释了 同前面的函数参数assign的解释
+s.append(str,2,string::npos)//不解释了
+s.append(“my name is jiayp”);
+s.append(“nico”,5);
+s.append(5,'x');
+s.push_back(‘a');//这个函数只能增加单个字符对STL熟悉的理解起来很简单
+</code></pre>
+<p>也许你需要在string中间的某个位置插入字符串，这时候你可以用insert()函数，这个函数需要你指定一个安插位置的索引，被插入的字符串将放在这个索引的后面。</p>
+<pre><code> s.insert(0,”my name”);
+ s.insert(1,str);
+</code></pre>
+<p>这种形式的insert()函数不支持传入单个字符，这时的单个字符必须写成字符串形式(让人恶心)。既然你觉得恶心，那就不得不继续读下面一段话：为了插 入单个字符，insert()函数提供了两个对插入单个字符操作的重载函数：insert(size_type index,size_type num,chart c)和insert(iterator pos,size_type num,chart c)。其中size_type是无符号整数，iterator是char*,所以，你这么调用insert函数是不行的：insert(0,1, 'j');这时候第一个参数将转换成哪一个呢？所以你必须这么写：insert((string::size_type)0,1,'j')！第二种形式指 出了使用迭代器安插字符的形式，在后面会提及。顺便提一下，string有很多操作是使用STL的迭代器的，他也尽量做得和STL靠近。</p>
+<p>删除函数erase()的形式也有好几种（真烦！），替换函数replace()也有好几个。</p>
+<pre><code>string s=“il8n”;
+s.replace(1,2,&quot;nternationalizatio&quot;);//从索引1开始的2个替换成后面的C_string
+s.erase(13);//从索引13开始往后全删除
+s.erase(7,5);//从索引7开始往后删5个
+</code></pre>
+<p>提取子串的函数是：substr()<br>
+形式如下：</p>
+<pre><code>s.substr();//返回s的全部内容
+s.substr(11);//从索引11往后的子串
+s.substr(5,6);//从索引5开始6个字符
+</code></pre>
+<p>把两个字符串结合起来的函数是+。</p>
+<p>string类支持输入流（&gt;&gt;）和输出流（&lt;&lt;）。<br>
+当然也可以用getline（）提取一整行的字符（直到遇到换行符'\n'）</p>
+<p>函数str.find(ch)<br>
+从str里查找字符ch</p>
+<p>这些函数返回符合搜索条件的字符区间内的第一个字符的索引，没找到目标就返回npos。所有的函数的参数说明如下：<br>
+第一个参数是被搜寻的对象。第二个参数（可有可无）指出string内的搜寻起点索引，第三个参数（可有可无）指出搜寻的字符个数。比较简单，不多说不理解的可以向我提出，我再仔细的解答。当然，更加强大的STL搜寻在后面会有提及。</p>
+<p>最后再说说npos的含义，string::npos的类型是string::size_type,所以，一旦需要把一个索引与npos相比，这个索引值必须是string::size)type类型的，更多的情况下，我们可以直接把函数和npos进行比较（如：if(s.find(“jia”)== string::npos)）。</p>
+
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/tu-de-jin-jie/">
-                图的进阶
+            <a href="https://Lookcatbox.github.io/post/csp-snoip2020-you-ji/">
+                CSP-S+NOIP2020游记
             </a>
         </div>
         
@@ -524,7 +620,15 @@ O(m+nlogn+q)<br>
     </div>
      
                 <div class="toc-container">
-                    
+                    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E7%82%B9-%E6%AF%94%E8%BE%83%E6%A0%B9%E6%8D%AE%E5%AD%97%E5%85%B8%E5%BA%8F">第二点 比较（根据字典序）</a></li>
+<li><a href="#%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%80%E7%82%B9-%E5%87%BD%E6%95%B0">最重要的一点 函数</a></li>
+</ul>
+</li>
+</ul>
+
     </div>
     </div>
     </div>
@@ -652,97 +756,193 @@ O(m+nlogn+q)<br>
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://Lookcatbox.github.io/post-images/ti-gao-zu-day5-ti-mu-jiang-ping.png" class="postimage" style="cursor:auto">
+                
+                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
-                <div class="posttag">
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gX-ZpYhUx/" class="postlink">
-                        <i class="fa fa-tag"></i> 题解
-                    </a>
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gdJHkK9Gm/" class="postlink">
-                        <i class="fa fa-tag"></i> 2020福建师大附中夏令营
-                    </a>
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-11-07</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 11 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>提高组DAY5题目讲评</h2>
+            <h2>String类深入讲解</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/string-lei-shen-ru-jiang-jie/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="提高组DAY5题目讲评">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="String类深入讲解">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <p>难易度T3&gt;T2&gt;T1<br>
-T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
-设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
-其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
-<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
-设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
-复杂度为n* 2^t  * O (25pt)</p>
-<p>发现前两维可以决定第三维，所以变成两维<br>
-复杂度为n * 2^t</p>
-<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
-其中关键点i到关键点j的路径为原图中i到j的最短路<br>
-然后做类似25pt的状压DP(100pt)</p>
-<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
-暴力<br>
-10pt<br>
-分类讨论</p>
-<ul>
-<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
-<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
-<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
-<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
-30pt<br>
-会超时，但因一开始的题目时间限制错误可以拿100pt</li>
+            <p>这是篇久远的文章，本来发在CSDN上的，搬过来顺便修正了一下<br>
+string类是个用于字符串处理的好东西，<s>用完以后再也不想用char类了</s><br>
+其中有很多实用的函数，初赛时也会考到。<br>
+string类的头文件<br>
+&lt;string.h&gt;<br>
+&lt; c string&gt;<br>
+声明一个string类：</p>
+<pre><code>string str;
+</code></pre>
+<p>下面来看一下它的应用。<br>
+<strong>一。运算</strong><br>
+string类支持一下几种运算：</p>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1341804"><label class="task-list-item-label" for="task-item-1341804"> 四则运算</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2197089"><label class="task-list-item-label" for="task-item-2197089"> 直接比较</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4871745"><label class="task-list-item-label" for="task-item-4871745"> 插入字符</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8635265"> 利用前一个字符串的一部分创建新字符串。<br>
+......<br>
+首先第一个，运算。<br>
+<label class="task-list-item-label" for="task-item-8635265"> 利用前一个字符串的一部分创建新字符串。
+......
+首先第一个，运算。
+我们来看一下代码：</label></p>
+</li>
 </ul>
-<p>考虑第二种情况<br>
-共有两种可能：</p>
-<ol>
-<li>改后的最短路比原最短路大：选原最短路</li>
-<li>改后的最短路比原最短路小<br>
-第一种情况直接输出原最短路即可，这里考虑第二种情况<br>
-如果改后的最短路比原最短路小，那么相当于把改前的那条边删掉，在原最短路外另找一条最短路径<br>
-找出新最短路径与原最短路径前一段重合的最后一个点，设为l<br>
-找出新最短路径与原最短路径后一段重合的最前一个点，设为r<br>
-1-&gt;l和r-&gt;n都是已知的（因为在原最短路上），其中枚举原最短路外的一条边将被删的边替换掉，算出点1，n到该边的两个端点的最短路，更新该边在最短路上对应的区间(l,r)<br>
-具体操作参考分类讨论中的第四种情况，即枚举被修改的边<br>
-O(m*最短路长度) 注：在随机生成的数据中，最短路的期望长度为logn<br>
-40pt</li>
-</ol>
-<p>线段树优化维护<br>
-枚举一条边，更新该边在最短路上对应的区间<br>
-发现之前的操作可以表示为C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
-这是个区间操作，可以用线段树维护<br>
-O(mlogn+nlogn+qlogn) 注：mlogn为最短路复杂度，nlogn为线段树初始化复杂度，qlogn为查询复杂度<br>
-优化：预处理好线段树，将所有懒标记预先下传到叶节点，查询时复杂度变为O(1)<br>
-O(mlogn+nlogn+q)<br>
-再优化：将最短路用斐波那契堆优化，最短路变为m复杂度 <s>优化狂魔</s><br>
-O(m+nlogn+q)<br>
-100pt（优化到线段树就可以了）</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/">
-                网络流及其拓展
-            </a>
+int main()
+{
+    string str1=&quot;a&quot;;//定义一个string字符串str1 为 ‘ a’
+    string str2=&quot;b&quot;;
+    
+    cout&lt;&lt;a+b;
+    return 0;
+}
+</code></pre>
+<p>运行结果如下：<br>
+<img src="https://img-blog.csdn.net/20181013102634576?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDUzODk0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述" loading="lazy"></p>
+<h2 id="第二点-比较根据字典序">第二点 比较（根据字典序）</h2>
+<p>还是复制黏贴上一段代码：</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int main()
+{
+    string str1=&quot;a&quot;;//定义一个string字符串str1 为 ‘ a’
+    string str2=&quot;b&quot;;
+    
+    if(str1 &lt; str2) cout&lt;&lt;&quot;&lt;&quot;;
+    if(str1 == str2) cout&lt;&lt;&quot;=&quot;;
+    if(str1 &gt; str2) cout&lt;&lt;&quot;&gt;&quot;;
+    return 0;
+}
+</code></pre>
+<p>运行结果如下</p>
+<p><img src="https://img-blog.csdn.net/20181013104010342?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDUzODk0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述" loading="lazy"> 可以看到，运行结果是&quot;&lt;&quot;。<br>
+因为‘a’的ASCLL码是97，‘b’是98，因此‘a’&lt;‘b’。</p>
+<h2 id="最重要的一点-函数">最重要的一点 函数</h2>
+<p>1.str.append（char）<br>
+在字符串str后面加上字符char(c)。<br>
+2.swap(str1,str2)<br>
+交换str1与str2。<br>
+3.str.clear()<br>
+清除str的全部字符。<br>
+4.str.empty()<br>
+判断str是否为空，空时返回true，否则返回false。<br>
+5.str.data()<br>
+将str以字符数组的形式返回。<br>
+6.str.length()<br>
+返回str的长度</p>
+<p>C ++提供的由C++字符串得到对应的C_string的方法是使用data()、c_str()和copy()，其中，data()以字符数组的形式返回字符串内容，但并不添加'/0'。c_str()返回一个以‘/0'结尾的字符数组，而copy()则把字符串的内容复制或写入既有的c_string或 字符数组内。C++字符串并不以'/0'结尾。我的建议是在程序中能使用C++字符串就使用，除非万不得已不选用c_string。由于只是简单介绍，详细介绍掠过。</p>
+<p>一个C++字符串存在三种大小：a)现有的字符数，函数是size()和length()，他们等效。Empty()用来检查字符串是否为空。b)max_size() 这个大小是指当前C++字符串最多能包含的字符数，很可能和机器本身的限制或者字符串所在位置连续内存的大小有关系。我们一般情况下不用关心他，应该大小足够我们用的。但是不够用的话，会抛出length_error异常c)capacity()重新分配内存之前 string所能包含的最大字符数。这里另一个需要指出的是reserve()函数，这个函数为string重新分配内存。重新分配的大小由其参数决定， 默认参数为0，这时候会对string进行非强制性缩减。</p>
+<p>还有必要再重复一下C++字符串和C字符串转换的问 题，许多人会遇到这样的问题，自己做的程序要调用别人的函数、类什么的（比如数据库连接函数Connect(char*,char*)），但别人的函数参 数用的是char<em>形式的，而我们知道，c_str()、data()返回的字符数组由该字符串拥有，所以是一种const char</em>,要想作为上面提及的函数的参数，还必须拷贝到一个char*,而我们的原则是能不使用C字符串就不使用。那么，这时候我们的处理方式是：如果 此函数对参数(也就是char*)的内容不修改的话，我们可以这样Connect((char*)UserID.c_str(), (char*)PassWD.c_str()),但是这时候是存在危险的，因为这样转换后的字符串其实是可以修改的（有兴趣地可以自己试一试），所以我强调除非函数调用的时候不对参数进行修改，否则必须拷贝到一个char<em>上去。当然，更稳妥的办法是无论什么情况都拷贝到一个char</em>上去。同时我们也祈祷现在仍然使用C字符串进行编程的高手们（说他们是高手一点儿也不为过，也许在我们还穿开裆裤的时候他们就开始编程了，哈哈…）写的函数都比较规范，那样我们就不必进行强制转换了。</p>
+<p>我们可以使用下标操作符[]和函数at()对元素包含的字符进行访问。但是应该注意的是操作符[]并不检查索引是否有效（有效索引0~str.length()），如果索引失效，会引起未定义的行为。而at()会检查，如果使用 at()的时候索引无效，会抛出out_of_range异常。</p>
+<p>有一个例外不得不说，const string a;的操作符[]对索引值是a.length()仍然有效，其返回值是'/0'。其他的各种情况，a.length()索引都是无效的。举例如下：</p>
+<pre><code>const string Cstr(“const string”);
+string Str(“string”);
+Str[3];      //ok
+Str.at(3);    //ok
+Str[100]; //未定义的行为
+Str.at(100);    //throw out_of_range
+Str[Str.length()]    //未定义行为
+Cstr[Cstr.length()] //返回 ‘/0'
+Str.at(Str.length());//throw out_of_range
+Cstr.at(Cstr.length()) ////throw out_of_range
+我不赞成类似于下面的引用或指针赋值：
+char&amp; r=s[2];
+char* p= &amp;s[3];
+</code></pre>
+<p>因为一旦发生重新分配，r,p立即失效。避免的方法就是不使用。</p>
+<p>C ++字符串支持常见的比较操作符（&gt;,&gt;=,&lt;,&lt;=,==,!=），甚至支持string与C-string的比较(如 str&lt;”hello”)。在使用&gt;,&gt;=,&lt;,&lt;=这些操作符的时候是根据“当前字符特性”将字符按字典顺序进行逐一得 比较。字典排序靠前的字符小，比较的顺序是从前向后比较，遇到不相等的字符就按这个位置上的两个字符的比较结果确定两个字符串的大小。同时，string (“aaaa”) &lt;string(aaaaa)。</p>
+<p>另一个功能强大的比较函数是成员函数compare()。他支持多参数处理，支持用索引值和长度定位子串来进行比较。他返回一个整数来表示比较结果，返回值意义如下：0-相等 〉0-大于 &lt;0-小于。举例如下：</p>
+<pre><code>string s(“abcd”);
+s.compare(“abcd”); //返回0
+s.compare(“dcba”); //返回一个小于0的值
+s.compare(“ab”); //返回大于0的值
+s.compare(s); //相等
+s.compare(0,2,s,2,2); //用”ab”和”cd”进行比较 小于零
+s.compare(1,2,”bcx”,2); //用”bc”和”bc”比较。
+</code></pre>
+<p>首先讲赋值，第一个赋值方法当然是使用操作符=，新值可以是string(如：s=ns) 、c_string(如：s=”gaint”)甚至单一字符（如：s='j'）。还可以使用成员函数assign()，这个成员函数可以使你更灵活的对字符串赋值。还是举例说明吧：</p>
+<pre><code>s.assign(str); //不说
+s.assign(str,1,3);//如果str是”iamangel” 就是把”ama”赋给字符串
+s.assign(str,2,string::npos);//把字符串str从索引值2开始到结尾赋给s
+s.assign(“gaint”); //不说
+s.assign(“nico”,5);//把'n' ‘I' ‘c' ‘o' ‘/0'赋给字符串
+s.assign(5,'x');//把五个x赋给字符串
+</code></pre>
+<p>把字符串清空的方法有三个：s=&quot;&quot;;s.clear();s.erase();(我越来越觉得举例比说话让别人容易懂！)。<br>
+string提供了很多函数用于插入（insert）、删除（erase）、替换（replace）、增加字符。<br>
+先说增加字符（这里说的增加是在尾巴上），函数有 +=、append()、push_back()。</p>
+<pre><code>s+=str;//加个字符串
+s+=”my name is jiayp”;//加个C字符串
+s+='a';//加个字符
+s.append(str);
+s.append(str,1,3);//不解释了 同前面的函数参数assign的解释
+s.append(str,2,string::npos)//不解释了
+s.append(“my name is jiayp”);
+s.append(“nico”,5);
+s.append(5,'x');
+s.push_back(‘a');//这个函数只能增加单个字符对STL熟悉的理解起来很简单
+</code></pre>
+<p>也许你需要在string中间的某个位置插入字符串，这时候你可以用insert()函数，这个函数需要你指定一个安插位置的索引，被插入的字符串将放在这个索引的后面。</p>
+<pre><code> s.insert(0,”my name”);
+ s.insert(1,str);
+</code></pre>
+<p>这种形式的insert()函数不支持传入单个字符，这时的单个字符必须写成字符串形式(让人恶心)。既然你觉得恶心，那就不得不继续读下面一段话：为了插 入单个字符，insert()函数提供了两个对插入单个字符操作的重载函数：insert(size_type index,size_type num,chart c)和insert(iterator pos,size_type num,chart c)。其中size_type是无符号整数，iterator是char*,所以，你这么调用insert函数是不行的：insert(0,1, 'j');这时候第一个参数将转换成哪一个呢？所以你必须这么写：insert((string::size_type)0,1,'j')！第二种形式指 出了使用迭代器安插字符的形式，在后面会提及。顺便提一下，string有很多操作是使用STL的迭代器的，他也尽量做得和STL靠近。</p>
+<p>删除函数erase()的形式也有好几种（真烦！），替换函数replace()也有好几个。</p>
+<pre><code>string s=“il8n”;
+s.replace(1,2,&quot;nternationalizatio&quot;);//从索引1开始的2个替换成后面的C_string
+s.erase(13);//从索引13开始往后全删除
+s.erase(7,5);//从索引7开始往后删5个
+</code></pre>
+<p>提取子串的函数是：substr()<br>
+形式如下：</p>
+<pre><code>s.substr();//返回s的全部内容
+s.substr(11);//从索引11往后的子串
+s.substr(5,6);//从索引5开始6个字符
+</code></pre>
+<p>把两个字符串结合起来的函数是+。</p>
+<p>string类支持输入流（&gt;&gt;）和输出流（&lt;&lt;）。<br>
+当然也可以用getline（）提取一整行的字符（直到遇到换行符'\n'）</p>
+<p>函数str.find(ch)<br>
+从str里查找字符ch</p>
+<p>这些函数返回符合搜索条件的字符区间内的第一个字符的索引，没找到目标就返回npos。所有的函数的参数说明如下：<br>
+第一个参数是被搜寻的对象。第二个参数（可有可无）指出string内的搜寻起点索引，第三个参数（可有可无）指出搜寻的字符个数。比较简单，不多说不理解的可以向我提出，我再仔细的解答。当然，更加强大的STL搜寻在后面会有提及。</p>
+<p>最后再说说npos的含义，string::npos的类型是string::size_type,所以，一旦需要把一个索引与npos相比，这个索引值必须是string::size)type类型的，更多的情况下，我们可以直接把函数和npos进行比较（如：if(s.find(“jia”)== string::npos)）。</p>
+
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/tu-de-jin-jie/">
-                图的进阶
+            <a href="https://Lookcatbox.github.io/post/csp-snoip2020-you-ji/">
+                CSP-S+NOIP2020游记
             </a>
         </div>
         

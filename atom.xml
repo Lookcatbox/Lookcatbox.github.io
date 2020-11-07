@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Lookcatbox.github.io</id>
     <title>HMF-have much fun Site</title>
-    <updated>2020-11-04T14:21:48.556Z</updated>
+    <updated>2020-11-07T04:21:36.554Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Lookcatbox.github.io"/>
     <link rel="self" href="https://Lookcatbox.github.io/atom.xml"/>
@@ -10,6 +10,171 @@
     <logo>https://Lookcatbox.github.io/images/avatar.png</logo>
     <icon>https://Lookcatbox.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, HMF-have much fun Site</rights>
+    <entry>
+        <title type="html"><![CDATA[String类深入讲解]]></title>
+        <id>https://Lookcatbox.github.io/post/string-lei-shen-ru-jiang-jie/</id>
+        <link href="https://Lookcatbox.github.io/post/string-lei-shen-ru-jiang-jie/">
+        </link>
+        <updated>2020-11-07T04:17:40.000Z</updated>
+        <content type="html"><![CDATA[<p>这是篇久远的文章，本来发在CSDN上的，搬过来顺便修正了一下<br>
+string类是个用于字符串处理的好东西，<s>用完以后再也不想用char类了</s><br>
+其中有很多实用的函数，初赛时也会考到。<br>
+string类的头文件<br>
+&lt;string.h&gt;<br>
+&lt; c string&gt;<br>
+声明一个string类：</p>
+<pre><code>string str;
+</code></pre>
+<p>下面来看一下它的应用。<br>
+<strong>一。运算</strong><br>
+string类支持一下几种运算：</p>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1341804"><label class="task-list-item-label" for="task-item-1341804"> 四则运算</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2197089"><label class="task-list-item-label" for="task-item-2197089"> 直接比较</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4871745"><label class="task-list-item-label" for="task-item-4871745"> 插入字符</label></p>
+</li>
+<li class="task-list-item">
+<p><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8635265"> 利用前一个字符串的一部分创建新字符串。<br>
+......<br>
+首先第一个，运算。<br>
+<label class="task-list-item-label" for="task-item-8635265"> 利用前一个字符串的一部分创建新字符串。
+......
+首先第一个，运算。
+我们来看一下代码：</label></p>
+</li>
+</ul>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int main()
+{
+    string str1=&quot;a&quot;;//定义一个string字符串str1 为 ‘ a’
+    string str2=&quot;b&quot;;
+    
+    cout&lt;&lt;a+b;
+    return 0;
+}
+</code></pre>
+<p>运行结果如下：<br>
+<img src="https://img-blog.csdn.net/20181013102634576?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDUzODk0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述" loading="lazy"></p>
+<h2 id="第二点-比较根据字典序">第二点 比较（根据字典序）</h2>
+<p>还是复制黏贴上一段代码：</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+
+int main()
+{
+    string str1=&quot;a&quot;;//定义一个string字符串str1 为 ‘ a’
+    string str2=&quot;b&quot;;
+    
+    if(str1 &lt; str2) cout&lt;&lt;&quot;&lt;&quot;;
+    if(str1 == str2) cout&lt;&lt;&quot;=&quot;;
+    if(str1 &gt; str2) cout&lt;&lt;&quot;&gt;&quot;;
+    return 0;
+}
+</code></pre>
+<p>运行结果如下</p>
+<p><img src="https://img-blog.csdn.net/20181013104010342?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDUzODk0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述" loading="lazy"> 可以看到，运行结果是&quot;&lt;&quot;。<br>
+因为‘a’的ASCLL码是97，‘b’是98，因此‘a’&lt;‘b’。</p>
+<h2 id="最重要的一点-函数">最重要的一点 函数</h2>
+<p>1.str.append（char）<br>
+在字符串str后面加上字符char(c)。<br>
+2.swap(str1,str2)<br>
+交换str1与str2。<br>
+3.str.clear()<br>
+清除str的全部字符。<br>
+4.str.empty()<br>
+判断str是否为空，空时返回true，否则返回false。<br>
+5.str.data()<br>
+将str以字符数组的形式返回。<br>
+6.str.length()<br>
+返回str的长度</p>
+<p>C ++提供的由C++字符串得到对应的C_string的方法是使用data()、c_str()和copy()，其中，data()以字符数组的形式返回字符串内容，但并不添加'/0'。c_str()返回一个以‘/0'结尾的字符数组，而copy()则把字符串的内容复制或写入既有的c_string或 字符数组内。C++字符串并不以'/0'结尾。我的建议是在程序中能使用C++字符串就使用，除非万不得已不选用c_string。由于只是简单介绍，详细介绍掠过。</p>
+<p>一个C++字符串存在三种大小：a)现有的字符数，函数是size()和length()，他们等效。Empty()用来检查字符串是否为空。b)max_size() 这个大小是指当前C++字符串最多能包含的字符数，很可能和机器本身的限制或者字符串所在位置连续内存的大小有关系。我们一般情况下不用关心他，应该大小足够我们用的。但是不够用的话，会抛出length_error异常c)capacity()重新分配内存之前 string所能包含的最大字符数。这里另一个需要指出的是reserve()函数，这个函数为string重新分配内存。重新分配的大小由其参数决定， 默认参数为0，这时候会对string进行非强制性缩减。</p>
+<p>还有必要再重复一下C++字符串和C字符串转换的问 题，许多人会遇到这样的问题，自己做的程序要调用别人的函数、类什么的（比如数据库连接函数Connect(char*,char*)），但别人的函数参 数用的是char<em>形式的，而我们知道，c_str()、data()返回的字符数组由该字符串拥有，所以是一种const char</em>,要想作为上面提及的函数的参数，还必须拷贝到一个char*,而我们的原则是能不使用C字符串就不使用。那么，这时候我们的处理方式是：如果 此函数对参数(也就是char*)的内容不修改的话，我们可以这样Connect((char*)UserID.c_str(), (char*)PassWD.c_str()),但是这时候是存在危险的，因为这样转换后的字符串其实是可以修改的（有兴趣地可以自己试一试），所以我强调除非函数调用的时候不对参数进行修改，否则必须拷贝到一个char<em>上去。当然，更稳妥的办法是无论什么情况都拷贝到一个char</em>上去。同时我们也祈祷现在仍然使用C字符串进行编程的高手们（说他们是高手一点儿也不为过，也许在我们还穿开裆裤的时候他们就开始编程了，哈哈…）写的函数都比较规范，那样我们就不必进行强制转换了。</p>
+<p>我们可以使用下标操作符[]和函数at()对元素包含的字符进行访问。但是应该注意的是操作符[]并不检查索引是否有效（有效索引0~str.length()），如果索引失效，会引起未定义的行为。而at()会检查，如果使用 at()的时候索引无效，会抛出out_of_range异常。</p>
+<p>有一个例外不得不说，const string a;的操作符[]对索引值是a.length()仍然有效，其返回值是'/0'。其他的各种情况，a.length()索引都是无效的。举例如下：</p>
+<pre><code>const string Cstr(“const string”);
+string Str(“string”);
+Str[3];      //ok
+Str.at(3);    //ok
+Str[100]; //未定义的行为
+Str.at(100);    //throw out_of_range
+Str[Str.length()]    //未定义行为
+Cstr[Cstr.length()] //返回 ‘/0'
+Str.at(Str.length());//throw out_of_range
+Cstr.at(Cstr.length()) ////throw out_of_range
+我不赞成类似于下面的引用或指针赋值：
+char&amp; r=s[2];
+char* p= &amp;s[3];
+</code></pre>
+<p>因为一旦发生重新分配，r,p立即失效。避免的方法就是不使用。</p>
+<p>C ++字符串支持常见的比较操作符（&gt;,&gt;=,&lt;,&lt;=,==,!=），甚至支持string与C-string的比较(如 str&lt;”hello”)。在使用&gt;,&gt;=,&lt;,&lt;=这些操作符的时候是根据“当前字符特性”将字符按字典顺序进行逐一得 比较。字典排序靠前的字符小，比较的顺序是从前向后比较，遇到不相等的字符就按这个位置上的两个字符的比较结果确定两个字符串的大小。同时，string (“aaaa”) &lt;string(aaaaa)。</p>
+<p>另一个功能强大的比较函数是成员函数compare()。他支持多参数处理，支持用索引值和长度定位子串来进行比较。他返回一个整数来表示比较结果，返回值意义如下：0-相等 〉0-大于 &lt;0-小于。举例如下：</p>
+<pre><code>string s(“abcd”);
+s.compare(“abcd”); //返回0
+s.compare(“dcba”); //返回一个小于0的值
+s.compare(“ab”); //返回大于0的值
+s.compare(s); //相等
+s.compare(0,2,s,2,2); //用”ab”和”cd”进行比较 小于零
+s.compare(1,2,”bcx”,2); //用”bc”和”bc”比较。
+</code></pre>
+<p>首先讲赋值，第一个赋值方法当然是使用操作符=，新值可以是string(如：s=ns) 、c_string(如：s=”gaint”)甚至单一字符（如：s='j'）。还可以使用成员函数assign()，这个成员函数可以使你更灵活的对字符串赋值。还是举例说明吧：</p>
+<pre><code>s.assign(str); //不说
+s.assign(str,1,3);//如果str是”iamangel” 就是把”ama”赋给字符串
+s.assign(str,2,string::npos);//把字符串str从索引值2开始到结尾赋给s
+s.assign(“gaint”); //不说
+s.assign(“nico”,5);//把'n' ‘I' ‘c' ‘o' ‘/0'赋给字符串
+s.assign(5,'x');//把五个x赋给字符串
+</code></pre>
+<p>把字符串清空的方法有三个：s=&quot;&quot;;s.clear();s.erase();(我越来越觉得举例比说话让别人容易懂！)。<br>
+string提供了很多函数用于插入（insert）、删除（erase）、替换（replace）、增加字符。<br>
+先说增加字符（这里说的增加是在尾巴上），函数有 +=、append()、push_back()。</p>
+<pre><code>s+=str;//加个字符串
+s+=”my name is jiayp”;//加个C字符串
+s+='a';//加个字符
+s.append(str);
+s.append(str,1,3);//不解释了 同前面的函数参数assign的解释
+s.append(str,2,string::npos)//不解释了
+s.append(“my name is jiayp”);
+s.append(“nico”,5);
+s.append(5,'x');
+s.push_back(‘a');//这个函数只能增加单个字符对STL熟悉的理解起来很简单
+</code></pre>
+<p>也许你需要在string中间的某个位置插入字符串，这时候你可以用insert()函数，这个函数需要你指定一个安插位置的索引，被插入的字符串将放在这个索引的后面。</p>
+<pre><code> s.insert(0,”my name”);
+ s.insert(1,str);
+</code></pre>
+<p>这种形式的insert()函数不支持传入单个字符，这时的单个字符必须写成字符串形式(让人恶心)。既然你觉得恶心，那就不得不继续读下面一段话：为了插 入单个字符，insert()函数提供了两个对插入单个字符操作的重载函数：insert(size_type index,size_type num,chart c)和insert(iterator pos,size_type num,chart c)。其中size_type是无符号整数，iterator是char*,所以，你这么调用insert函数是不行的：insert(0,1, 'j');这时候第一个参数将转换成哪一个呢？所以你必须这么写：insert((string::size_type)0,1,'j')！第二种形式指 出了使用迭代器安插字符的形式，在后面会提及。顺便提一下，string有很多操作是使用STL的迭代器的，他也尽量做得和STL靠近。</p>
+<p>删除函数erase()的形式也有好几种（真烦！），替换函数replace()也有好几个。</p>
+<pre><code>string s=“il8n”;
+s.replace(1,2,&quot;nternationalizatio&quot;);//从索引1开始的2个替换成后面的C_string
+s.erase(13);//从索引13开始往后全删除
+s.erase(7,5);//从索引7开始往后删5个
+</code></pre>
+<p>提取子串的函数是：substr()<br>
+形式如下：</p>
+<pre><code>s.substr();//返回s的全部内容
+s.substr(11);//从索引11往后的子串
+s.substr(5,6);//从索引5开始6个字符
+</code></pre>
+<p>把两个字符串结合起来的函数是+。</p>
+<p>string类支持输入流（&gt;&gt;）和输出流（&lt;&lt;）。<br>
+当然也可以用getline（）提取一整行的字符（直到遇到换行符'\n'）</p>
+<p>函数str.find(ch)<br>
+从str里查找字符ch</p>
+<p>这些函数返回符合搜索条件的字符区间内的第一个字符的索引，没找到目标就返回npos。所有的函数的参数说明如下：<br>
+第一个参数是被搜寻的对象。第二个参数（可有可无）指出string内的搜寻起点索引，第三个参数（可有可无）指出搜寻的字符个数。比较简单，不多说不理解的可以向我提出，我再仔细的解答。当然，更加强大的STL搜寻在后面会有提及。</p>
+<p>最后再说说npos的含义，string::npos的类型是string::size_type,所以，一旦需要把一个索引与npos相比，这个索引值必须是string::size)type类型的，更多的情况下，我们可以直接把函数和npos进行比较（如：if(s.find(“jia”)== string::npos)）。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSP-S+NOIP2020游记]]></title>
         <id>https://Lookcatbox.github.io/post/csp-snoip2020-you-ji/</id>
@@ -49,9 +214,46 @@
 <p>简单复习：manacher，回文数，欧拉筛，KMP，莫队</p>
 <p>11.树套树</p>
 <p>12.AC自动机</p>
-<p>13.线段树优化</p>
+<p>13.线段树优化<br>
+复习成功</p>
 <p>14.博弈论</p>
 <p>15.最短路</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二十四·世纪传]]></title>
+        <id>https://Lookcatbox.github.io/post/er-shi-si-shi-ji-chuan/</id>
+        <link href="https://Lookcatbox.github.io/post/er-shi-si-shi-ji-chuan/">
+        </link>
+        <updated>2020-10-26T13:35:24.000Z</updated>
+        <content type="html"><![CDATA[<p>“因为我是暴君，是于逆境中诞生的暴君。”<br>
+“只有我能做到这一切。“<br>
+“我是永远正确的，正因我知道自己是永远正确的，我才能放心地将权力交给自己。”<br>
+“逆境中的王不会在顺境中存在。”<br>
+“王已消失”</p>
+<h2 id="莫存">莫存</h2>
+<p>“你不得被奉为君王”<br>
+“就算浑身玉饰金镶”<br>
+“就算乐于征战沙场”<br>
+“也不得被奉为君王”</p>
+<h2 id="切尔诺-凯尼亚">切尔诺、凯尼亚</h2>
+<p>“我们像机械一样杀戮。”<br>
+“我们身陷于正义粉饰的愚蠢中。“<br>
+“逃兵不是败兵，我们会追逐自己的正义。”<br>
+“待我回家”<br>
+“带我回家”<br>
+“代我回家”<br>
+“他们拿我们的梦想作为战争的筹码”<br>
+“在帷幕后驱使我们进行无意义的战争的，才是真正该死的家伙。”<br>
+“不要沉默”<br>
+“我们活下来了”<br>
+“你、你、你、你们都该死，为什么要陪着他们玩这无聊的游戏！为什么要陪着他们演戏！”<br>
+“给，水。”</p>
+<h1 id="线">线</h1>
+<h1 id="茧">茧</h1>
+<h1 id="议">议</h1>
+<h1 id="分">分</h1>
+<h2 id="亚曼莎莉丝">亚曼，莎莉丝</h2>
 ]]></content>
     </entry>
     <entry>
@@ -462,50 +664,6 @@ Naive 在SPFA中，如果一个点入队超过N次，那么一定会有负环</l
 </ul>
 </li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[自动播放网 抑 云音乐与bilibili视频方法]]></title>
-        <id>https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/</id>
-        <link href="https://Lookcatbox.github.io/post/zi-dong-bo-fang-wang-yi-yun-yin-le-yu-bilibili-shi-pin-fang-fa/">
-        </link>
-        <updated>2020-08-06T12:10:38.000Z</updated>
-        <content type="html"><![CDATA[<p>** 网易云：**<br>
-实例</p>
-<iframe  class="music" frameborder="no" src="https://music.163.com/outchain/player?type=1&id=89680147&auto=0&height=90"></iframe>
-<p><img src="https://Lookcatbox.github.io/post-images/123.png" alt="代码" loading="lazy"><br>
-直接复制放进文章内就行，通过修改src的值来更换音乐(去掉斜杆，将&lt;iframe  和 class两行合并,在最后加上即可，记得留空格)</p>
-<p>其中auto=0代表不会自动播放,auto=1代表自动播放。</p>
-<p>其他值请不要修改。</p>
-<p>** bilibili：**</p>
-<div class="tvcontainer">
-<p>​                        <iframe  class="tv" src="https://player.bilibili.com/player.html?cid=145147963&aid=84267566&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe></p>
-<p><img src="file://C:/Users/linchenbang/Desktop/frime.png" alt="代码" loading="lazy"><br>
-通过修改cid来更换视频，修改方式如上。<br>
-转自https://github.com/850552586/gridea-theme-fog#目前支持的主题自定义目录</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[提高组夏令营DAY 4 题目讲评]]></title>
-        <id>https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/</id>
-        <link href="https://Lookcatbox.github.io/post/ti-gao-zu-xia-ling-ying-day-4-ti-mu-jiang-ping/">
-        </link>
-        <updated>2020-08-06T09:14:40.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="t1">T1</h1>
-<pre><code>N=14，判断胡牌
-如果N=13，那么枚举添加的牌，然后判断胡牌
-先枚举雀头（雀头只要一对，时间复杂度会低一点）
-然后DFS暴搜
-每检测出一个刻子或者顺子，就将其取上，然后转移状态
-</code></pre>
-<h1 id="t2">T2</h1>
-<pre><code>DFS序后做线段树+倍增LCA
-</code></pre>
-<h1 id="t3">T3</h1>
-<pre><code>对于一个等差数列
-val=N(max(l,r)-min(l,r)+l-r)
-也可以用析和树
-</code></pre>
 ]]></content>
     </entry>
 </feed>

@@ -1,13 +1,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="难易度T3&gt;T2&gt;T1
-T3 传送门
-设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个
-其中第一种包为（平，仄），第二种包为（平平，仄仄）
-T2传送门
-设f(i,S,h..." />
-    <meta name="keywords" content="题解,2020福建师大附中夏令营" />
+    <meta name="description" content="“因为我是暴君，是于逆境中诞生的暴君。”
+“只有我能做到这一切。“
+“我是永远正确的，正因我知道自己是永远正确的，我才能放心地将权力交给自己。”
+“逆境中的王不会在顺境中存在。”
+“王已消失”
+莫存
+“你不得被奉为君王”
+“就算浑身玉饰金镶..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
     
@@ -320,97 +322,71 @@ T2传送门
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://Lookcatbox.github.io/post-images/ti-gao-zu-day5-ti-mu-jiang-ping.png" class="postimage" style="cursor:auto">
+                
+                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
-                <div class="posttag">
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gX-ZpYhUx/" class="postlink">
-                        <i class="fa fa-tag"></i> 题解
-                    </a>
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gdJHkK9Gm/" class="postlink">
-                        <i class="fa fa-tag"></i> 2020福建师大附中夏令营
-                    </a>
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-10-26</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>提高组DAY5题目讲评</h2>
+            <h2>二十四·世纪传</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/er-shi-si-shi-ji-chuan/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="提高组DAY5题目讲评">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="二十四·世纪传">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <p>难易度T3&gt;T2&gt;T1<br>
-T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
-设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
-其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
-<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
-设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
-复杂度为n* 2^t  * O (25pt)</p>
-<p>发现前两维可以决定第三维，所以变成两维<br>
-复杂度为n * 2^t</p>
-<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
-其中关键点i到关键点j的路径为原图中i到j的最短路<br>
-然后做类似25pt的状压DP(100pt)</p>
-<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
-暴力<br>
-10pt<br>
-分类讨论</p>
-<ul>
-<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
-<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
-<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
-<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
-30pt<br>
-会超时，但因一开始的题目时间限制错误可以拿100pt</li>
-</ul>
-<p>考虑第二种情况<br>
-共有两种可能：</p>
-<ol>
-<li>改后的最短路比原最短路大：选原最短路</li>
-<li>改后的最短路比原最短路小<br>
-第一种情况直接输出原最短路即可，这里考虑第二种情况<br>
-如果改后的最短路比原最短路小，那么相当于把改前的那条边删掉，在原最短路外另找一条最短路径<br>
-找出新最短路径与原最短路径前一段重合的最后一个点，设为l<br>
-找出新最短路径与原最短路径后一段重合的最前一个点，设为r<br>
-1-&gt;l和r-&gt;n都是已知的（因为在原最短路上），其中枚举原最短路外的一条边将被删的边替换掉，算出点1，n到该边的两个端点的最短路，更新该边在最短路上对应的区间(l,r)<br>
-具体操作参考分类讨论中的第四种情况，即枚举被修改的边<br>
-O(m*最短路长度) 注：在随机生成的数据中，最短路的期望长度为logn<br>
-40pt</li>
-</ol>
-<p>线段树优化维护<br>
-枚举一条边，更新该边在最短路上对应的区间<br>
-发现之前的操作可以表示为C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
-这是个区间操作，可以用线段树维护<br>
-O(mlogn+nlogn+qlogn) 注：mlogn为最短路复杂度，nlogn为线段树初始化复杂度，qlogn为查询复杂度<br>
-优化：预处理好线段树，将所有懒标记预先下传到叶节点，查询时复杂度变为O(1)<br>
-O(mlogn+nlogn+q)<br>
-再优化：将最短路用斐波那契堆优化，最短路变为m复杂度 <s>优化狂魔</s><br>
-O(m+nlogn+q)<br>
-100pt（优化到线段树就可以了）</p>
+            <p>“因为我是暴君，是于逆境中诞生的暴君。”<br>
+“只有我能做到这一切。“<br>
+“我是永远正确的，正因我知道自己是永远正确的，我才能放心地将权力交给自己。”<br>
+“逆境中的王不会在顺境中存在。”<br>
+“王已消失”</p>
+<h2 id="莫存">莫存</h2>
+<p>“你不得被奉为君王”<br>
+“就算浑身玉饰金镶”<br>
+“就算乐于征战沙场”<br>
+“也不得被奉为君王”</p>
+<h2 id="切尔诺-凯尼亚">切尔诺、凯尼亚</h2>
+<p>“我们像机械一样杀戮。”<br>
+“我们身陷于正义粉饰的愚蠢中。“<br>
+“逃兵不是败兵，我们会追逐自己的正义。”<br>
+“待我回家”<br>
+“带我回家”<br>
+“代我回家”<br>
+“他们拿我们的梦想作为战争的筹码”<br>
+“在帷幕后驱使我们进行无意义的战争的，才是真正该死的家伙。”<br>
+“不要沉默”<br>
+“我们活下来了”<br>
+“你、你、你、你们都该死，为什么要陪着他们玩这无聊的游戏！为什么要陪着他们演戏！”<br>
+“给，水。”</p>
+<h1 id="线">线</h1>
+<h1 id="茧">茧</h1>
+<h1 id="议">议</h1>
+<h1 id="分">分</h1>
+<h2 id="亚曼莎莉丝">亚曼，莎莉丝</h2>
 
         </div>
         
         <div class="prev-post">
             上一篇
-            <a href="https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/">
-                网络流及其拓展
+            <a href="https://Lookcatbox.github.io/post/xu-yao-fu-xi-de-suan-fa/">
+                需要复习的算法
             </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/tu-de-jin-jie/">
-                图的进阶
+            <a href="https://Lookcatbox.github.io/post/fei-bo-na-qi-dui-xue-xi-bi-ji/">
+                斐波那契堆学习笔记
             </a>
         </div>
         
@@ -524,7 +500,23 @@ O(m+nlogn+q)<br>
     </div>
      
                 <div class="toc-container">
-                    
+                    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%8E%AB%E5%AD%98">莫存</a></li>
+<li><a href="#%E5%88%87%E5%B0%94%E8%AF%BA-%E5%87%AF%E5%B0%BC%E4%BA%9A">切尔诺、凯尼亚</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BA%BF">线</a></li>
+<li><a href="#%E8%8C%A7">茧</a></li>
+<li><a href="#%E8%AE%AE">议</a></li>
+<li><a href="#%E5%88%86">分</a>
+<ul>
+<li><a href="#%E4%BA%9A%E6%9B%BC%E8%8E%8E%E8%8E%89%E4%B8%9D">亚曼，莎莉丝</a></li>
+</ul>
+</li>
+</ul>
+
     </div>
     </div>
     </div>
@@ -652,97 +644,71 @@ O(m+nlogn+q)<br>
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://Lookcatbox.github.io/post-images/ti-gao-zu-day5-ti-mu-jiang-ping.png" class="postimage" style="cursor:auto">
+                
+                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-07</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
-                <div class="posttag">
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gX-ZpYhUx/" class="postlink">
-                        <i class="fa fa-tag"></i> 题解
-                    </a>
-                    
-                    <a href="https://Lookcatbox.github.io/tag/gdJHkK9Gm/" class="postlink">
-                        <i class="fa fa-tag"></i> 2020福建师大附中夏令营
-                    </a>
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-10-26</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>提高组DAY5题目讲评</h2>
+            <h2>二十四·世纪传</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/er-shi-si-shi-ji-chuan/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="提高组DAY5题目讲评">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="二十四·世纪传">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <p>难易度T3&gt;T2&gt;T1<br>
-T3 <a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4618">传送门</a><br>
-设f(i,j,k) 为已经取了对联的前i位（即取了2*i个词），j，k表示第一种包取了j个，第二种包取了k个<br>
-其中第一种包为（平，仄），第二种包为（平平，仄仄）</p>
-<p>T2<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4617">传送门</a><br>
-设f(i,S,h) 为现在在点i，已经走过的有食物的点的集合（压缩），h为现在的饱食度<br>
-复杂度为n* 2^t  * O (25pt)</p>
-<p>发现前两维可以决定第三维，所以变成两维<br>
-复杂度为n * 2^t</p>
-<p>缩点。设所有有食物的点为关键点，将中间的点去掉，更新边长。<br>
-其中关键点i到关键点j的路径为原图中i到j的最短路<br>
-然后做类似25pt的状压DP(100pt)</p>
-<p>T1<a href="https://algorithms2019.com/algorithm/problem/problem?problemId=4612">传送门</a><br>
-暴力<br>
-10pt<br>
-分类讨论</p>
-<ul>
-<li>改的边在最短路上，且比原边值小 -&gt; 原最短路-原边值+修改后的边值</li>
-<li>改的边在最短路上，且比原边值大 -&gt; 暴力改边，算一遍最短路</li>
-<li>改的边不在最短路上，且比原边大 -&gt; 原最短路</li>
-<li>改的边不在最短路上，且比原边小 -&gt; min(1-&gt;u+v-&gt;n,原最短路) u，v为被修改边的端点<br>
-30pt<br>
-会超时，但因一开始的题目时间限制错误可以拿100pt</li>
-</ul>
-<p>考虑第二种情况<br>
-共有两种可能：</p>
-<ol>
-<li>改后的最短路比原最短路大：选原最短路</li>
-<li>改后的最短路比原最短路小<br>
-第一种情况直接输出原最短路即可，这里考虑第二种情况<br>
-如果改后的最短路比原最短路小，那么相当于把改前的那条边删掉，在原最短路外另找一条最短路径<br>
-找出新最短路径与原最短路径前一段重合的最后一个点，设为l<br>
-找出新最短路径与原最短路径后一段重合的最前一个点，设为r<br>
-1-&gt;l和r-&gt;n都是已知的（因为在原最短路上），其中枚举原最短路外的一条边将被删的边替换掉，算出点1，n到该边的两个端点的最短路，更新该边在最短路上对应的区间(l,r)<br>
-具体操作参考分类讨论中的第四种情况，即枚举被修改的边<br>
-O(m*最短路长度) 注：在随机生成的数据中，最短路的期望长度为logn<br>
-40pt</li>
-</ol>
-<p>线段树优化维护<br>
-枚举一条边，更新该边在最短路上对应的区间<br>
-发现之前的操作可以表示为C(l,r,x) = 把l到r之间的答案全部用x更新一遍<br>
-这是个区间操作，可以用线段树维护<br>
-O(mlogn+nlogn+qlogn) 注：mlogn为最短路复杂度，nlogn为线段树初始化复杂度，qlogn为查询复杂度<br>
-优化：预处理好线段树，将所有懒标记预先下传到叶节点，查询时复杂度变为O(1)<br>
-O(mlogn+nlogn+q)<br>
-再优化：将最短路用斐波那契堆优化，最短路变为m复杂度 <s>优化狂魔</s><br>
-O(m+nlogn+q)<br>
-100pt（优化到线段树就可以了）</p>
+            <p>“因为我是暴君，是于逆境中诞生的暴君。”<br>
+“只有我能做到这一切。“<br>
+“我是永远正确的，正因我知道自己是永远正确的，我才能放心地将权力交给自己。”<br>
+“逆境中的王不会在顺境中存在。”<br>
+“王已消失”</p>
+<h2 id="莫存">莫存</h2>
+<p>“你不得被奉为君王”<br>
+“就算浑身玉饰金镶”<br>
+“就算乐于征战沙场”<br>
+“也不得被奉为君王”</p>
+<h2 id="切尔诺-凯尼亚">切尔诺、凯尼亚</h2>
+<p>“我们像机械一样杀戮。”<br>
+“我们身陷于正义粉饰的愚蠢中。“<br>
+“逃兵不是败兵，我们会追逐自己的正义。”<br>
+“待我回家”<br>
+“带我回家”<br>
+“代我回家”<br>
+“他们拿我们的梦想作为战争的筹码”<br>
+“在帷幕后驱使我们进行无意义的战争的，才是真正该死的家伙。”<br>
+“不要沉默”<br>
+“我们活下来了”<br>
+“你、你、你、你们都该死，为什么要陪着他们玩这无聊的游戏！为什么要陪着他们演戏！”<br>
+“给，水。”</p>
+<h1 id="线">线</h1>
+<h1 id="茧">茧</h1>
+<h1 id="议">议</h1>
+<h1 id="分">分</h1>
+<h2 id="亚曼莎莉丝">亚曼，莎莉丝</h2>
 
         </div>
         
         <div class="prev-post">
             上一篇
-            <a href="https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/">
-                网络流及其拓展
+            <a href="https://Lookcatbox.github.io/post/xu-yao-fu-xi-de-suan-fa/">
+                需要复习的算法
             </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/tu-de-jin-jie/">
-                图的进阶
+            <a href="https://Lookcatbox.github.io/post/fei-bo-na-qi-dui-xue-xi-bi-ji/">
+                斐波那契堆学习笔记
             </a>
         </div>
         
