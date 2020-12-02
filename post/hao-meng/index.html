@@ -1,19 +1,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-二分图
-网络流
-费用流
-网络流及其线性规划
-例题
-
-
-二分图
-将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图
-如果一个图没有奇环，那么它就是二分图
-奇环：点数为奇数的环。
-二分图的子图也是个二..." />
+    <meta name="description" content="燃起的篝火，驱散了我的寒冷。
+我搓了搓双手，呼了一口热气。
+“好暖和啊...”双眼便不自觉地眯了起来。
+全身仿佛通了电一般地涌起一股酥麻麻的感觉。
+我抬头看了看她，她正在往火堆里推木柴。
+慢慢地，慢慢地，最后用一根手指将木柴顶了进去。
+“为..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://Lookcatbox.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://Lookcatbox.github.io/styles/main.css">
@@ -327,124 +321,119 @@
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://Lookcatbox.github.io/post-images/wang-luo-liu-ji-qi-tuo-zhan.png" class="postimage" style="cursor:auto">
+                
+                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-08</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-                <div class="posttag">
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-02</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>网络流及其拓展</h2>
+            <h2>好梦</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/hao-meng/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="网络流及其拓展">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="好梦">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <ul>
-<li>二分图</li>
-<li>网络流</li>
-<li>费用流</li>
-<li>网络流及其线性规划</li>
-<li>例题</li>
-</ul>
-<ol>
-<li>二分图<br>
-将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图<br>
-如果一个图没有奇环，那么它就是二分图<br>
-奇环：点数为奇数的环。<br>
-二分图的子图也是个二分图<br>
-奇环无法把点集分为两个点集，使同一点集的点互不相连</li>
-</ol>
-<ul>
-<li>
-<p>二分图染色！<br>
-将图中的一个点随机赋予一个颜色，与它相邻的点染成第二种颜色，如果将整个图染色后没有出现矛盾，那么即为二分图。</p>
-</li>
-<li>
-<p>二分图匹配<br>
-给定边数<br>
-每个点最多连一条边<br>
-求连边的方法数<br>
-最小顶点覆盖及为匹配</p>
-</li>
-<li>
-<p>匈牙利算法<br>
-用于计算二分图最大匹配<br>
-枚举两个集合<br>
-找到不同集合的两个未匹配的点并连边<br>
-如果<br>
-交错路<br>
-从一条边开始遍历<br>
-如果被连的边设为1，未连的边设为0<br>
-交错路即为1010101010<br>
-如果最后一个节点时未被匹配的节点，那么这是增广路<br>
-我们将其路径上的匹配边换为未匹配边，未匹配边换为匹配边<br>
-那么匹配边会增加一条，就找到了一种二分图匹配。<br>
-O（n^3)</p>
-</li>
-<li>
-<p>二分图最大权匹配<br>
-给每个边加一个权值，求二分图匹配的最大权值</p>
-</li>
-<li>
-<p>KM算法</p>
-</li>
-</ul>
-<p>步入正题</p>
-<ul>
-<li>
-<p>网络流</p>
-</li>
-<li>
-<p>最大流EK算法</p>
-</li>
-<li>
-<p>dinic算法-层次网络<br>
-EK算法复杂度太大了，所以换一种算法、<br>
-循环增<br>
-当前弧优化</p>
-</li>
-<li>
-<p>费用流（最大流量最小费用）<br>
-先满足最大流然后满足最小费用<br>
-就是在正常网络流的</p>
-</li>
-<li>
-<p>zkw费用流<br>
-改造dinic，bfs的时候找最短路然后分层就好了</p>
-</li>
-<li>
-<p>网络流与线性规划</p>
-<ul>
-<li>线性约束+变量+函数最小化<br>
-最大流的对偶问题是最小割<br>
-最小路径覆盖<br>
-最小顶点覆盖</li>
-</ul>
-</li>
-</ul>
+            <p>燃起的篝火，驱散了我的寒冷。</p>
+<p>我搓了搓双手，呼了一口热气。</p>
+<p>“好暖和啊...”双眼便不自觉地眯了起来。</p>
+<p>全身仿佛通了电一般地涌起一股酥麻麻的感觉。</p>
+<p>我抬头看了看她，她正在往火堆里推木柴。</p>
+<p>慢慢地，慢慢地，最后用一根手指将木柴顶了进去。</p>
+<p>“为什么要放这么多柴啊？”我为什么要这么问啊。</p>
+<p>她看了我一眼，啊，那是轻蔑的眼神？</p>
+<p>“傻啊，你想被冻死吗？”</p>
+<p>啊，她正视我了。</p>
+<p>“啊，被冻死也挺好的呢。”我眯着眼，紧了紧毯子，感觉脑袋有点昏昏沉沉了。</p>
+<p>“今晚的月亮真大啊。”</p>
+<p>我又没头没尾地冒出一句话来。</p>
+<p>“是啊，很大啊，有相机就好了。”</p>
+<p>抿了抿嘴唇，又用舌头舔了舔。</p>
+<p>“异想天开呢<s>啊</s>” 我打了个哈欠，倒在了竹席上。</p>
+<p>为什么是竹席呢，这种东西好没有意义啊。</p>
+<p>把毯子裹在身上，缩成一团。</p>
+<p>眼前便是地面了，啊，宽敞的街道。</p>
+<p>原来今晚的月亮有这么亮吗，看的好清楚啊，而且，好虚幻的感觉。</p>
+<p>啊，方形的铁质地板上覆盖着一层薄薄的灰尘，还有铁块之间的接缝，看起来也有很多灰尘。</p>
+<p>忍不住用手指抹了一下。</p>
+<p>好大的街道啊。</p>
+<p>又宽又大，躺在上面睡会有一种奇妙的感觉。</p>
+<p>仿佛，仿佛置身荒野之中一般。</p>
+<p>或许这不是个恰当的比喻。。。好吧。</p>
+<p>“好静啊。”我这么说，到底是在和谁讲话呢？</p>
+<p>“除了我们的声音和火的声音听不见其他的声音了吧。”</p>
+<p>“胡说啦，明明是木柴的声音。”我翻了个身。</p>
+<p>“有什么区别吗？”</p>
+<p>“听出来了哟，这种把我当傻子的语气。”</p>
+<p>“。。。那你想怎样。”</p>
+<p>“我希望你不要再把我看成傻子了。”我本来是想坐起来说出这句话的，可是身体不让。</p>
+<p>“。。。为什么突然严肃了起来，好吧好吧。”</p>
+<p>“啊啊啊啊。”又翻了个身，我仰着躺了起来。</p>
+<p>微微眯着的双眼看到高耸的楼房的那一下，我终于知道了。</p>
+<p>什么荒野啊</p>
+<p>那两侧的楼房，好高啊。</p>
+<p>高高的楼房向远处延伸，斜斜的就好像要交于一点一般。</p>
+<p>好宽敞的街道啊，为什么呢。</p>
+<p>啊，仔细看不远处有个拐角，顺着那个拐角走过去的话，又是同样的街道吧？</p>
+<p>好奇妙啊好奇妙啊</p>
+<p>“好高啊。”</p>
+<p>“嗯”</p>
+<p>“这些房子还有屋檐呢。”</p>
+<p>“嗯”</p>
+<p>“好整齐的屋檐啊”</p>
+<p>“嗯”</p>
+<p>“好高啊”</p>
+<p>“。。。”</p>
+<p>她为什么还能坐着呢？</p>
+<p>为什么“不躺下来吗？”</p>
+<p>“没事，我坐着就好”她看了我一眼，扭头看了我一眼。</p>
+<p>睡意越发朦胧了，旁边就是地板啊，地板是什么味道的呢。</p>
+<p>是淡淡的铁锈味······</p>
+<p>眨了几下，阖上了眼睛。</p>
+<p>······</p>
+<p>我睡了没多久吧。</p>
+<p>仔细一看，她已经躺下了，篝火也快熄灭了。</p>
+<p>或许是已经熄灭了也不一定。</p>
+<p>还有一些火苗吗？</p>
+<p>算了，爬起来填个柴吧。</p>
+<p>不想离开席子啊，把她的背包拿过来吧。</p>
+<p>将背包拽到了面前，手伸进去翻找了起来。</p>
+<p>尼龙布料的质感。。。</p>
+<p>拿掉了上面的一件衣服，下面就是木柴了。</p>
+<p>一摸，呀，好多灰啊</p>
+<p>是会掉渣的木头吗？</p>
+<p>这可不好，我把木柴挪出来，一看，背包底部全是木屑了。</p>
+<p>旁边的白色防风衣的内衬也沾满了木屑。</p>
+<p>不过木头有股淡淡的香味，还挺好闻的。</p>
+<p>抽出一根木柴，努力弯曲身子塞到火堆里。</p>
+<p>再吹几口气——啊，燃起来了，我真棒！</p>
+<p>躺回了席子上后，看着那些楼房的上层。</p>
+<p>好像。。。。好像书店啊！一排排，连在一起的书店。。。。</p>
+<p>啊，等等，她没躺到和我一样的角度。</p>
+<p>我们大概是围绕火堆呈扇形散开的。</p>
+<p>这可不行——把她搬过来——算了吧，没那个力气。</p>
+<p>那——把我的席子搬过去——</p>
+<p>“嘿咻......”</p>
+<p>好啦，完美啦。</p>
+<p>还有风呢，真舒服啊。</p>
+<p>要睡着啦。。。</p>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-jiang-ping/">
-                提高组DAY6讲评
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
-                提高组DAY5题目讲评
+            <a href="https://Lookcatbox.github.io/post/string-lei-shen-ru-jiang-jie/">
+                String类深入讲解
             </a>
         </div>
         
@@ -686,124 +675,119 @@ EK算法复杂度太大了，所以换一种算法、<br>
         <div class="postshow">
             
             <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
-                <img src="https://Lookcatbox.github.io/post-images/wang-luo-liu-ji-qi-tuo-zhan.png" class="postimage" style="cursor:auto">
+                
+                <img src="http://pic154.nipic.com/file/20180129/26103254_111825202032_2.jpg" class="postimage">
+                
             </div>
             <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2020-08-08</div>
-                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
-                <div class="posttag">
-                    
-                </div>
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-12-02</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 4 min read</div>
+            <div class="posttag">
+                
             </div>
-            
+        </div>
+        
         <div id="texttitle" style="text-align: center">
-            <h2>网络流及其拓展</h2>
+            <h2>好梦</h2>
             <!-- id 将作为查询条件 -->
-            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/wang-luo-liu-ji-qi-tuo-zhan/</div>
+            <div id="pl" style="display:none">https://Lookcatbox.github.io/post/hao-meng/</div>
             <div id="rootaddr" style="display:none">https://Lookcatbox.github.io</div>
-            <span id="hotnum" class="leancloud_visitors" data-flag-title="网络流及其拓展">
+            <span id="hotnum" class="leancloud_visitors" data-flag-title="好梦">
                 <h4 class="readercount">热度🔥: <i class="leancloud-visitors-count">loading...</i></h4>
             </span>
         </div>
         <div class="text ">
-            <ul>
-<li>二分图</li>
-<li>网络流</li>
-<li>费用流</li>
-<li>网络流及其线性规划</li>
-<li>例题</li>
-</ul>
-<ol>
-<li>二分图<br>
-将一个图G(V,E)的点集划分为V1,V2，那么只要保证同一个点集内的点互不相连，即为二分图<br>
-如果一个图没有奇环，那么它就是二分图<br>
-奇环：点数为奇数的环。<br>
-二分图的子图也是个二分图<br>
-奇环无法把点集分为两个点集，使同一点集的点互不相连</li>
-</ol>
-<ul>
-<li>
-<p>二分图染色！<br>
-将图中的一个点随机赋予一个颜色，与它相邻的点染成第二种颜色，如果将整个图染色后没有出现矛盾，那么即为二分图。</p>
-</li>
-<li>
-<p>二分图匹配<br>
-给定边数<br>
-每个点最多连一条边<br>
-求连边的方法数<br>
-最小顶点覆盖及为匹配</p>
-</li>
-<li>
-<p>匈牙利算法<br>
-用于计算二分图最大匹配<br>
-枚举两个集合<br>
-找到不同集合的两个未匹配的点并连边<br>
-如果<br>
-交错路<br>
-从一条边开始遍历<br>
-如果被连的边设为1，未连的边设为0<br>
-交错路即为1010101010<br>
-如果最后一个节点时未被匹配的节点，那么这是增广路<br>
-我们将其路径上的匹配边换为未匹配边，未匹配边换为匹配边<br>
-那么匹配边会增加一条，就找到了一种二分图匹配。<br>
-O（n^3)</p>
-</li>
-<li>
-<p>二分图最大权匹配<br>
-给每个边加一个权值，求二分图匹配的最大权值</p>
-</li>
-<li>
-<p>KM算法</p>
-</li>
-</ul>
-<p>步入正题</p>
-<ul>
-<li>
-<p>网络流</p>
-</li>
-<li>
-<p>最大流EK算法</p>
-</li>
-<li>
-<p>dinic算法-层次网络<br>
-EK算法复杂度太大了，所以换一种算法、<br>
-循环增<br>
-当前弧优化</p>
-</li>
-<li>
-<p>费用流（最大流量最小费用）<br>
-先满足最大流然后满足最小费用<br>
-就是在正常网络流的</p>
-</li>
-<li>
-<p>zkw费用流<br>
-改造dinic，bfs的时候找最短路然后分层就好了</p>
-</li>
-<li>
-<p>网络流与线性规划</p>
-<ul>
-<li>线性约束+变量+函数最小化<br>
-最大流的对偶问题是最小割<br>
-最小路径覆盖<br>
-最小顶点覆盖</li>
-</ul>
-</li>
-</ul>
+            <p>燃起的篝火，驱散了我的寒冷。</p>
+<p>我搓了搓双手，呼了一口热气。</p>
+<p>“好暖和啊...”双眼便不自觉地眯了起来。</p>
+<p>全身仿佛通了电一般地涌起一股酥麻麻的感觉。</p>
+<p>我抬头看了看她，她正在往火堆里推木柴。</p>
+<p>慢慢地，慢慢地，最后用一根手指将木柴顶了进去。</p>
+<p>“为什么要放这么多柴啊？”我为什么要这么问啊。</p>
+<p>她看了我一眼，啊，那是轻蔑的眼神？</p>
+<p>“傻啊，你想被冻死吗？”</p>
+<p>啊，她正视我了。</p>
+<p>“啊，被冻死也挺好的呢。”我眯着眼，紧了紧毯子，感觉脑袋有点昏昏沉沉了。</p>
+<p>“今晚的月亮真大啊。”</p>
+<p>我又没头没尾地冒出一句话来。</p>
+<p>“是啊，很大啊，有相机就好了。”</p>
+<p>抿了抿嘴唇，又用舌头舔了舔。</p>
+<p>“异想天开呢<s>啊</s>” 我打了个哈欠，倒在了竹席上。</p>
+<p>为什么是竹席呢，这种东西好没有意义啊。</p>
+<p>把毯子裹在身上，缩成一团。</p>
+<p>眼前便是地面了，啊，宽敞的街道。</p>
+<p>原来今晚的月亮有这么亮吗，看的好清楚啊，而且，好虚幻的感觉。</p>
+<p>啊，方形的铁质地板上覆盖着一层薄薄的灰尘，还有铁块之间的接缝，看起来也有很多灰尘。</p>
+<p>忍不住用手指抹了一下。</p>
+<p>好大的街道啊。</p>
+<p>又宽又大，躺在上面睡会有一种奇妙的感觉。</p>
+<p>仿佛，仿佛置身荒野之中一般。</p>
+<p>或许这不是个恰当的比喻。。。好吧。</p>
+<p>“好静啊。”我这么说，到底是在和谁讲话呢？</p>
+<p>“除了我们的声音和火的声音听不见其他的声音了吧。”</p>
+<p>“胡说啦，明明是木柴的声音。”我翻了个身。</p>
+<p>“有什么区别吗？”</p>
+<p>“听出来了哟，这种把我当傻子的语气。”</p>
+<p>“。。。那你想怎样。”</p>
+<p>“我希望你不要再把我看成傻子了。”我本来是想坐起来说出这句话的，可是身体不让。</p>
+<p>“。。。为什么突然严肃了起来，好吧好吧。”</p>
+<p>“啊啊啊啊。”又翻了个身，我仰着躺了起来。</p>
+<p>微微眯着的双眼看到高耸的楼房的那一下，我终于知道了。</p>
+<p>什么荒野啊</p>
+<p>那两侧的楼房，好高啊。</p>
+<p>高高的楼房向远处延伸，斜斜的就好像要交于一点一般。</p>
+<p>好宽敞的街道啊，为什么呢。</p>
+<p>啊，仔细看不远处有个拐角，顺着那个拐角走过去的话，又是同样的街道吧？</p>
+<p>好奇妙啊好奇妙啊</p>
+<p>“好高啊。”</p>
+<p>“嗯”</p>
+<p>“这些房子还有屋檐呢。”</p>
+<p>“嗯”</p>
+<p>“好整齐的屋檐啊”</p>
+<p>“嗯”</p>
+<p>“好高啊”</p>
+<p>“。。。”</p>
+<p>她为什么还能坐着呢？</p>
+<p>为什么“不躺下来吗？”</p>
+<p>“没事，我坐着就好”她看了我一眼，扭头看了我一眼。</p>
+<p>睡意越发朦胧了，旁边就是地板啊，地板是什么味道的呢。</p>
+<p>是淡淡的铁锈味······</p>
+<p>眨了几下，阖上了眼睛。</p>
+<p>······</p>
+<p>我睡了没多久吧。</p>
+<p>仔细一看，她已经躺下了，篝火也快熄灭了。</p>
+<p>或许是已经熄灭了也不一定。</p>
+<p>还有一些火苗吗？</p>
+<p>算了，爬起来填个柴吧。</p>
+<p>不想离开席子啊，把她的背包拿过来吧。</p>
+<p>将背包拽到了面前，手伸进去翻找了起来。</p>
+<p>尼龙布料的质感。。。</p>
+<p>拿掉了上面的一件衣服，下面就是木柴了。</p>
+<p>一摸，呀，好多灰啊</p>
+<p>是会掉渣的木头吗？</p>
+<p>这可不好，我把木柴挪出来，一看，背包底部全是木屑了。</p>
+<p>旁边的白色防风衣的内衬也沾满了木屑。</p>
+<p>不过木头有股淡淡的香味，还挺好闻的。</p>
+<p>抽出一根木柴，努力弯曲身子塞到火堆里。</p>
+<p>再吹几口气——啊，燃起来了，我真棒！</p>
+<p>躺回了席子上后，看着那些楼房的上层。</p>
+<p>好像。。。。好像书店啊！一排排，连在一起的书店。。。。</p>
+<p>啊，等等，她没躺到和我一样的角度。</p>
+<p>我们大概是围绕火堆呈扇形散开的。</p>
+<p>这可不行——把她搬过来——算了吧，没那个力气。</p>
+<p>那——把我的席子搬过去——</p>
+<p>“嘿咻......”</p>
+<p>好啦，完美啦。</p>
+<p>还有风呢，真舒服啊。</p>
+<p>要睡着啦。。。</p>
 
-        </div>
-        
-        <div class="prev-post">
-            上一篇
-            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-jiang-ping/">
-                提高组DAY6讲评
-            </a>
         </div>
         
         
         <div class="next-post">
             下一篇
-            <a href="https://Lookcatbox.github.io/post/ti-gao-zu-day5-ti-mu-jiang-ping/">
-                提高组DAY5题目讲评
+            <a href="https://Lookcatbox.github.io/post/string-lei-shen-ru-jiang-jie/">
+                String类深入讲解
             </a>
         </div>
         
