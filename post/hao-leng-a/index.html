@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="看着从自己嘴里呼出的白汽被凛冽的风切得细碎，消散在空中，我有些后悔了。
+怎么说呢，跟着一个奇怪的陌生人来到百米高的桥上吹冷风，的确是一个愚蠢的决定。我此时仿佛置身于海上的巨浪之中，间隔超过十米两人甚至就无法听见彼此的声。我出门的时候也没想过..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://lookcatbox.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://lookcatbox.github.io/styles/main.css">
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/rainbow.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://lookcatbox.github.io/media/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+            ]
+        });
+    </script>
+    
+    <title>好冷啊</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://lookcatbox.github.io</div>
+    <div id="content">
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" style="color:white" href="https://lookcatbox.github.io">HMF-have much fun Site&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/" style="color:white">
+            ✎首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives" style="color:white">
+            ☰归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags" style="color:white">
+            ★标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about" style="color:white">
+            ☎关于
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://lookcatbox.github.io/post/xue-xi-bi-ji-hui-wen-zi-dong-ji-chu-bu-zong-jie" style="color:white">
+            ♚推荐
+          </a>
+        </li>
+        
+        
+        
+        <li><a data-pjax href="https://lookcatbox.github.io/talk" style="color:white">说说</a></li>
+        
+        
+          
+        <li><a data-pjax href="https://lookcatbox.github.io/friends" style="color:white">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
+    <link rel="stylesheet" href="https://lookcatbox.github.io/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://lookcatbox.github.io/styles/main.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/rainbow.min.css">
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <link rel="stylesheet" href="https://lookcatbox.github.io/media/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+    <!--------- 数学公式👇---- -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+    </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                }
+            ]
+        });
+    </script>
+    
+    <!--------- 数学公式👆----------------- -->
+    <!--------- daovocie功能👇 ------------------->
+    
+    <!--------- daovocie功能👆 ------------------->
+    <!-- -----------------twikoo评论系统引入👇 --------->
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.1/dist/twikoo.all.min.js"></script>
+    <!-- -----------------twikoo评论系统引入👆 --------->
+    <!---------------- leancloud api 功能依赖引入👇 -------->
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script>
+    <!---------------- leancloud api 功能依赖引入👆 -------->
+    <!------------------ valine评论系统引入👇 ------------------>
+    <script src="https://lookcatbox.github.io/media/js/valine.min.js"></script>
+    <!------------------ valine评论系统引入👆 ------------------>
+    <!---------------- 今日诗词api功能依赖👇 ----------------------->
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <!---------------- 今日诗词api功能依赖👆 ----------------------->
+    <!---------------- 今日诗词api功能依赖👇 ----------------------->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
+    <!---------------- 哔哔功能依赖👆 ----------------------->
+
+
+</head>
+
+<style>
+    body {
+        overflow-x: hidden;
+        height: 100vh;
+        overflow-y: scroll;
+        cursor: url("https://lookcatbox.github.io/media/images/mouse_cursor.png"), auto
+    }
+</style>
+
+<body>
+    <!--=------ 页面加载动态画面👇 --------------->
+    <div class="pjaxloading" onclick="pjaxloadingClose()">
+        <div class="loadingbackground"></div>
+        <div id="loading-aname">
+            <div class="loading-aname">
+            </div>
+        </div>
+    </div>
+    <!--=------ 页面加载动态画面👆 --------------->
+
+    <!--------------- 左侧菜单栏👇 ------------------------>
+    
+    <div id=side>
+        <div class="r_m_div">
+            <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
+                        src='https://lookcatbox.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
+        </div>
+        <div class="avatar-border">
+            <img src="https://lookcatbox.github.io/images/avatar.png?v=1710169081707" class="avatar">
+        </div>
+        <div class="sitename">HMF-have much fun Site</div>
+        <span class="description" data-text='[" HMF | Every day have much fun"]'>&nbsp;</span>
+        <div class="siteinfocontainer">
+            <span class="siteinfo">文章</span>
+            <span class="siteinfo">标签</span>
+        </div>
+        <div class="siteinfocontainer">
+            <span class="siteinfo" id="siteinfo-postsnum"></span>
+            <span class="siteinfo">16</span>
+        </div>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>联系方式戳我~</span>
+        
+        <a href="https://github.com/Lookcatbox" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://lookcatbox.github.io/media/images/github.png" alt=""></i></a>
+        
+        
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://lookcatbox.github.io/media/images/QQ.png" alt=""></i></a>
+        
+        
+        
+        <a href="https://space.bilibili.com/1157268322?spm_id_from=333.1007.0.0" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://lookcatbox.github.io/media/images/bilibili.png" alt=""></i></a>
+        
+        
+        
+        
+        
+        <a href="https://steamcommunity.com/profiles/76561199085605460/" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://lookcatbox.github.io/media/images/steam.png" alt=""></i></a>
+        
+    </div>
+    <div id="qq" style="display:none">https://lookcatbox.github.io/media/images/QQ.png</div>
+    <!------------ 加载菜单按钮👇 ------------------------->
+    <div class="menucontainer">
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="✎首页"></i>&nbsp;<span
+                    data-text="✎首页">✎首页</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/archives" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="☰归档"></i>&nbsp;<span
+                    data-text="☰归档">☰归档</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/tags" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="★标签"></i>&nbsp;<span
+                    data-text="★标签">★标签</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/about" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="☎关于"></i>&nbsp;<span
+                    data-text="☎关于">☎关于</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="https://lookcatbox.github.io/post/xue-xi-bi-ji-hui-wen-zi-dong-ji-chu-bu-zong-jie" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="♚推荐"></i>&nbsp;<span
+                    data-text="♚推荐">♚推荐</span>
+            </a>
+        </div>
+        
+        
+
+        
+        <div class="mchocie description">
+            <a data-pjax href="https://lookcatbox.github.io/talk" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="说说"></i>&nbsp;<span data-text="说说">说说</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="https://lookcatbox.github.io/friends" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="友人帐"></i>&nbsp;<span data-text="友人帐">友人帐</span>
+            </a>
+        </div>
+        
+        <!--  -->
+    </div>
+    <!------------ 加载菜单按钮👆 ------------------------->
+    <hr>
+    <style>
+    .copyright {
+        font-size: 15px;
+        color: #d9d9d9;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        .foot {
+            width: 100%;
+            height: 130px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .foot {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="foot">
+        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
+            <div>
+                
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">02/22/2020</div>
+                
+            </div>
+            <div>
+                
+                <script async
+                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
+                <div id="vistornum" style="margin:0">
+                    <span id="busuanzi_container_site_uv">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
+                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                </div>
+                
+            </div>
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020 备案号: 闽ICP备21335467号
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
+
+    </div>
+
+    <img class="moon" src="https://lookcatbox.github.io/media/images/moon.png" onclick="moonlight()">
+    <script src="https://lookcatbox.github.io/media/js/wordshow.js"></script>
+    
+    <!--------------- 左侧菜单栏👆 ------------------------>
+
+    <!----------------- 顶部菜单栏👇 ------------------------>
+    
+    <!----------------- 顶部菜单栏👆 ------------------------>
+
+<!--核心功能加载-->
+<script src="https://lookcatbox.github.io/media/js/mainfunc.js"></script>
+
+<!------------- Fog1.0版本彩蛋👇 -------------->
+    <!-- <section id="terrestrial" class="popup">
+        <a href="#" class="back">&lt; back</a>
+    </section>
+
+    <div class="flycontainer">
+        <div class="flyword">御风飞行中...</div>
+    </div>
+
+    <script>
+        $("#fog_go").click(function(){fog_go()});
+        async function fog_go(){
+            $(".bars").hide()
+            $("#live2d").hide()
+            await sleep(3000);
+            $(".flycontainer").css("display","flex");
+            $(".popup").fadeOut(500)
+            await sleep(2000);
+            var sitename = "HMF-have much fun Site";
+            getFogUser(sitename);
+        }
+
+        function fog_goregis(){
+            var sitename = "HMF-have much fun Site";
+            var siteurl = "https://lookcatbox.github.io";
+            regisFogUser(sitename,siteurl);
+        }
+        fog_goregis();
+    </script> -->
+<!------------- Fog1.0版本彩蛋👆 -------------->
+<script>
+    function change_topmenu(){
+        tmcolor = "#f06595"
+        tsnamecolor = "#22b8cf"
+        $(".navbar-inverse .navbar-nav>li>a").css("color",tmcolor)
+        $(".navbar-inverse .navbar-brand").css("color",tsnamecolor)
+        $(".navbar-fixed-top").css("border-radius","0 0 10px 10px")
+    }
+</script>
+
+<!------ 根据自定义配置声明变量👇 --------------------->
+    
+    <script>
+        var postnumChoice = true
+    </script>
+    
+    
+    <script>
+        var shareChoice = true
+    </script>
+    
+    
+    <script>
+        var donateChoice = true
+    </script>
+    
+    
+    <script>
+        var searchChoice = true
+    </script>
+    
+    <script>let postsnum = 0;</script>
+    <div id="side-posttitle" style="display: none;">
+    
+    
+    ？
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    好冷啊
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    离去
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【Trick】一类集合计数问题
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    水水水酉
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    计数问题
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】AT3912 Antennas on Tree
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    AGC杂题乱做
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【游记】APIO2022
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF1137F Matches Are Not a Child&#39;s Play
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】AT1976 [ARC058D] 文字列大好きいろはちゃん / Iroha Loves Strings
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    FJOI2022 游记
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】P5785 [SDOI2012]任务安排
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】P4338 [ZJOI2018]历史
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【学习笔记】线段树分治
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF1140F Extending Set of Points
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF700E Cool Slogans
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】P8252 讨论
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    
+    
+    【题解】CF1163F Indecisive Taxi Fee
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF238D Tape Programming
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    NOI Online2022游记
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】P6626 [省选联考 2020 B 卷] 消息传递
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】YZOJ5037 升级
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF1625E1 Cats on the Upgrade (easy version)
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF1638D Big Brush
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF1039D You Are Given a Tree
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】CF280D k-Maximum Subsequence Sum
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】AT3611 Tree MST
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】P8078 [WC2022] 秃子酋长
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【题解】P8207 [THUPC2022 初赛] 最小公倍树
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【学习笔记】回滚莫队初步总结
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【学习笔记】回文自动机初步总结
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    
+    
+    Linky的推荐题单第一弹
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    
+    
+    【题解】CF818G Four Melodies
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    【冬日绘版】某小型资本家的冬日绘版游记
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    好梦（2）
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    CDQ分治初步总结
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    String类深入讲解
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+    
+        <script>
+            var menupos = 'left';
+            $("#siteinfo-postsnum").html(postsnum);
+        </script>
+    
+    <script>
+        let commentsHide = false
+    </script>
+    <!------ 根据自定义配置声明变量👆 --------------------->
+
+
+    <!----------根据自定义配置设置图标信息👇---------->
+    <script>
+        var icondict = new Array();
+    </script>
+    
+        
+    
+    <!----------根据自定义配置设置图标信息👆---------->
+</body>
+
+<script src="https://lookcatbox.github.io/media/share/dist/Share.js"></script>
+<!-- 页面pjax测试 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+<!--确保jQuery已经在此之前加载-->
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src="https://lookcatbox.github.io/media/js/all-pjax.js"></script>
+<script>
+    //-------------------------------说说功能👇--------------------------------------
+    let talksall = [];
+    let talks = [];
+    let talkindex = 0;
+    get();
+
+    function get() {
+        var t = JSON.parse('[{"author":"","img":"","text":"备战省选","time":"2022-3-22"},{"author":"","img":"","text":"NOIO 纪念，我太菜了www","time":"2022-3-26"}]');
+        talkindex = t.length - 1;
+        for (var i = 0; i <= t.length - 1; i++) {
+            var d = {};
+            d["time"] = t[i].time;
+            d["author"] = t[i].author;
+            d["text"] = t[i].text;
+            d["img"] = t[i].img;
+            talksall.push(d);
+        }
+    }
+
+    function add() {
+        for (var i = talkindex; i >= 0 && i > talkindex - 3; i--) {
+            talks.push(talksall[i]);
+        }
+        talkindex = (talkindex - 3) >= 0 ? (talkindex - 3) : -1;
+        if (talkindex < 0) $("#getmorebt").hide();
+        show();
+    }
+
+    function show() {
+        var talkT = document.getElementById("talkContainer");
+        talkT.innerHTML = "";
+        for (var i = 0; i < talks.length; i++) {
+            if (talks[i].img != '') {
+                talkT.innerHTML += '\
+            <div class="talk" v-for="t in talks"> \
+                <span data-fancybox="images" href="' + talks[i].img + '"><img src="' + talks[i].img + '" class="talkimg"></span> \
+                <div class="ainfo">\
+                    <div class="ainfo-intro">\
+                        <div class="author">' + talks[i].author + '</div>·\
+                        <div class="time">' + talks[i].time + '</div>\
+                    </div>\
+                </div>\
+                <div class="talkcontent">' + talks[i].text + '\
+                </div\>\
+            ';
+            } else {
+                talkT.innerHTML += '\
+            <div class="talk" v-for="t in talks"> \
+                <div class="ainfo">\
+                    <div class="ainfo-intro">\
+                        <div class="author">' + talks[i].author + '</div>·\
+                        <div class="time">' + talks[i].time + '</div>\
+                    </div>\
+                </div>\
+                <div class="talkcontent">' + talks[i].text + '\
+                </div\>\
+            ';
+            }
+        }
+    }
+    //-------------------------------说说功能👆--------------------------------------
+</script>
+
+<!---->
+<script>
+    function replaceAvatar() {
+        twikoo_avatar = $(".tk-avatar-img");
+        for (var i = 0; i < twikoo_avatar.length; i++) {
+            var asrc = twikoo_avatar.eq(i).attr('src');
+            if (asrc.search('cn.gravatar.com') != -1) {
+                twikoo_avatar.eq(i).attr('src', 'https://lookcatbox.github.io/media/images/comavatar.png');
+            }
+        }
+    }
+
+    function showWechat() {
+        var wechat = '';
+        alert("博主微信号：" + wechat);
+        return false;
+    }
+</script>
+
+<script>
+    /**
+     * https://github.com/tangkaichuan/gridea-search
+     */
+    // 检查缓存是否最新
+    function checkCache() {
+        var caches_postsnum = localStorage.getItem("postsnum");
+        var pt = document.getElementById("side-posttitle").innerHTML;
+        pt = pt.replace(/\s+/g, '').replace(/<script>.*?<\/script>/gi, "")
+        var ptlen = pt.length;
+        var ptlen_storage = localStorage.getItem("poststitlelen");
+        if (caches_postsnum != postsnum || ptlen != ptlen_storage) {
+            console.log("更新缓存");
+            return false
+        }
+        return true;
+    }
+
+    (function () {
+        var CACHES = checkCache()
+        if (!CACHES) {
+            var NOW = Date.now()
+            var API_CONTENT = '../api-content/index.html' + '?_=' + NOW
+            preload(API_CONTENT);
+            getContents(show_getContentresult);
+        }
+
+        function show_getContentresult(data) {
+            console.log("获取成功");
+            var postslen = data["posts"].length;
+            localStorage.setItem('postsnum', postslen);
+            var poststitlelen = 0;
+            var pt = document.getElementById("side-posttitle").innerHTML;
+            pt = pt.replace(/\s+/g, '').replace(/<script>.*?<\/script>/gi, "");
+            localStorage.setItem('poststitlelen', pt.length);
+        }
+
+
+
+        // preload
+        function preload(url) {
+            var preloadLink = document.createElement('link')
+            preloadLink.href = url
+            preloadLink.rel = 'preload'
+            preloadLink.as = 'fetch'
+            preloadLink.crossOrigin = 'anonymous'
+            document.head.appendChild(preloadLink)
+        }
+
+        // 异步 GET 请求
+        function get(obj) {
+            var xhr = new XMLHttpRequest()
+            xhr.open('get', obj.url, true)
+            xhr.send(null)
+            xhr.onreadystatechange = function () {
+                // 异步请求：响应状态为4，数据加载完毕
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        obj.success(xhr.responseText)
+                    } else {
+                        obj.error(xhr.status)
+                    }
+                }
+            }
+        }
+
+        // 获取博客全文 api
+        function getContents(callback) {
+            if (CACHES) {
+                callback(CACHES.contents)
+            } else {
+                get({
+                    url: API_CONTENT,
+                    success: function (data) {
+                        callback(JSON.parse(data));
+                        localStorage.setItem('ContentsCache', data);
+                        getStorageContent();
+                    }
+                })
+            }
+        }
+    })()
+    //------------------------核心功能--pjax全局渲染👇-------------------
+    let talkinit = false;
+    $(document).pjax('a[data-pjax]', '#main', {
+        fragment: '#main',
+        timeout: 8000
+    }).on('pjax:complete', function () {
+        //代码块高亮渲染
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+        //文章热度
+        if(postnumChoice){
+            getHotnum();
+        }
+        //文章索引
+        toginit();
+        //清空搜索栏
+        if (searchChoice) {
+            searchInit();
+            searchInput.value = "";
+        }
+        var pl = window.location.pathname;
+        //说说更新
+        if (pl.search("talk") != -1 && !talkinit) {
+            add();
+            talkinit = true;
+        } else if (pl.search("talk") != -1) {
+            show();
+        }
+        if (pl.search("post") != -1) {
+            if (shareChoice)
+                shareInit();
+            if (donateChoice)
+                donateInit();
+            if ("valine" == "default"&&!commentsHide) {
+                $("#comment").hide()
+                commentsHide = true
+            }
+            lazyload();
+            codeinit();
+            if ("valine" == "twikoo") {
+                //twikoo头像更换
+                setTimeout(replaceAvatar, 3000);
+                setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
+            }
+        }
+        if (btstate == true)
+            dropdown();
+    }).on('pjax:start', function () {
+        $(".pjaxloading").fadeIn(50);
+    }).on('pjax:end', function () {
+        $(".pjaxloading").fadeOut(50);
+    });
+    //------------------------核心功能--pjax全局渲染👆-------------------
+
+    //-------------------------------------------------搜索
+    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
+    if (searchChoice) {
+        var searchInput = document.querySelector('.search-input');
+        var searchResults = document.querySelector('.search-results');
+    }
+    // 申明保存文章的标题、链接、内容的数组变量
+    var searchValue = '',
+        arrItems = [],
+        arrLinks = [],
+        arrTitles = [],
+        arrContents = [],
+        arrResults = [],
+        indexItem = [],
+        itemLength = 0;
+    var tmpDiv = document.createElement('div');
+    tmpDiv.className = 'result-item';
+
+
+    function getStorageContent() {
+        var data = localStorage.getItem('ContentsCache');
+        data = JSON.parse(data);
+        posts = data["posts"];
+        for (var i = 0; i < posts.length; i++) {
+            arrLinks[i] = posts[i].link;
+            arrTitles[i] = posts[i].title;
+            arrContents[i] = posts[i].content;
+            itemLength++;
+        }
+    }
+    if (checkCache())
+        getStorageContent();
+    // 输入框内容变化后就开始匹配，可以不用点按钮
+    // 经测试，onkeydown, onchange 等方法效果不太理想，
+    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
+    // 并且可以处理中文输入法拼写的变化
+    searchInput.oninput = function () {
+        setTimeout(searchConfirm, 0);
+    }
+    searchInput.onfocus = function () {
+        searchResults.style.display = 'block';
+    }
+
+    function searchConfirm() {
+        if (searchInput.value == '') {
+            searchResults.style.display = 'none';
+        } else if (searchInput.value.search(/^\s+$/) >= 0) {
+            // 检测输入值全是空白的情况
+            searchInit();
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '请输入有效内容...';
+            searchResults.appendChild(itemDiv);
+        } else {
+            // 合法输入值的情况
+            searchInit();
+            searchValue = searchInput.value;
+            // 在标题、内容中查找
+            searchMatching(arrTitles, arrContents, searchValue);
+        }
+    }
+
+    // 每次搜索完成后的初始化
+    function searchInit() {
+        arrResults = [];
+        indexItem = [];
+        searchResults.innerHTML = '';
+        searchResults.style.display = 'block';
+    }
+
+    function searchMatching(arr1, arr2, input) {
+        // 忽略输入大小写
+        input = new RegExp(input, 'i');
+        var step = 10;
+        // 在所有文章标题、内容中匹配查询值
+        for (i = 0; i < itemLength; i++) {
+            var indexContent = arr2[i].search(input);
+            //标题匹配
+            if (arr1[i].search(input) != -1) {
+                indexItem.push(i); // 保存匹配值的索引
+                if (indexContent != -1) {
+                    startindex = (indexContent - step) >= 0 ? (indexContent - step) : 0;
+                    var searchcontent = arr2[i].slice(indexContent - step, indexContent + 5)
+                    arrResults.push("....." + searchcontent + ".....");
+                } else
+                    arrResults.push("");
+            }
+            //内容匹配
+            else if (indexContent != -1) {
+                indexItem.push(i); // 保存匹配值的索引
+
+                startindex = (indexContent - step) >= 0 ? (indexContent - step) : 0;
+                var searchcontent = arr2[i].slice(indexContent - step, indexContent + 5)
+                arrResults.push("....." + searchcontent + ".....");
+            }
+        }
+
+        // 输出总共匹配到的数目
+        var totalDiv = tmpDiv.cloneNode(true);
+        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
+        searchResults.appendChild(totalDiv);
+
+        // 未匹配到内容的情况
+        if (indexItem.length == 0) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '未匹配到内容...';
+            searchResults.appendChild(itemDiv);
+        }
+
+        // 将所有匹配内容进行组合
+        for (i = 0; i < arrResults.length; i++) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerHTML = '<a data-pjax class="searchresults" href="' + arrLinks[indexItem[i]] + '"><b>[' +
+                arrTitles[indexItem[i]] +
+                ']</b><p>' + arrResults[i] + '</p></a><hr />';
+            searchResults.appendChild(itemDiv);
+        }
+    }
+</script>
+
+
+
+<!--------------------- 菜单栏图标加载功能👇 ----------------------->
+<script>
+var menulist = $(".menuicon");
+var menulength = menulist.length;
+for (var i = 0; i < menulength; i++) {
+    var altname = menulist.eq(i).attr("alt");
+    var iconurl = icondict[altname];
+    if (iconurl == undefined || iconurl == '')
+        continue;
+    if (iconurl == 'Home') {
+        menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/Home.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Archive') {
+menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/Archive.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Tag') {
+menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/Tag.png");
+menulist.eq(i).show();
+} else if (iconurl == 'About') {
+menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/About.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Talk') {
+menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/Talk.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Friends') {
+menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/Friends.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Fly') {
+menulist.eq(i).attr("src", "https://lookcatbox.github.io/media/images/wind.png");
+menulist.eq(i).show();
+} else {
+menulist.eq(i).attr("src", iconurl);
+menulist.eq(i).show();
+}
+}
+</script>
+<!--------------------- 菜单栏图标加载功能👆 ----------------------->
+
+<script>
+    //--------------------bber-onetalk加载👇--------------------------------
+    function bberonetalkLoad(){
+        bberjsonurl = '';
+        if ( $("#bber-talk").length > 0 ) {
+        jsonUrl = bberjsonurl
+        $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
+        var bberHtml = ''
+        $.each(res.data, function(i, item){
+            d = new Date(item.date)
+            date = d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate() +' '+d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()
+            dataTime = '<span class="datatime">'+date+'</span>'
+            bberHtml += '<li class="item item-'+(i+1)+'">'+dataTime+'： <a data-pjax href="https://lookcatbox.github.io/bber">'+item.content+'</a></li>'
+        });
+        $('#bber-talk').append('<span class="index-talk-icon"><svg viewBox="0 0 1024 1024" width="21" height="21"><path d="M184.32 891.667692c-12.603077 0-25.206154-2.363077-37.809231-7.876923-37.021538-14.966154-59.864615-49.624615-59.864615-89.009231v-275.692307c0-212.676923 173.292308-385.969231 385.969231-385.969231h78.76923c212.676923 0 385.969231 173.292308 385.969231 385.969231 0 169.353846-137.846154 307.2-307.2 307.2H289.083077l-37.021539 37.021538c-18.904615 18.116923-43.323077 28.356923-67.741538 28.356923zM472.615385 195.347692c-178.018462 0-322.953846 144.935385-322.953847 322.953846v275.692308c0 21.267692 15.753846 29.144615 20.48 31.507692 4.726154 2.363077 22.055385 7.876923 37.021539-7.08923l46.473846-46.473846c6.301538-6.301538 14.178462-9.452308 22.055385-9.452308h354.461538c134.695385 0 244.184615-109.489231 244.184616-244.184616 0-178.018462-144.935385-322.953846-322.953847-322.953846H472.615385z"></path><path d="M321.378462 512m-59.076924 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M518.301538 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M715.224615 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153846 0 59.076923 59.076923 0 1 0-118.153846 0Z"></path></svg></span><ul class="talk-list">'+bberHtml+'</ul>')
+        //Lately({ 'target': '#bber-talk .datatime' });
+        });
+        function Roll (){
+        var list_li = $('.talk-list li'),cur_li = list_li.first(),last_li = list_li.last();
+        last_li.after(cur_li);
+        };
+        setInterval(Roll,3000);
+    }
+    }
+  //--------------------bber-onetalk加载👆--------------------------------
+</script>
+
+<script>
+    var ClicksideState = 1
+    var cur_readingmode = false
+    function readingmode(){
+        if (!cur_readingmode){
+            if(menupos == 'left'){
+                if(ClicksideState==1)
+                menu_openclose1()
+            }
+            $("#tab1").fadeOut(50)
+            $("#bg").fadeOut(50)
+            $(".navbar").fadeOut(50)
+            $(".markdownIt-TOC li a").css("color","black")
+            cur_readingmode = true
+        }else{
+            if(menupos == 'left'){
+                if(ClicksideState==0)
+                    menu_openclose1()
+            }
+            $("#tab1").fadeIn(50)
+            $("#bg").fadeIn(50)
+            $(".navbar").fadeIn(50)
+            $(".markdownIt-TOC li a").css("color","antiquewhite")
+            cur_readingmode = false  
+        }
+    }
+</script>
+
+
+<!----夜间模式👇-->
+<script>
+    var moonlightState = false
+    function moonlight(){
+        if(!moonlightState){
+            $("#bg").fadeOut(200)
+            $('body').css("background","rgba(0,0,0,0.8)")
+            $(".markdownIt-TOC li a").css("color","white")
+            $(".text p, .text ul").css("color","white")
+            $("#articlecontent").css("color","white")
+            $(".post-copyright").css("background","rgba(10,10,10,0.5)")
+            $('blockquote').css("background","rgba(10,10,10,0.6)")
+            $("#articlecontent").css("background","rgba(10,10,10,0.5)")
+            moonlightState = true
+            $(".moon").attr("src","https://lookcatbox.github.io/media/images/sun.png")
+        }else{
+            $("#bg").show()
+            $(".markdownIt-TOC li a").css("color","antiquewhite")
+            $(".text p, .text ul").css("color","rgba(0, 0, 0, 0.7)")
+            $("#articlecontent").css("color","black")
+            $(".post-copyright").css("background","#f9f9f9")
+            $('blockquote').css("background","#eff8f0")
+            $("#articlecontent").css("background","white")
+            $(".moon").attr("src","https://lookcatbox.github.io/media/images/moon.png")
+            $('body').css("background","white")
+            moonlightState = false
+        }
+    }
+</script>
+<!----夜间模式👆--></div>
+            <!--------------- pc端菜单栏👆 ---------------->
+
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            
+            <div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                    <div class="readingmode" onclick="readingmode()">阅</div>
+                    <link rel="stylesheet" href="https://lookcatbox.github.io/media/css/font-awesome.css">
+
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                
+                <img src="https://cdn.luogu.com.cn/upload/image_hosting/63r7s3yf.png" class="postimage">
+                
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2023-12-25</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 21 min read</div>
+            <div class="posttag">
+                
+            </div>
+        </div>
+        
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">好冷啊</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://lookcatbox.github.io/post/hao-leng-a/</div>
+                <div id="rootaddr" style="display:none">https://lookcatbox.github.io</div>
+                
+                    
+                    <span id="hotnum">
+                        <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
+                                class="hotnum">loading...</i></h4>
+                    </span>
+                    
+                
+            </div>
+            <div class="text ">
+                <p>看着从自己嘴里呼出的白汽被凛冽的风切得细碎，消散在空中，我有些后悔了。</p>
+<p>怎么说呢，跟着一个奇怪的陌生人来到百米高的桥上吹冷风，的确是一个愚蠢的决定。我此时仿佛置身于海上的巨浪之中，间隔超过十米两人甚至就无法听见彼此的声。我出门的时候也没想过会到风这么大的地方来，我原本的计划是去城西，参观下首都最繁荣商业街——当然现在已经空无一人了。城里当然是没风的，但相应的大多数时候也没有太阳，只有正午的时候我才能将自己的身躯沐浴在阳光下，然后我可以坐在街道正中央吃完一顿午餐，我原本是这么想的。双手即使缩在口袋里也依然冻得僵硬，伸出手去调整被风吹歪的帽子更是一次可怕的折磨。我的脚步逐渐放缓，我有些跟不上她的步伐，并且我也不想继续跟下去了，在这里停下，然后调头往回走也许是一个更明智的抉择。</p>
+<p>唯一让人欣慰的一点是，这里的风景还是很不错的。江水从桥下奔腾而过，向着远处的入海口流去，海洋与天空的交界处泛着金色的波浪，她精致的脸庞也被阳光描上了金色的轮廓。两侧都是山，但并不密集，朝着来时的路的方向望去可以看到城市侧面的剪影。今天还是个清丽透彻的好天气，空气染上了天空的颜色，微微有些发蓝，质地类似某种介于水和冰之间的凝胶，既像冰一样晶莹剔透，身处其中时又能感受到不可思议的流动性。远处细微的景物也清晰可见，像是摆在玻璃柜台里的展品。阳光虽明媚却无法驱散身上的寒意，寒风本就不住地将人往一侧吹，一米高的铁制护栏更是让我不得不考虑被风从桥上吹下去的可能，好在桥面够宽，走在正中间可以稍稍抵消这种恐惧感。</p>
+<p>她穿着棕褐色的羽绒服，头发盘起来放在黑色贝雷帽里，脖子上围了一条红色的围巾。虽说听不到，但我看着她走路的时候脑海中不禁出现了衣服摩擦产生的沙沙声。她有时会将一只手从口袋中抽出，在空气中挥动几下，很小孩子气的举动，此时就能看到她靛蓝色的指甲，像是天空与海洋颜色的糅合。</p>
+<p>我看到她在桥边停下，向着桥下望去，于是快步跟上。向下看去时，正如我此前每次这样做一样，一股血液倒流的感觉传遍全身。白色浪花拍打着整齐排列的桥墩，在其上印出深色的水痕。她轻抬起头，清脆的声音在我耳边响起：“为什么要来首都？”</p>
+<p>“喜欢到废墟里探险有问题吗？”</p>
+<p>“这里还不是废墟。”</p>
+<p>“和废墟已经没区别了，一具温热的尸体而已。”</p>
+<p>“那你呢？恋尸癖？”</p>
+<p>“这笑话真不好笑。”</p>
+<p>“抱歉，我幽默感不是很好。所以呢？为什么来这里。”</p>
+<p>“嗯......我喜欢陌生的城市，喜欢在陌生的街道上迷路的感觉。”我怎么会对着一个陌生人说这么多？但她的眼睛如生漆一般黑得深沉，让我觉得自己像是死后在一个漆黑的房间，对着一台嗡鸣着，闪烁着“GAME OVER”字样的电脑倾诉自己的一生。“迷茫，无力，不知该往何处走的时候，去欣赏城市，你感到正被一只巨手攥紧心脏，感到自己正深陷于这座城市中，你懂吗？就像在梦里，你有一个明确的目的地，但你不认识这座城市，你不知道怎么走，只能凭借内心隐约的感觉在错综复杂的道路上闲逛，在这种时候，你环视了四周，抬头仰望却发现难以看清四周建筑的顶端，然后你意识到自己正被整个城市拥抱着，沉浸在这温暖，无机质的怀抱中。”</p>
+<p>“所以你一听到首都废弃的消息后就赶过来了？”她转了下头，活动了下脖颈，眼睛半眯着，睫毛在阳光下闪闪发亮。<br>
+“这简直是我梦寐以求的地方。”我盯着她围巾上一根在风中不停摆动的丝线。<br>
+“我知道了。”她说着站到了我的前面，我转过身背靠着栏杆，从海的方向吹来的风吹到我脸上刮得生疼。我们沉默不语地对视了良久，然后在一个瞬间，她伸出双手——将我从桥上推了下去。</p>
+<p>时间仿佛停止，世界在我的眼中定格，空气在这一刻凝结，收缩，随即又迅速地膨胀，搅动起来，风，从我的衣领进入，贴着皮肤涌向了我的全身，衣服被风撑起，仿佛皮肤与骨肉分离，桥上的她正极速离我而去，高速的下坠，五脏六腑被提起的感觉，远方海面上的太阳，天空中真正的太阳，头顶上的江水，正咆哮着向我靠近，眼中的她突然活了过来——</p>
+<p>这家伙，是个疯子。</p>
+<p>水声...稀稀落落的，是在下雨吗？外面很昏暗，现在应该是黑夜。还有，一声声清脆的“咔嚓”声......我猛地睁开眼睛，自己正躺在一张靠着墙角的沙发上，她正坐在床尾处的椅子上剪指甲。见到我醒来后她抬起头<br>
+说了句“醒啦？”便继续自己手上的事情。</p>
+<p>“你......我......我操，我他妈差点死了！”</p>
+<p>“这不是没死嘛。怎么样，有没有感觉到什么？”</p>
+<p>“什么...感觉到什么？”我注意到自己身上的衣服是干的，我是怎么被带回来的，又是谁帮我换的衣服？</p>
+<p>“有没有觉得很震撼？”她微微俯身盯着我说道，语调略带兴奋，“有没有触及你的心灵？让你想要再来一次？”</p>
+<p>我一时梗塞，说不出话来，良久之后才憋出一句“你疯了。”</p>
+<p>“我还是先回去吧。”我从沙发上爬起，确认了自己身上并没有少什么部件之后，打开了门。</p>
+<p>外面正下着瓢盆大雨，一片漆黑，屋内的灯光勉强够照亮门口走廊的一片空地，水珠从屋檐上滴滴答答地落下来。我沉浸在雨声中，她的声音从身后传来，挟着些许水汽，虚幻又空灵，“出楼第二个路口左转，就是地铁站。”</p>
+<p>我退回屋内，掩上门，她的声音重新清晰起来，”不过我不建议你现在回去，现在是凌晨十二点半。“</p>
+<p>“哦对了，还有你的手机”她说着在身旁的包里翻找了起来，“忘记叫你拿出来，泡坏了，抱歉。”</p>
+<p>“......”</p>
+<p>我突然很想笑，这一切实在是太荒诞了。</p>
+<p>“我唯一的娱乐是手机里存的书和电影。”我发觉自己现在无比平静，思绪也变得慢条斯理起来，“还有，如果我要离开这里的话，手机也是必不可少的。”</p>
+<p>“对不起啦...我把我的手机给你吧。”她说着将一部有着淡粉色外壳的手机递给了我，“趁现在还没完全断电，你的那些书和电影还是可以下回来的吧。不过关于你手机里那些私人数据的话实在抱歉，如果你想修的话可以考虑去一趟附近的城市。不过，现在这座城市的火车站应该已经停运了，唯一的交通方式可能只剩下......”</p>
+<p>我打断了她的话：“我有车。”</p>
+<p>“哦那就好，总之，先在这里将就睡一晚吧。”</p>
+<p>“我睡沙发上还是？”</p>
+<p>“当然是睡沙发上，床是我的，你毕竟是客人。”</p>
+<p>这家伙貌似完全不对把我推下桥这件事感到抱歉。我在屋子里四处看了看，很小的单人公寓，进门是客厅，左手边是厨房，右手边是卧室和卫生间，客厅里只有摆在东南角的一张沙发，沙发对面的电视和一张小圆桌。</p>
+<p>我坐上沙发，心中所想只有快些来到第二天早晨，这时候我才意识到自己没有吃晚饭，这家伙看起来也没有给我准备晚饭的意图，估计是自己已经吃过了。</p>
+<p>......被推下了桥掉到江里还没吃上晚饭，莫名有点生气，很是恼火，在这种心态下入眠是件极其困难的事。</p>
+<p>不会明天早上早饭也没得吃吧，这样一想更恼火了。</p>
+<p>早上起来倒是意外得知有早饭，不过据她所说我晚起一会就没有了。</p>
+<p>“话说你的食物是哪来的？”</p>
+<p>“当初撤离的时候，很多超市都在降价促销，于是就屯了很多。”</p>
+<p>“所以你是一开始就计划好要留在这了？为什么不跟着大部队一起走？”</p>
+<p>“不想走就是不想走吧，没什么原因。”她端起汤喝了一口，“你是不是该回你自己的家了？”</p>
+<p>“这么快就下逐客令？你以为我是因为谁才回不去的啊？”</p>
+<p>“我看的出来，你挺喜欢那种感觉吧，所以我没必要感到抱歉。”</p>
+<p>看来沟通是很难沟通的。我们面对面沉默着吃完了早餐，我打开门，任由风涌进来，将我杀死、肢解、撕碎，风就是如此令人厌恶的风，带着浓浓的恨意，风恨我的程度和我恨风的程度一样深。胸中从昨天燃烧到今天的无名怒火，想来也包含着对风的恨意。</p>
+<p>乘地铁回到了我的住所，这地方其实还没布置完毕；住所被我选在了市中心附近一座居民楼的最顶层，空荡荡的屋子里偶尔会响起狂风拍打窗户发出的吱呀声。显然，在二百二十层的高度下，如果我打开窗户，我将遇到我来这里以来最强的风。屋主人走的时候没带走家具，这给我省了不少麻烦，从这里可以俯瞰除了市中心那几座超高楼外的几乎整个城市，而唯一的坏处则是，如果停电了，那么上下楼都将成为一件非常，非常困难的事。不过我并不担心，现在距离城市废弃才过了不到一个月，至少还有两个月备用电源才会耗尽迎来全面停电，这段时间应该够我游览完整个城市了。为了养足精神在家休整了一天，等到第二天风小了一点继续出门，目的地是我前天原计划要去的城西。为了不与她相遇，我此后的路线都得绕着她家走，鬼知道再遇见她一次她会做出什么。但我又不可能永远都不去她家附近那一块，可着实令人犯难。</p>
+<p>晴天，大晴天，万里无云。</p>
+<p>事情终究还是不遂人愿，我站在纯白色的楼间平台上，看着眼前玻璃幕墙中的倒影，有个人正站在我身后数十米处。我深吸了一口气，立定，静静地看着身后的人影，她依旧穿着那件棕色羽绒服，衣摆在风中舞动。我不知道她是怎么找到我，从什么时候开始跟在我身后的。</p>
+<p>大约两分钟后，她终于开口了：“发现我了？”</p>
+<p>我脑中闪过了好几个问题，然后问出了我最想问的一个：“你是怎么找到我的？”</p>
+<p>“这个嘛，保密。”她将双手背在身后，往前走了几步，“我是来当你的导游的。”</p>
+<p>“我不需要。”</p>
+<p>“有个本地人当导游难道不好吗？我自认为对这座城市还是蛮熟悉的。”</p>
+<p>我大概了解她的性格了，无论我怎么讲她都不会听的，只能任由她跟在我的身后，保持着几十米的距离。接下来的三个小时里身后一直传来她喋喋不休的话语，而我则一直努力着将这些话语从我脑中排出去，假装身后并没有一个人一直试图当我的导游。</p>
+<p>到了中午我不得不停下来休息，无法保持与她的距离，于是她走到我身旁坐下。</p>
+<p>“我知道的，你既然会来这座城市，就代表你也深深地被她的美所折服，对吧。”她看着我，眼中闪烁着光芒，双手在空中比划了一下，“钢铁与水泥铸就的梦境。”</p>
+<p>我虽然不想回答，但她说的确实不错。尽管大片大片单一的灰色建筑有时会为人所诟病，但在我眼里这正是她动人的力量感的一部分来源。</p>
+<p>“吃的什么？自热米饭？”</p>
+<p>“嗯。”</p>
+<p>“你带了多少啊？这东西应该挺占空间的吧，我还以为你会带压缩饼干之类的。”</p>
+<p>“太难吃了，脑子坏了才会带压缩饼干。自热米饭我带了六箱，这东西不用热水，方便得很。”</p>
+<p>“一日三餐都吃这个？”</p>
+<p>“嗯。”</p>
+<p>“不会腻？”</p>
+<p>“有不同口味的，换着吃呗。话说回来你呢？你的东西吃完了怎么办？我吃完了可就回去了。”</p>
+<p>“吃完了......吃完了就结束了，大概吧。”</p>
+<p>“你现在要搬走的话挺麻烦的，如果没有车的话。”我停下来吃了一口饭，“这边的所有线路都已经停运了。”</p>
+<p>我猛然想起她是不是对我说过差不多的话。</p>
+<p>她直视前方，我从侧边看着她。她今天编了个挺精美的发型，可惜我说不上来叫什么名字。</p>
+<p>“饭，分我点呗。”</p>
+<p>“不行。”</p>
+<p>到了下午这家伙不怎么说话了，不知道是因为太饿了还是这篇区域她不怎么熟。我们穿过了无数高架桥，在数百米乃至千米高的高楼间游荡。城市内很安静，安静到有时耳边会泛起一阵没来由的嗡鸣声，也许是现实的底噪，天空中偶尔有鸟类盘旋而过，可能是在附近的高楼上筑了巢。</p>
+<p>我直到很久以后还深深地记得傍晚我站在地铁站口所望见的一幅画面，这同样也是没有理由的，这幅景象和我在城市别处看到的景象并没有什么很大的不同，可能人有时候就是会没缘由地将一些画面刻在脑子里。脚下的白色石砖是磨砂质感的，材质可能是大理石，巨大的，灰色的模板居民楼无声地矗立着，压迫着，将我夹在中间。右侧是宽阔的马路，前方是十字路口，十字路口上方有一座天桥，再上方则是每三十层一座的楼间平台，构成城市的第二层，第三层，...，无数层地面，在夕阳的照射下投下广阔的格栅状阴影，其中离我最近的阴影就在我的前方几步远。只有少数市中心的巨型建筑可以突破密集的楼间平台，在我抬头向上看时出现在我视野的顶端，他们拥有的玻璃幕墙反射出我所看不到的建筑楼顶的景观，给人一种城市向天空无限延伸的错觉。其中有三座比较有特点，一座顶端呈塔状的，一座顶端有着巨大的空洞，还有一座螺旋形的，理论上应该还有一座极具特色的巨型建筑，可惜已经随着这座城市一起死亡了，在城市废弃的前一个晚上倒塌，原址我去看过，很壮观的一片废墟，除了散落在路上的一部分被清理了，剩下的那些很显然并没有人想去处理。这三座建筑几乎在城市的任何地方都能看见，可惜我不记得他们叫什么名字，我不太擅长记名字。</p>
+<p>记忆中的场景里没有她，但她此时肯定是站在我的视野里的，我尝试将她摆到正确的位置。她应该站在楼间平台投下的阴影里，她的头发，前面提过了，挺漂亮的发型，棕色的羽绒服敞开着，露出了里面，呃，深灰色的毛衣。她的脸，应该是看着我的，但面部被阴影盖着，看不清她的表情。我回头，地铁站入口处上方的一块显示屏上显示着当前的时间，我记得特别清楚，“18:02”。很多地铁口会修的很高，以确保每层楼间平台都有一个入口，而这里的这个却并不是这样。</p>
+<p>“你的家。”说实话我不太确定那是不是她家。</p>
+<p>“怎么了？”</p>
+<p>“看起来不像是有人经常住的样子。”</p>
+<p>“然后呢？”</p>
+<p>“呃，没什么，可能我接下讲的也跟这些没什么关系，就是，其实现在你想住哪里就可以住哪里。”</p>
+<p>“那要是我就喜欢住在那里呢？”</p>
+<p>“没事，啊，不对，啧，我就是看你那地方不太顺眼，尽量换个地方住吧，我感觉你心里应该也有更好的去处的，只是感觉。”我为什么要讲这些？</p>
+<p>她看着我的眼神里带着疑惑：“谢谢你的，...好意？”</p>
+<p>“没什么，我先走了。”</p>
+<p>“等等。”她叫住我，“如果我说，是我摧毁了这座城市，你信吗？”</p>
+<p>“我信，我信，毕竟你是真有可能干出来这种事。”</p>
+<p>“你那语气明显是认为我在开玩笑吧。”</p>
+<p>“我信，我先走了，拜拜。”明明是她硬要缠上来跟我一起走的，现在我却跟他说拜拜，真奇怪。</p>
+<p>接下来的整整两周都没有碰见她。其实在这么大的一个城市里，碰见了才是小概率事件，那天她能精准地找到我属实令我大吃一惊，不过现在看来也许真的只是偶遇罢了。</p>
+<p>很清爽的一天早晨，我爬到楼顶上远眺。又是冬日常见的大晴天，又是刮得剧烈的风，吸进肺部的空气仿佛要将你的每一根气管冻结，再爬到你的大脑里用冰锥狠狠地刺你的脑子。我拿出手机，这是她的手机，还套着那个淡粉色的手机壳，我不太喜欢，但扔掉又觉得心有芥蒂。我想转一圈拍个全景照片，但我在手机上看到了一个人。</p>
+<p>准确地说是一个人影，站在一栋居民楼的楼顶上。</p>
+<p>是她吗？不，除了她还有谁呢？她所在的那栋楼好像不是原来的住所，是听我说的搬家了吗？</p>
+<p>我将手机里的屏幕放大，想要看得清晰一点。</p>
+<p>我看到了她的侧脸，没错，是她。</p>
+<p>然后我就看着，她直挺挺地，从楼顶上倒了下去。</p>
+<p>一瞬间，我的大脑一片空白，随之而来的是——反胃，恶心。我不愿再待在楼顶上，楼顶上的风会加剧我的恶心，于是我下楼，回到了我的房间里。</p>
+<p>我试着干呕却呕不出来什么东西，但至少让我感觉好点。紧接着我意识到摆在我面前的是一个迫在眉睫的问题：我要去给她收尸吗？</p>
+<p>从那么高的地方摔下来，她的死相一定不会很好看，但是，把她的尸体留在原处腐烂发臭，也是我无法容忍的。怎么办？怎么办？去别的城市找警察来帮忙收尸？我有可能说服他们千里迢迢地跑到这里来吗？除了我就没别人了？除了我就没别人了。妈的，要是能当做没看见就好了，要是我没上这个楼顶，没拿手机拍这个逼照就好了，我干嘛要犯贱呐，他妈的，他妈的，这家伙死了都要给我添麻烦，死了都要恶心我。</p>
+<p>我在房间里踱步了一个早上，终于在正午之前下定决心出门，带上了一捆白布，一把铲子，打算给这家伙一包，运到郊外挖个土坑埋了。没关系的，我告诉自己，忍一忍就好，把自己想象成没有感情的机器，干完活，就回来吃午饭，然后当这家伙没有存在过，这事就这么过去了。</p>
+<p>我驾车根据照片中的位置驶到现场，本来已经准备好面对血肉模糊的场景，但我看到的却是，</p>
+<p>却是，</p>
+<p>一滩淡淡的血迹。</p>
+<p>没有人。</p>
+<p>没有破碎的内脏，折断的四肢。</p>
+<p>有的...有的只是淡淡的血迹，像是马路中间的一个印花。</p>
+<p>发生了什么？</p>
+<p>从那个高度摔下来，她有可能自己站起来，然后爬走吗？</p>
+<p>四周没有滴落的血液。</p>
+<p>这个城市，有，除了我和她以外的人？</p>
+<p>我感到一阵脊背发凉。</p>
+<p>黑色沥青上沾染的淡淡血迹，像是被擦拭过一般。</p>
+<p>地面上的血迹先是慢慢隆起，从纸上的画变为了浮雕，随即，粗壮的绿色茎叶蛟结着，盘旋着冲破了地面，升向了天空，一朵红色大丽花在大地上绽开。</p>
+<p>我仓惶地逃窜</p>
+<p>回来的路上我根本无法正常地思考，所有的思绪均在进行到一半时被打断</p>
+<p>“我不是你的什么人，也不对你抱有什么感情，为什么你要这样缠着我？”</p>
+<p>“不。”她摇了摇食指，“你还能看到我就意味着你的内心深处还隐藏着关于我的思考，如果我没猜错的话，我在你心中种下的种子已经生根发芽，正在吸食着你的血水。”</p>
+<p>“你到底是......”</p>
+<p>“我到底是幻觉还是魂魄，又有什么关系呢？这些都不重要，重要的是我现在出现在了你的面前，你有什么感想吗？”</p>
+<p>“感觉很不爽。”</p>
+<p>“真的吗？”</p>
+<p>“......”</p>
+<p>“真的吗？”</p>
+<p>“我感到，有些安心。”</p>
+<p>“即使知道在这里的不是真正的我？”</p>
+<p>“是的。我猜是因为这给了我一种你还没死的错觉，缓解了一部分因看到自己认识的人死亡产生的恐惧感。”</p>
+<p>“啊，是啊，容貌一定为你赢得了许多，让你变得骄傲自满，性格才会如此恶劣。”</p>
+<p>“性格恶劣吗......可能，确实有点吧。但对你我算是特别恶劣吧，因为我看你很不爽。”</p>
+<p>“情欲亦有其存在意义。”她将食指伸入了我微张着的双唇中。</p>
+<p>“但思想才是一切。”食指搅动着。</p>
+<p>“我们追寻的是，超脱于想象之外的事物。”</p>
+<p>“梦中亦不可存在的事物，梦中亦不能望见的景色。”</p>
+<p>“你渴求的是，”</p>
+<p>“永生。”</p>
+<p>“是这样啊。”她将手指拔出，其上挂着晶莹的液珠，“很可惜，永生并不存在，你这辈子都无法实现你的愿望了。”</p>
+<p>“真是奇怪，直到你死后，我才第一次对你有了心动的感觉。”</p>
+<p>“这很正常，只要是性取向没问题的男性都会对我有心动的感觉。”</p>
+<p>“或者是性取向有问题的女性。”</p>
+<p>她的笑容敛了起来，但由于她细长的弯眉毛，使她即使在没有任何表情的情况下看起来仍带有一丝笑意。</p>
+<p>“曾经有个人说我像件绝世的艺术品。也许跟性别无关，所有人到最后都会喜欢上我。”</p>
+<p>我不知道这个结论是否正确，但至少现在我对此没有发言权。</p>
+
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="https://cdn.luogu.com.cn/upload/image_hosting/zwt5z6fc.png" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>Linky</li>
+            <li><strong>原文链接：</strong>https://lookcatbox.github.io/post/hao-leng-a/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        
+            <div class="shareContainer">
+                <div class="share" style="height:30px;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://lookcatbox.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+        <div id="otherpost">
+            
+            <a  data-pjax class="prev-post-pc" href="https://lookcatbox.github.io/post/"  style="color: black;">
+                <div id="ppcontainer">
+                    
+                    
+                    <img src="https://cdn.luogu.com.cn/upload/image_hosting/63r7s3yf.png" style="width: 100%;" class="opimg">
+                    
+                    
+                    <h4 class="optitle">？</h4>
+                </div>
+            </a>
+            <div class="prev-post">
+                上一篇 <a  data-pjax href="https://lookcatbox.github.io/post/">？</a>
+            </div>
+            
+            
+            <a data-pjax class="next-post-pc" href="https://lookcatbox.github.io/post/chi-qu/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    
+                    <img src="https://cdn.luogu.com.cn/upload/image_hosting/63r7s3yf.png" style="width: 100%;" class="opimg">
+                    
+                    
+                    <h4 class="optitle">离去</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://lookcatbox.github.io/post/chi-qu/">离去</a>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
+<script>
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
+</script>
+                    <div class="toc-container">
+                        
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👇 ------------------------->
+                    <div id="comment" class="comment">
+                        <div class="commentcontainer">
+                            
+                                
+                                    
+        <div id="vcomments">
+        </div>
+        <script>
+            var valine = new Valine();
+            var curpath = window.location.pathname;
+            if (curpath[curpath.length - 1] != '/')
+                curpath += '/'
+            valine.init({
+                el: '#vcomments',
+                appId: 'BDiJiDiNIG8ucfPohdXfRwuI-gzGzoHsz',
+                appKey: 'V8HvQWmrp5odFO5gn1PoWlNX',
+                avatar: 'retro',
+                pageSize: 10,
+                placeholder: '既然来了，何不畅所欲言呢？',
+                recordIP: true,
+                path: curpath //[重点] 记得添加path路径
+            });
+        </script>
+        <script type="text/javascript">
+            var jrsc = '既然来了，何不畅所欲言呢？';
+            jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                    .dynasty + " · " + result.data.origin.author;
+            });
+        </script>
+
+
+                                    <div class="clear"></div>
+                                
+                            
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👆 ------------------------->
+                </div>
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
+                <div class="col-md-1 col-lg-2"></div>
+                <div id="bg">
+                </div>
+            </div>
+            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+            
+        </div>
+        <!-- aplayer播放器加载👇 -->
+            
+        <!-- aplayer播放器加载👆 -->
+    </div>
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
+                </div>
+                
+                <div id="bgurl" style="display:none">https://i.loli.net/2019/01/12/5c3970b446151.png</div>
+                
+    <!-- 背景图加载方式👆 -->
+</body>
+
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
+
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://lookcatbox.github.io/media/js/live2d.js"></script>
+<script type="text/javascript" src="https://lookcatbox.github.io/media/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://lookcatbox.github.io/media/live2d/assets/tororo.model.json");
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
+
+<!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+<script>
+    var bgchoice = "link"
+    var bg = $('#bg');
+    var bgurl = document.getElementById("bgurl").innerHTML;
+    if (bgchoice == 'default')
+    {
+        for (var i = 0; i < 3; i++)
+            bgurl = bgurl.replace("\\", "/");
+        bgurl = "https://lookcatbox.github.io/" + bgurl;
+    }
+    bg.css("background", "url('" + bgurl + "')");
+
+    window.onload = function () {
+        aplayerbtnInit();
+    }
+</script>
+<!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+
+
+
+
+<script src="https://lookcatbox.github.io/media/js/index.js"></script>
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://lookcatbox.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
